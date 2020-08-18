@@ -127,6 +127,7 @@ const MDXComponents = {
   hr: Hr,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   inlineCode: (props) => <Code variantColor="yellow" fontSize="0.84em" {...props} />,
+  pre: (props) => <Box my="2em" borderRadius="sm" {...props} />,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
   table: Table,

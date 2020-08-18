@@ -1,5 +1,4 @@
 const withMdx = require('next-mdx-enhanced')
-const mdxPrism = require('mdx-prism')
 const path = require('path')
 const execa = require('execa')
 const fromUnixTime = require('date-fns/fromUnixTime')
@@ -71,7 +70,7 @@ module.exports = withMdx({
     require('remark-toc'),
     require('remark-unwrap-images')
   ],
-  rehypePlugins: [mdxPrism],
+  rehypePlugins: [],
   extendFrontMatter: {
     process: async (_, frontmatter) => {
       const { __resourcePath: mdxPath, author, tags } = frontmatter
