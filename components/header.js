@@ -55,7 +55,6 @@ const HeaderContent = () => {
         </NextLink>
         <HStack as="nav" spacing={4} ml={6} display={{ base: 'none', md: 'flex' }}>
           <NavLink href="/grammar/getting-started">Grammar</NavLink>
-          <NavLink href="/docs/getting-started">Docs</NavLink>
         </HStack>
       </Flex>
 
