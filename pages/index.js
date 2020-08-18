@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Box, Heading, Text, Button, Divider, Flex, Stack, Center } from '@chakra-ui/core'
+import { Box, Heading, Text, Button, Divider, Stack } from '@chakra-ui/core'
 import Container from '@/components/container'
 import Header from '@/components/header'
 import { Footer } from '@/components/footer'
@@ -11,7 +11,7 @@ import { DiGithubBadge } from 'react-icons/di'
 const HomePage = () => {
   return (
     <>
-      <SEO title="Grammarkup - Web for learning grammar" />
+      <SEO title="Grammarkup - A Web for learning grammar" />
       <Header />
       <Box mb={4}>
         <Box as="section" pt={40} pb={20}>

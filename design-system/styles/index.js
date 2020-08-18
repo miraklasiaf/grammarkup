@@ -15,14 +15,6 @@ const styles = {
       boxSizing: 'border-box',
       wordWrap: 'break-word'
     },
-    '.deleted': {
-      color: '#ff8383 !important',
-      fontStyle: 'normal !important'
-    },
-    '.inserted': {
-      color: '#b5f4a5 !important',
-      fontStyle: 'normal !important'
-    },
     fontFeatureSettings: `'kern'`,
     textRendering: 'optimizeLegibility',
     WebkitFontSmoothing: 'antialiased'

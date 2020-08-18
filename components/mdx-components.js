@@ -1,7 +1,6 @@
 import {
   Box,
   Code,
-  chakra,
   Kbd,
   Link,
   Text,
@@ -10,8 +9,6 @@ import {
   useColorModeValue
 } from '@chakra-ui/core'
 import NextLink from 'next/link'
-
-const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
 const Table = (props) => <Box as="table" textAlign="left" mt={8} w="full" {...props} />
 
@@ -130,7 +127,6 @@ const MDXComponents = {
   hr: Hr,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   inlineCode: (props) => <Code variantColor="yellow" fontSize="0.84em" {...props} />,
-  pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
   table: Table,
