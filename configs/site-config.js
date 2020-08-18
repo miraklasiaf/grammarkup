@@ -53,7 +53,7 @@ const siteConfig = {
           url: '/twitter-og-image.png',
           width: 1012,
           height: 506,
-          alt: 'Chakra UI: Web for learning grammar'
+          alt: 'Grammarkup: Web for learning grammar'
         }
       ]
     }

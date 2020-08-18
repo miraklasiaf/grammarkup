@@ -1,20 +1,19 @@
-/** @jsx jsx */
 import {
   Box,
   Code,
-  Heading,
+  chakra,
   Kbd,
   Link,
   Text,
-  Divider,
+  Alert,
+  Heading,
   useColorModeValue
 } from '@chakra-ui/core'
-import { jsx } from '@emotion/core'
 import NextLink from 'next/link'
 
-const Table = (props) => (
-  <Box as="table" textAlign="left" mt="32px" width="full" {...props} />
-)
+const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
+
+const Table = (props) => <Box as="table" textAlign="left" mt={8} w="full" {...props} />
 
 const THead = (props) => {
   const bg = useColorModeValue('gray.50', 'whiteAlpha.100')
@@ -33,44 +32,6 @@ const TData = (props) => (
     {...props}
   />
 )
-
-const CustomLink = (props) => {
-  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)')
-
-  const { href } = props
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
-
-  if (isInternalLink) {
-    return (
-      <NextLink href={href} passHref>
-        <Link color={color} {...props} />
-      </NextLink>
-    )
-  }
-
-  return <Link color={color} isExternal {...props} />
-}
-
-const Quote = (props) => {
-  const bgColor = useColorModeValue('blue.50', 'blue.900')
-
-  return (
-    <Box
-      mt={4}
-      w="full"
-      bg={bgColor}
-      variant="left-accent"
-      status="info"
-      css={{
-        '> *:first-of-type': {
-          marginTop: 0,
-          marginLeft: 8
-        }
-      }}
-      {...props}
-    />
-  )
-}
 
 const DocsHeading = (props) => (
   <Heading
@@ -117,20 +78,61 @@ const DocsHeading = (props) => (
   </Heading>
 )
 
+const CustomLink = (props) => {
+  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)')
+
+  const { href } = props
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
+
+  if (isInternalLink) {
+    return (
+      <NextLink href={href} passHref>
+        <Link color={color} {...props} />
+      </NextLink>
+    )
+  }
+
+  return <Link color={color} isExternal {...props} />
+}
+
 const Hr = () => {
   const borderColor = useColorModeValue('gray.200', 'gray.600')
 
   return <Divider borderColor={borderColor} my={4} w="full" />
 }
 
+const Quote = (props) => {
+  const bgColor = useColorModeValue('blue.50', 'blue.900')
+
+  return (
+    <Alert
+      variant="left-accent"
+      mt={4}
+      w="full"
+      bg={bgColor}
+      variant="left-accent"
+      status="info"
+      css={{
+        '> *:first-of-type': {
+          marginTop: 0,
+          marginLeft: 8
+        }
+      }}
+      {...props}
+    />
+  )
+}
+
 const MDXComponents = {
   h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />,
   h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
-  inlineCode: (props) => <Code variantcolor="yellow" fontSize="0.84em" {...props} />,
+  hr: Hr,
+  strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
+  inlineCode: (props) => <Code variantColor="yellow" fontSize="0.84em" {...props} />,
+  pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
-  hr: Hr,
   table: Table,
   th: THead,
   td: TData,
@@ -142,5 +144,4 @@ const MDXComponents = {
   blockquote: Quote
 }
 
-export { CustomLink }
 export default MDXComponents

@@ -1,5 +1,5 @@
 import { Box, Icon, Text, Stack, Link, chakra } from '@chakra-ui/core'
-import { IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io'
+import { IoLogoTwitter } from 'react-icons/io'
 import { MdEmail } from 'react-icons/md'
 import { DiGithubBadge } from 'react-icons/di'
 
@@ -19,10 +19,6 @@ const links = [
     url: 'https://twitter.com/miraklasiaf'
   },
   {
-    icon: IoLogoLinkedin,
-    url: 'https://linkedin.com/in/miraklasiaf'
-  },
-  {
     icon: MdEmail,
     url: 'mailto:faisalkarim96@gmail.com'
   }
@@ -31,23 +27,15 @@ const links = [
 const IndonesiaFlag = (props) => (
   <chakra.svg
     display="inline-block"
-    mx="3"
-    h="16px"
+    borderWidth="1px"
+    mx={3}
+    h={4}
     w="auto"
-    viewBox="0 0 48 48"
+    viewBox="0 0 3 2"
     {...props}
   >
-    <g>
-      <rect x="16" y="6" fill="#E6E6E6" width="16" height="36"></rect>{' '}
-      <path
-        fill="#078754"
-        d="M48,40c0,1.105-0.895,2-2,2H32V6h14c1.105,0,2,0.895,2,2V40z"
-      />
-      <path
-        fill="#078754"
-        d="M16,42H2c-1.105,0-2-0.895-2-2V8c0-1.105,0.895-2,2-2h14V42z"
-      />
-    </g>
+    <rect fill="#FFF" width="3" height="2" />
+    <rect fill="#CE1126" width="3" height="1" />
   </chakra.svg>
 )
 

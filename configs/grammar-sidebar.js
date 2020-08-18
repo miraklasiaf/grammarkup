@@ -26,7 +26,7 @@ const sidebar = {
               path: '/grammar/present-tenses/present-continuous'
             },
             {
-              title: 'Present simple vs continuous',
+              title: 'Present Simple vs Continuous',
               path: '/grammar/present-tenses/simple-vs-continuous'
             },
             {

@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { Box, chakra, Stack } from '@chakra-ui/core'
 import SidebarCategory from './sidebar-category'
 import SidebarLink from './sidebar-link'
-// import Search from "components/algolia-search"
 
 const Sidebar = ({ routes }) => {
   const { pathname } = useRouter()

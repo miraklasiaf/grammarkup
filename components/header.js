@@ -36,6 +36,7 @@ const GithubIcon = (props) => (
 const HeaderContent = () => {
   const { toggleColorMode: toggleMode } = useColorMode()
   const text = useColorModeValue('dark', 'light')
+  const logoColor = useColorModeValue('gray.600', 'whiteAlpha.800')
   const SwitchIcon = useColorModeValue(FaMoon, FaSun)
 
   return (
@@ -47,6 +48,7 @@ const HeaderContent = () => {
             display="block"
             aria-label="Chakra UI, Back to homepage"
             fontWeight="bold"
+            color={logoColor}
           >
             Grammarkup
           </Box>

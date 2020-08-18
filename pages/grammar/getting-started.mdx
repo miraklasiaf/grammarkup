@@ -1,62 +1,87 @@
 ---
-title: Getting Started
-description: How to install and set up Chakra UI in your local project
+title: MDX Cheatsheet
+description: Building Forms with Chakra UI and React Hook Form
+tags: ['form', 'react-hook-form']
+author: miraklasiaf
 ---
 
-**First, you need to install Chakra UI**
+## Heading
 
-> For `create-react-app` installation instructions, see the
-> [official CRA templates guide](/guides/integrations/with-cra) instead.
+- `# H1`
+- `## H2`
+- `### H3`
+- `#### H4`
 
-```bash
-npm i @chakra-ui/core@next
+## Emphasis
 
-# or
+- _Emphasis_, aka italics, with `*asterisks* or _underscores_`.
+- **Strong emphasis**, aka bold, with `**asterisks** or __underscores__`.
+- **Combined _emphasis_** with `**asterisks and _underscores_**`.
+- ~~Strikethrough~~ uses `~~two tildes~~`.
 
-yarn add @chakra-ui/core@next
+### List
+
+Ordered list
+
+1. One
+2. Two
+3. Three
+
+Unordered list
+
+- Unordered list can use asterisks
+
+* Or minuses
+
+### Links
+
+- [Inline-style link](https://www.google.com) `[Inline-style link](https://www.google.com)`
+
+- [Inline-style link with title](https://www.google.com "Google's Homepage") `[Inline-style link with title](https://www.google.com "Google's Homepage")`
+
+### Images
+
+`![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')`
+
+- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'Logo Title Text 1')
+
+### Code and Syntax Highlighting
+
+Inline `code` has `back-ticks around` it.
+
+```javascript
+var s = 'JavaScript syntax highlighting'
+alert(s)
 ```
 
-**Next, add the provider**
+```python
+s = "Python syntax highlighting"
+print s
+```
 
-For Chakra to work correctly, you need to setup the global provider and add
-browser css reset. At the root of your application, here's what you need do:
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
 
-```jsx
-import * as React from 'react'
-// 1. import these components
-import { ChakraProvider, theme } from '@chakra-ui/core'
+```bash
+npx create-next-app
+```
 
-// 2. Use at the root of your app
-function App() {
-  return (
-    <ChakraProvider resetCSS theme={theme}>
-      <App />
-    </ChakraProvider>
-  )
+```css
+body {
+  font-family: Camphor, Open Sans, Segoe UI, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 ```
 
-> - For Next.js, you need to set this up in `pages/_app.js`
-> - For Gatsby, install the `gatsby-plugin-chakra-ui`. It does it automatically
->   for you.
-> - For Create React App, you need to set this up in `index.js`
+### Blockquotes
 
-<br />
+> Blockquotes are very handy in email to emulate reply text.
+> This line is part of the same quote.
 
-That's it, you're good to go!
+Quote break.
 
-## TypeScript
-
-Please note that when adding Chakra UI to a TypeScript project, a minimum
-TypeScript version of `3.8.0` is required.
-
-If you're adding Chakra UI to a `create-react-app` project, this means you'll
-need to manually upgrade `typescript` to `^3.8.0`.
-
-See [the guide for our create-react-app](../guides/cra-templates) templates if
-you'd like to generate a Chakra-enabled `create-react-app` project from scratch.
-
-## Contributing
-
-Please see our [contribution guidelines](/contributing) to learn how you can
-contribute to this project.
+> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
