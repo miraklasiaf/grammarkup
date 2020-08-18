@@ -18,22 +18,6 @@ const HomeLayout = ({ children }) => (
   </Box>
 )
 
-const DocsLayout = ({ children }) => {
-  return (
-    <MDXProvider components={MDXComponents}>
-      <Header />
-      <Box>
-        <SideNav w="full" maxWidth={72} display={['none', null, 'block']} />
-        <Box pl={[0, null, 72]} py={2} mb={20}>
-          <SkipNavContent />
-          <Main>{children}</Main>
-          <Footer />
-        </Box>
-      </Box>
-    </MDXProvider>
-  )
-}
-
 const GrammarLayout = ({ children }) => {
   return (
     <MDXProvider components={MDXComponents}>
@@ -65,8 +49,6 @@ const GuidesLayout = ({ children }) => {
 
 function getLayout(context) {
   switch (context) {
-    case 'docs':
-      return DocsLayout
     case 'grammar':
       return GrammarLayout
     case 'guides':

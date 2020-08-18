@@ -1,14 +1,12 @@
 import { Box, Flex, Heading } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
-import EditPageLink from './edit-page-button'
-
 import SEO from './seo'
 import Container from './container'
 import Header from './header'
 import Pagination from './pagination'
 import Footer from './footer'
-
 import Sidebar from './sidebar/sidebar'
+import EditPageLink from './edit-page-button'
 import { findRouteByPath, removeFromLast } from '@/utils/find-route-by-path'
 import { getRouteContext } from '@/utils/get-route-context'
 
