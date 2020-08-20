@@ -1,4 +1,4 @@
-import { Box, Flex, Heading } from '@chakra-ui/core'
+import { Box, Flex, Heading, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import SEO from './seo'
 import Container from './container'
@@ -27,7 +27,7 @@ const DocsContainer = ({ frontmatter, sidebarRoutes: routes, children }) => {
           <div style={{ flex: 1 }}>
             <SkipNavContent />
             <Box pt={3} px={5} mt={18} mx="auto" maxW="3xl" minH="80vh">
-              <Heading letterSpacing="tight" mt={8} as="h1" size="xl">
+              <Heading letterSpacing="tight" mt={4} as="h1" size="xl">
                 {title}
               </Heading>
               {children}

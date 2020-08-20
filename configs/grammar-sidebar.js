@@ -1,7 +1,7 @@
 const sidebar = {
   routes: [
     {
-      title: 'Learn Grammar',
+      title: 'Foundations',
       heading: true,
       routes: [
         {
@@ -9,29 +9,59 @@ const sidebar = {
           path: '/grammar/getting-started'
         },
         {
-          title: 'Present Tenses',
+          title: 'Nouns & Pronouns',
+          path: '/grammar/nouns-and-pronouns',
+          open: true,
+          routes: [
+            {
+              title: 'Common Nouns',
+              path: '/grammar/nouns-and-pronouns/common-nouns'
+            },
+            {
+              title: 'Subject Pronouns',
+              path: '/grammar/nouns-and-pronouns/subject-nouns'
+            },
+            {
+              title: 'Object Pronouns',
+              path: '/grammar/nouns-and-pronouns/object-nouns'
+            }
+          ]
+        },
+        {
+          title: 'Articles',
+          path: '/grammar/present-tenses',
+          open: true,
+          routes: [
+            {
+              title: 'A - An - The',
+              path: '/grammar/present-tenses/to-be'
+            }
+          ]
+        },
+        {
+          title: 'Verbs: Simple Tense',
+          path: '/grammar/present-tenses',
+          open: true,
+          routes: [
+            {
+              title: 'Present Simple Tense',
+              path: '/grammar/present-tenses/to-be'
+            },
+            {
+              title: 'Past Simple Tense',
+              path: '/grammar/present-tenses/present-simple'
+            }
+          ]
+        },
+
+        {
+          title: 'Auxilliary Verbs',
           path: '/grammar/present-tenses',
           open: true,
           routes: [
             {
               title: 'To Be',
               path: '/grammar/present-tenses/to-be'
-            },
-            {
-              title: 'Present Simple',
-              path: '/grammar/present-tenses/present-simple'
-            },
-            {
-              title: 'Present Continuous',
-              path: '/grammar/present-tenses/present-continuous'
-            },
-            {
-              title: 'Present Simple vs Continuous',
-              path: '/grammar/present-tenses/simple-vs-continuous'
-            },
-            {
-              title: 'Have Got',
-              path: '/grammar/present-tenses/have-got'
             }
           ]
         }

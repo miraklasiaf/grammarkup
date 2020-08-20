@@ -1,34 +1,36 @@
 import {
   Box,
-  Code,
-  Kbd,
-  Link,
-  Text,
   Alert,
   Heading,
+  Divider,
+  Text,
+  chakra,
+  Kbd,
   useColorModeValue
 } from '@chakra-ui/core'
-import NextLink from 'next/link'
 
-const Table = (props) => <Box as="table" textAlign="left" mt={8} w="full" {...props} />
+const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
-const THead = (props) => {
-  const bg = useColorModeValue('gray.50', 'whiteAlpha.100')
+const Quote = (props) => {
+  const bgColor = useColorModeValue('blue.50', 'blue.900')
 
-  return <Box as="th" bg={bg} fontWeight="semibold" p={2} fontSize="sm" {...props} />
+  return (
+    <Alert
+      mt={4}
+      w="98%"
+      bg={bgColor}
+      variant="left-accent"
+      status="info"
+      css={{
+        '> *:first-of-type': {
+          marginTop: 0,
+          marginLeft: 8
+        }
+      }}
+      {...props}
+    />
+  )
 }
-
-const TData = (props) => (
-  <Box
-    as="td"
-    p={2}
-    borderTopWidth="1px"
-    borderColor="inherit"
-    fontSize="sm"
-    whiteSpace="normal"
-    {...props}
-  />
-)
 
 const DocsHeading = (props) => (
   <Heading
@@ -75,49 +77,74 @@ const DocsHeading = (props) => (
   </Heading>
 )
 
-const CustomLink = (props) => {
-  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)')
+const Table = (props) => (
+  <chakra.div overflowX="auto">
+    <chakra.table textAlign="left" mt="32px" width="full" {...props} />
+  </chakra.div>
+)
 
-  const { href } = props
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
+const THead = (props) => (
+  <chakra.th
+    bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
+    fontWeight="semibold"
+    p={2}
+    fontSize="sm"
+    {...props}
+  />
+)
 
-  if (isInternalLink) {
-    return (
-      <NextLink href={href} passHref>
-        <Link color={color} {...props} />
-      </NextLink>
-    )
-  }
+const TData = (props) => (
+  <chakra.td
+    p={2}
+    borderTopWidth="1px"
+    borderColor="inherit"
+    fontSize="sm"
+    whiteSpace="normal"
+    {...props}
+  />
+)
 
-  return <Link color={color} isExternal {...props} />
-}
+const LinkedHeading = (props) => (
+  <chakra.h2
+    css={{
+      '&[id]': {
+        pointerEvents: 'none'
+      },
+      '&[id]::before': {
+        display: 'block',
+        height: ' 6rem',
+        marginTop: '-6rem',
+        visibility: 'hidden',
+        content: `""`
+      },
+      '&[id]:hover a': { opacity: 1 }
+    }}
+    {...props}
+  >
+    <chakra.div pointerEvents="auto">
+      {props.children}
+      {props.id && (
+        <chakra.a
+          aria-label="anchor"
+          color="teal.500"
+          fontWeight="normal"
+          outline="none"
+          _focus={{ opacity: 1, boxShadow: 'outline' }}
+          opacity={0}
+          ml="0.375rem"
+          href={`#${props.id}`}
+        >
+          #
+        </chakra.a>
+      )}
+    </chakra.div>
+  </chakra.h2>
+)
 
 const Hr = () => {
-  const borderColor = useColorModeValue('gray.200', 'gray.600')
+  const borderColor = useColorMode('gray.200', 'gray.600')
 
-  return <Divider borderColor={borderColor} my={4} w="full" />
-}
-
-const Quote = (props) => {
-  const bgColor = useColorModeValue('blue.50', 'blue.900')
-
-  return (
-    <Alert
-      variant="left-accent"
-      mt={4}
-      w="full"
-      bg={bgColor}
-      variant="left-accent"
-      status="info"
-      css={{
-        '> *:first-of-type': {
-          marginTop: 0,
-          marginLeft: 8
-        }
-      }}
-      {...props}
-    />
-  )
+  return <Divider borderColor={borderColor} my={4} w="100%" />
 }
 
 const MDXComponents = {
@@ -126,14 +153,14 @@ const MDXComponents = {
   h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
   hr: Hr,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
-  inlineCode: (props) => <Code variantcolor="yellow" fontSize="0.84em" {...props} />,
-  pre: (props) => <Box my="2em" borderRadius="sm" {...props} />,
+  inlineCode: (props) => <chakra.code apply="mdx.code" {...props} />,
+  pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
   table: Table,
   th: THead,
   td: TData,
-  a: CustomLink,
+  a: (props) => <chakra.a apply="mdx.a" {...props} />,
   p: (props) => <Text as="p" mt={4} lineHeight="tall" {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,
