@@ -1,73 +1,77 @@
 const sidebar = {
   routes: [
     {
-      title: 'Beginner',
+      title: 'Beginner Grammar',
       heading: true,
       routes: [
         {
+          title: 'Getting Started',
+          path: '/beginner/getting-started'
+        },
+        {
           title: 'Nouns',
-          path: '/grammar/nouns',
+          path: '/beginner/nouns',
           open: true,
           routes: [
             {
               title: 'Common Nouns',
-              path: '/grammar/nouns/common-nouns'
+              path: '/beginner/nouns/common-nouns'
             },
             {
               title: 'Proper Nouns',
-              path: '/grammar/nouns/proper-nouns'
+              path: '/beginner/nouns/proper-nouns'
             }
           ]
         },
         {
           title: 'Pronouns',
-          path: '/grammar/pronouns',
+          path: '/beginner/pronouns',
           open: true,
           routes: [
             {
               title: 'Subject Pronouns',
-              path: '/grammar/pronouns/subject-nouns'
+              path: '/beginner/pronouns/subject-nouns'
             },
             {
               title: 'Object Pronouns',
-              path: '/grammar/pronouns/object-pronouns'
+              path: '/beginner/pronouns/object-pronouns'
             }
           ]
         },
         {
           title: 'Articles',
-          path: '/grammar/present-tenses',
+          path: '/beginner/present-tenses',
           open: true,
           routes: [
             {
               title: 'A - An - The',
-              path: '/grammar/present-tenses/to-be'
+              path: '/beginner/present-tenses/to-be'
             }
           ]
         },
         {
           title: 'Demonstratives',
-          path: '/grammar/demonstratives',
+          path: '/beginner/demonstratives',
           open: true,
           routes: [
             {
               title: 'This - That - These - Those ',
-              path: '/grammar/demonstratives/this-that-these-those'
+              path: '/beginner/demonstratives/this-that-these-those'
             }
           ]
         },
         {
           title: 'Distributives',
-          path: '/grammar/distributives',
+          path: '/beginner/distributives',
           open: true,
           routes: [
             {
               title: 'All - Half',
-              path: '/grammar/distributives/all-half'
+              path: '/beginner/distributives/all-half'
             },
             {
               title: 'Each - Every',
-              path: '/grammar/distributives/each-every'
+              path: '/beginner/distributives/each-every'
             }
           ]
         }

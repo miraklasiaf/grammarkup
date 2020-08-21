@@ -17,7 +17,7 @@ const Quote = (props) => {
 
   return (
     <Alert
-      mt={4}
+      mt={2}
       w="98%"
       bg={bgColor}
       color={color}
