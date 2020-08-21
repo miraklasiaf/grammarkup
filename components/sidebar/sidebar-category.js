@@ -46,7 +46,7 @@ function SidebarCategory(props) {
   }, [toggle, shouldScroll, isMobile, contentRef])
 
   return (
-    <chakra.div mt="18px" ref={ref}>
+    <chakra.div mt={4} ref={ref}>
       <chakra.button
         w="full"
         cursor="pointer"
@@ -67,7 +67,7 @@ function SidebarCategory(props) {
         <Icon
           w="auto"
           h="1em"
-          fontSize="12px"
+          fontSize="sm"
           mr={4}
           transformOrigin="center"
           transform={toggle ? 'rotate(90deg)' : undefined}
@@ -76,14 +76,7 @@ function SidebarCategory(props) {
           color="gray.400"
         />
       </chakra.button>
-      <chakra.div
-        hidden={!toggle}
-        borderLeftWidth="1px"
-        mt={4}
-        pl="5"
-        overflow="hidden"
-        ml="1"
-      >
+      <chakra.div hidden={!toggle} mt={3} pl={3} overflow="hidden">
         {children}
       </chakra.div>
     </chakra.div>

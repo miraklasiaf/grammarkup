@@ -13,13 +13,12 @@ const Sidebar = ({ routes }) => {
       ref={ref}
       as="aside"
       pos="sticky"
-      top="6.5rem"
+      top={24}
       w="280px"
-      pr="8"
-      pb="8"
-      pl="1"
+      pr={8}
+      pb={8}
+      pl={2}
       overflowY="auto"
-      className="sidebar-content"
       flexShrink={0}
       h="calc(((100vh - 1.5rem) - 64px) - 42px);"
     >
@@ -28,7 +27,7 @@ const Sidebar = ({ routes }) => {
         return (
           <React.Fragment key={idx}>
             {c1.heading && (
-              <chakra.h4 fontSize="md" fontWeight="bold" my="1.25rem">
+              <chakra.h4 fontSize="md" my={5} fontWeight="bold">
                 {c1.title}
               </chakra.h4>
             )}
@@ -36,7 +35,7 @@ const Sidebar = ({ routes }) => {
             {c1.routes.map((c2) => {
               if (!c2.routes) {
                 return (
-                  <SidebarLink mt="18px" key={c2.path} href={c2.path}>
+                  <SidebarLink mt={4} key={c2.path} href={c2.path}>
                     {c2.title}
                   </SidebarLink>
                 )
@@ -53,7 +52,7 @@ const Sidebar = ({ routes }) => {
                   selected={selected}
                   opened={opened}
                 >
-                  <Stack spacing="18px">
+                  <Stack spacing={3}>
                     {c2.routes.map((c3) => (
                       <SidebarLink key={c3.path} href={c3.path}>
                         {c3.title}

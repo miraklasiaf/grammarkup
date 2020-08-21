@@ -1,29 +1,36 @@
 const sidebar = {
   routes: [
     {
-      title: 'Foundations',
+      title: 'Beginner',
       heading: true,
       routes: [
         {
-          title: 'Getting Started',
-          path: '/grammar/getting-started'
-        },
-        {
-          title: 'Nouns & Pronouns',
-          path: '/grammar/nouns-and-pronouns',
+          title: 'Nouns',
+          path: '/grammar/nouns',
           open: true,
           routes: [
             {
               title: 'Common Nouns',
-              path: '/grammar/nouns-and-pronouns/common-nouns'
+              path: '/grammar/nouns/common-nouns'
             },
             {
+              title: 'Proper Nouns',
+              path: '/grammar/nouns/proper-nouns'
+            }
+          ]
+        },
+        {
+          title: 'Pronouns',
+          path: '/grammar/pronouns',
+          open: true,
+          routes: [
+            {
               title: 'Subject Pronouns',
-              path: '/grammar/nouns-and-pronouns/subject-nouns'
+              path: '/grammar/pronouns/subject-nouns'
             },
             {
               title: 'Object Pronouns',
-              path: '/grammar/nouns-and-pronouns/object-nouns'
+              path: '/grammar/pronouns/object-pronouns'
             }
           ]
         },
@@ -39,29 +46,28 @@ const sidebar = {
           ]
         },
         {
-          title: 'Verbs: Simple Tense',
-          path: '/grammar/present-tenses',
+          title: 'Demonstratives',
+          path: '/grammar/demonstratives',
           open: true,
           routes: [
             {
-              title: 'Present Simple Tense',
-              path: '/grammar/present-tenses/to-be'
-            },
-            {
-              title: 'Past Simple Tense',
-              path: '/grammar/present-tenses/present-simple'
+              title: 'This - That - These - Those ',
+              path: '/grammar/demonstratives/this-that-these-those'
             }
           ]
         },
-
         {
-          title: 'Auxilliary Verbs',
-          path: '/grammar/present-tenses',
+          title: 'Distributives',
+          path: '/grammar/distributives',
           open: true,
           routes: [
             {
-              title: 'To Be',
-              path: '/grammar/present-tenses/to-be'
+              title: 'All - Half',
+              path: '/grammar/distributives/all-half'
+            },
+            {
+              title: 'Each - Every',
+              path: '/grammar/distributives/each-every'
             }
           ]
         }

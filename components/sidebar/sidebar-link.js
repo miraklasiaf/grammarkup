@@ -5,7 +5,7 @@ import { forwardRef } from 'react'
 
 const StyledLink = forwardRef((props, ref) => {
   const hoverColor = useColorModeValue('gray.900', 'whiteAlpha.900')
-  const activeColor = useColorModeValue('teal.500', 'teal.200')
+  const activeColor = useColorModeValue('teal.400', 'teal.200')
   const color = useColorModeValue('gray.700', 'whiteAlpha.900')
 
   return (

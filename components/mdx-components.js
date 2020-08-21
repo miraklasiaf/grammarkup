@@ -13,12 +13,14 @@ const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
 const Quote = (props) => {
   const bgColor = useColorModeValue('blue.50', 'blue.900')
+  const color = useColorModeValue('black', 'white')
 
   return (
     <Alert
       mt={4}
       w="98%"
       bg={bgColor}
+      color={color}
       variant="left-accent"
       status="info"
       css={{
@@ -78,67 +80,47 @@ const DocsHeading = (props) => (
 )
 
 const Table = (props) => (
-  <chakra.div overflowX="auto">
-    <chakra.table textAlign="left" mt="32px" width="full" {...props} />
+  <chakra.div mt={8} mx={{ sm: `-${6}`, lg: `-${8}` }} overflowX="auto">
+    <chakra.div
+      minWidth="full"
+      px={{ sm: 6, lg: 8 }}
+      py={2}
+      display="inline-block"
+      minWidth="full"
+      verticalAlign="middle"
+    >
+      <chakra.div boxShadow="default" overflow="hidden" borderRadius={{ sm: 'lg' }}>
+        <chakra.table w="full" {...props} />
+      </chakra.div>
+    </chakra.div>
   </chakra.div>
 )
 
 const THead = (props) => (
   <chakra.th
-    bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
-    fontWeight="semibold"
-    p={2}
-    fontSize="sm"
+    bg={useColorModeValue('gray.50', 'gray.800')}
+    color={useColorModeValue('gray.500', 'white')}
+    fontSize="xs"
+    fontWeight="medium"
+    letterSpacing="wider"
+    lineHeight={4}
+    px={6}
+    py={3}
+    textTransform="uppercase"
+    borderBottomWidth="1px"
     {...props}
   />
 )
 
 const TData = (props) => (
   <chakra.td
-    p={2}
-    borderTopWidth="1px"
-    borderColor="inherit"
-    fontSize="sm"
-    whiteSpace="normal"
+    px={6}
+    py={4}
+    borderBottom="1px"
+    borderBottomColor="gray.200"
+    whiteSpace="nowrap"
     {...props}
   />
-)
-
-const LinkedHeading = (props) => (
-  <chakra.h2
-    css={{
-      '&[id]': {
-        pointerEvents: 'none'
-      },
-      '&[id]::before': {
-        display: 'block',
-        height: ' 6rem',
-        marginTop: '-6rem',
-        visibility: 'hidden',
-        content: `""`
-      },
-      '&[id]:hover a': { opacity: 1 }
-    }}
-    {...props}
-  >
-    <chakra.div pointerEvents="auto">
-      {props.children}
-      {props.id && (
-        <chakra.a
-          aria-label="anchor"
-          color="teal.500"
-          fontWeight="normal"
-          outline="none"
-          _focus={{ opacity: 1, boxShadow: 'outline' }}
-          opacity={0}
-          ml="0.375rem"
-          href={`#${props.id}`}
-        >
-          #
-        </chakra.a>
-      )}
-    </chakra.div>
-  </chakra.h2>
 )
 
 const Hr = () => {

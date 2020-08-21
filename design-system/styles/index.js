@@ -3,7 +3,7 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: (props) => ({
     fontFamily: 'body',
-    color: mode('gray.900', 'whiteAlpha.900')(props),
+    color: mode('gray.900', 'white')(props),
     bg: mode('white', 'gray.900')(props),
     lineHeight: 'normal',
     minHeight: 'full',

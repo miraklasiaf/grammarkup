@@ -99,7 +99,7 @@ const Header = (props) => {
       borderBottomWidth="1px"
       {...props}
     >
-      <Box h="4.5rem" mx="auto" maxW="7xl">
+      <Box h={16} mx="auto" maxW="8xl">
         <HeaderContent />
       </Box>
     </chakra.header>
