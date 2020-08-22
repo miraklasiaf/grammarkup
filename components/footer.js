@@ -11,12 +11,12 @@ const FooterLink = ({ icon, href }) => (
 
 const links = [
   {
-    icon: DiGithubBadge,
-    url: 'https://github.com/miraklasiaf'
-  },
-  {
     icon: IoLogoTwitter,
     url: 'https://twitter.com/miraklasiaf'
+  },
+  {
+    icon: DiGithubBadge,
+    url: 'https://github.com/miraklasiaf'
   },
   {
     icon: MdEmail,
@@ -48,7 +48,7 @@ export const Footer = () => (
       </span>
       <span>Faisal Karim</span>
     </Text>
-    <Stack mt={4} direction="row" spacing="12px" justify="center">
+    <Stack mt={4} direction="row" spacing={3} justify="center">
       {links.map((link) => (
         <FooterLink key={link.url} href={link.url} icon={link.icon} />
       ))}

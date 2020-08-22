@@ -4,7 +4,7 @@ import { Box, chakra, Stack } from '@chakra-ui/core'
 import SidebarCategory from './sidebar-category'
 import SidebarLink from './sidebar-link'
 
-const Sidebar = ({ routes }) => {
+const Sidebar = ({ routes, isMobile, ...props }) => {
   const { pathname } = useRouter()
   const ref = React.useRef(null)
 
@@ -12,15 +12,17 @@ const Sidebar = ({ routes }) => {
     <Box
       ref={ref}
       as="aside"
-      pos="sticky"
-      top={24}
-      w="280px"
-      pr={8}
+      pos={isMobile ? 'static' : 'sticky'}
+      top={isMobile ? 0 : 24}
+      w={isMobile ? 'full' : '280px'}
+      mt={isMobile ? 2 : 0}
+      pr={isMobile ? 2 : 8}
       pb={8}
       pl={2}
-      overflowY="auto"
+      overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
-      h="calc(((100vh - 1.5rem) - 64px) - 42px);"
+      h={isMobile ? 'calc(100vh - 5.5rem)' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
+      {...props}
     >
       {/* <Search /> */}
       {routes.map((c1, idx) => {

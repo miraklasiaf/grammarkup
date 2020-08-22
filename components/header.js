@@ -9,7 +9,7 @@ import {
   useColorMode,
   useColorModeValue
 } from '@chakra-ui/core'
-import siteConfig from '@/configs/site-config'
+import MobileNav from './mobile-nav'
 import NextLink from 'next/link'
 import NavLink from './header-nav-link'
 import { FaMoon, FaSun } from 'react-icons/fa'
@@ -61,17 +61,6 @@ const HeaderContent = () => {
       </Flex>
 
       <Flex maxW="720px" align="center" color="gray.400">
-        <HStack spacing="5">
-          <Link isExternal href={siteConfig.repo.url}>
-            <Icon
-              as={GithubIcon}
-              transition="color 0.2s"
-              w="5"
-              h="5"
-              _hover={{ color: 'gray.600' }}
-            />
-          </Link>
-        </HStack>
         <IconButton
           size="md"
           fontSize="lg"
@@ -82,6 +71,7 @@ const HeaderContent = () => {
           onClick={toggleMode}
           icon={<SwitchIcon />}
         />
+        <MobileNav display={{md :'none'}} />
       </Flex>
     </Flex>
   )

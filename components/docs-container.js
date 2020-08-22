@@ -21,12 +21,13 @@ const DocsContainer = ({ frontmatter, sidebarRoutes: routes, children }) => {
       <SEO title={title} description={description} />
       <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
       <Header />
+
       <Container>
         <Flex>
-          <Sidebar routes={routes} />
+          <Sidebar routes={routes} display={['none', null, 'block']} />
           <div style={{ flex: 1 }}>
             <SkipNavContent />
-            <Box pt={4} px={5} mt={18} mx="auto" maxW="3xl" minH="80vh">
+            <Box pt={4} px={5} mt={16} mx="auto" maxW="3xl" minH="80vh">
               <Heading letterSpacing="tight" mt={4} as="h1" size="xl">
                 {title}
               </Heading>

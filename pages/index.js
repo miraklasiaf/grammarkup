@@ -50,18 +50,6 @@ const HomePage = () => {
                     Get Started
                   </Button>
                 </NextLink>
-                <Button
-                  as="a"
-                  size="lg"
-                  h={12}
-                  px={8}
-                  fontSize="xl"
-                  href="https://github.com/miraklasiaf/grammarkup"
-                  target="__blank"
-                  leftIcon={<DiGithubBadge size="1.5em" />}
-                >
-                  GitHub
-                </Button>
               </Stack>
             </Box>
           </Container>
