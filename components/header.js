@@ -67,11 +67,10 @@ const HeaderContent = () => {
           aria-label={`Switch to ${text} mode`}
           variant="ghost"
           color="current"
-          ml="3"
           onClick={toggleMode}
           icon={<SwitchIcon />}
         />
-        <MobileNav display={{md :'none'}} />
+        <MobileNav display={{ md: 'none' }} />
       </Flex>
     </Flex>
   )
@@ -84,8 +83,8 @@ const Header = (props) => {
     <chakra.header
       pos="fixed"
       w="full"
-      top={0}
       insetX={0}
+      top={0}
       zIndex="1"
       bg={bg}
       borderBottomWidth="1px"

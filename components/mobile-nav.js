@@ -47,7 +47,9 @@ const MobileNav = (props) => {
       <IconButton
         aria-label="Open menu"
         fontSize="lg"
+        display={{ sm: 'inline-flex', md: 'none' }}
         variant="ghost"
+        verticalAlign="middle"
         icon={<MdDehaze />}
         onClick={onOpen}
         ref={btnRef}

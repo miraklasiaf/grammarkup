@@ -5,10 +5,6 @@ const sidebar = {
       heading: true,
       routes: [
         {
-          title: 'Getting Started',
-          path: '/beginner/getting-started'
-        },
-        {
           title: 'Nouns',
           path: '/beginner/nouns',
           open: true,

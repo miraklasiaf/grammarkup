@@ -6,7 +6,8 @@ import {
   Text,
   chakra,
   Kbd,
-  useColorModeValue
+  useColorModeValue,
+  Link
 } from '@chakra-ui/core'
 
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
@@ -129,6 +130,23 @@ const Hr = () => {
   return <Divider borderColor={borderColor} my={4} w="100%" />
 }
 
+const CustomLink = (props) => {
+  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)')
+
+  const { href } = props
+  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
+
+  if (isInternalLink) {
+    return (
+      <NextLink href={href} passHref>
+        <Link color={color} {...props} />
+      </NextLink>
+    )
+  }
+
+  return <Link color={color} isExternal {...props} />
+}
+
 const MDXComponents = {
   h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,
   h2: (props) => <DocsHeading as="h2" fontWeight="bold" size="lg" {...props} />,
@@ -142,7 +160,7 @@ const MDXComponents = {
   table: Table,
   th: THead,
   td: TData,
-  a: (props) => <chakra.a apply="mdx.a" {...props} />,
+  a: CustomLink,
   p: (props) => <Text as="p" mt={4} lineHeight="tall" {...props} />,
   ul: (props) => <Box as="ul" pt={2} pl={4} ml={2} {...props} />,
   ol: (props) => <Box as="ol" pt={2} pl={4} ml={2} {...props} />,

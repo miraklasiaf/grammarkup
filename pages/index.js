@@ -1,12 +1,10 @@
 import NextLink from 'next/link'
-import { Box, Heading, Text, Button, Divider, Stack } from '@chakra-ui/core'
+import { Box, Heading, Text, Button, Divider, Flex } from '@chakra-ui/core'
 import Container from '@/components/container'
 import Header from '@/components/header'
 import { Footer } from '@/components/footer'
 import SEO from '@/components/seo'
-
 import { FaArrowRight } from 'react-icons/fa'
-import { DiGithubBadge } from 'react-icons/di'
 
 const HomePage = () => {
   return (
@@ -36,8 +34,8 @@ const HomePage = () => {
                 Grammarkup is a web for learn grammar
               </Text>
 
-              <Stack mt={10} spacing={4} justify="center" direction={['column', 'row']}>
-                <NextLink href="/beginner/getting-started" passHref>
+              <Flex justify="center" mt={8}>
+                <NextLink href="/beginner/nouns/common-nouns" passHref>
                   <Button
                     as="a"
                     h={12}
@@ -50,7 +48,7 @@ const HomePage = () => {
                     Get Started
                   </Button>
                 </NextLink>
-              </Stack>
+              </Flex>
             </Box>
           </Container>
         </Box>
