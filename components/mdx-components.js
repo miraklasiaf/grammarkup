@@ -7,7 +7,8 @@ import {
   chakra,
   Kbd,
   useColorModeValue,
-  Link
+  Link,
+  Code
 } from '@chakra-ui/core'
 
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
@@ -153,7 +154,7 @@ const MDXComponents = {
   h3: (props) => <DocsHeading as="h3" size="md" fontWeight="bold" {...props} />,
   hr: Hr,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
-  inlineCode: (props) => <chakra.code apply="mdx.code" {...props} />,
+  inlineCode: (props) => <Code colorScheme="yellow" fontSize="0.84em" {...props} />,
   pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,

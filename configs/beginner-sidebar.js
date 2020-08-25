@@ -6,7 +6,7 @@ const sidebar = {
       routes: [
         {
           title: 'Nouns',
-          path: '/beginner/nouns',
+          path: '/beginner/pronouns/subject-pronouns',
           open: true,
           routes: [
             {
@@ -26,7 +26,7 @@ const sidebar = {
           routes: [
             {
               title: 'Subject Pronouns',
-              path: '/beginner/pronouns/subject-nouns'
+              path: '/beginner/pronouns/subject-pronouns'
             },
             {
               title: 'Object Pronouns',
