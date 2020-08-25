@@ -1,12 +1,12 @@
 /**
  * Returns the siblings of a specific route (that is the previous and next routes).
  */
-export function getRouteContext(_route, routes, ctx = {}) {
-  if (!_route) {
+export function getRouteContext(currentRoute, routes, ctx = {}) {
+  if (!currentRoute) {
     return ctx
   }
 
-  const { path } = _route
+  const { path } = currentRoute
   const { parent } = ctx
 
   for (let i = 0; i < routes.length; i += 1) {
@@ -14,11 +14,12 @@ export function getRouteContext(_route, routes, ctx = {}) {
 
     if (route.routes) {
       ctx.parent = route
-      ctx = getRouteContext(_route, route.routes, ctx)
+      ctx = getRouteContext(currentRoute, route.routes, ctx)
 
       // If the active route and the next route was found in nested routes, return it
       if (ctx.nextRoute) return ctx
     }
+
     if (!route) continue
     if (!route.path) continue
 
@@ -30,8 +31,11 @@ export function getRouteContext(_route, routes, ctx = {}) {
 
     if (route && route.path === path) {
       ctx.route = {
-        ..._route,
-        title: parent && !parent.heading ? `${parent.title}: ${_route.title}` : _route.title
+        ...currentRoute,
+        title:
+          parent && !parent.heading
+            ? `${parent.title}: ${currentRoute.title}`
+            : currentRoute.title
       }
       // Continue the loop until we know the next route
       continue

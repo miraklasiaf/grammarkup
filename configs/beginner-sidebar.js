@@ -6,7 +6,6 @@ const sidebar = {
       routes: [
         {
           title: 'Nouns',
-          path: '/beginner/pronouns/subject-pronouns',
           open: true,
           routes: [
             {
@@ -21,7 +20,6 @@ const sidebar = {
         },
         {
           title: 'Pronouns',
-          path: '/beginner/pronouns',
           open: true,
           routes: [
             {

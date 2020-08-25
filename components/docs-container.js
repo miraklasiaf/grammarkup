@@ -13,8 +13,15 @@ import { getRouteContext } from '@/utils/get-route-context'
 const DocsContainer = ({ frontmatter, sidebarRoutes: routes, children }) => {
   const { title, description, slug, editUrl } = frontmatter
 
-  const route = findRouteByPath(removeFromLast(slug, '#'), routes)
-  const { prevRoute, nextRoute } = getRouteContext(route, routes)
+  const currentRoute = findRouteByPath(removeFromLast(slug, '#'), routes)
+
+  console.log('route', currentRoute)
+  console.log('routes', routes)
+
+  const { prevRoute, nextRoute } = getRouteContext(currentRoute, routes)
+
+  console.log('Previous', prevRoute)
+  console.log('Next', nextRoute)
 
   return (
     <>
