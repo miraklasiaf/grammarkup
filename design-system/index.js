@@ -6,6 +6,28 @@ const theme = {
   ...chakraTheme,
   ...foundations,
   styles,
+  textStyles: {
+    heading: {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      letterSpacing: '-0.015em',
+      lineHeight: '1.24',
+      fontSize: { base: '2.75rem', md: '3.5rem' }
+    },
+    'heading-2': {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      letterSpacing: '-0.015em',
+      lineHeight: '1.24',
+      fontSize: { base: '2.5rem', md: '2.75rem' }
+    },
+    caps: {
+      textTransform: 'uppercase',
+      fontSize: 'sm',
+      letterSpacing: 'widest',
+      fontWeight: 'bold'
+    }
+  },
   mdx: {
     h1: {
       mt: '2rem',
@@ -49,11 +71,18 @@ const theme = {
         color: 'teal.600'
       }
     },
+    p: {
+      mt: '1.25rem',
+      lineHeight: 1.7,
+      'blockquote &': {
+        mt: 0
+      }
+    },
     hr: {
       my: '4rem'
     },
     blockquote: {
-      bg: 'blue.50',
+      bg: 'orange.100',
       borderWidth: '1px',
       borderColor: 'orange.200',
       rounded: 'lg',
@@ -61,18 +90,21 @@ const theme = {
       py: '1rem',
       my: '1.5rem'
     },
+    ul: {
+      mt: '1.5rem',
+      ml: '1.25rem',
+      'blockquote &': { mt: 0 },
+      '& > * + *': {
+        mt: '0.25rem'
+      }
+    },
     code: {
-      color: 'purple.500',
       rounded: 'sm',
       px: '1',
       fontSize: '0.875em',
       py: '2px',
       whiteSpace: 'nowrap',
-      lineHeight: 'normal',
-      bg: 'gray.50',
-      'blockquote &': {
-        bg: 'transparent'
-      }
+      lineHeight: 'normal'
     }
   }
 }

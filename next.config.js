@@ -1,4 +1,8 @@
 const withMdx = require('next-mdx-enhanced')
+const withPlugins = require('next-compose-plugins')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 const path = require('path')
 const execa = require('execa')
 const fromUnixTime = require('date-fns/fromUnixTime')
@@ -7,15 +11,6 @@ const { getEditUrl, addLeadingSlash } = require('@docusaurus/utils')
 
 const EDIT_URL = 'https://github.com/miraklasiaf/grammarkup/edit/master/pages'
 
-/**
- * Gets the last edited timestamp and author from git
- * using `git log`
- *
- * %an = author name
- * %ct = committer date, UNIX timestamp
- *
- * @see https://git-scm.com/docs/git-log
- */
 async function getLastEdited(filePath) {
   try {
     const { stdout } = await execa('git', [
@@ -34,9 +29,6 @@ async function getLastEdited(filePath) {
 
 const GIT_COMMIT_TIMESTAMP_AUTHOR_REGEX = /^(\d+), (.+)$/
 
-/**
- * Format the last edited timestamp and author from git output
- */
 function getTimestampAndAuthor(str) {
   if (!str) return null
 
@@ -57,14 +49,26 @@ function fileToPath(str) {
   return addLeadingSlash(str.replace('.mdx', ''))
 }
 
-module.exports = withMdx({
+const defaultConfig = {
+  target: 'serverless',
+  webpack: (config) => {
+    return {
+      ...config,
+      externals: [...config.externals, 'sharp']
+    }
+  },
+  experimental: {
+    modern: true
+  }
+}
+
+const mdxConfig = {
   layoutPath: 'layouts',
   defaultLayout: true,
   fileExtensions: ['mdx'],
   remarkPlugins: [
     require('remark-autolink-headings'),
     require('remark-emoji'),
-    require('remark-footnotes'),
     require('remark-images'),
     require('remark-slug'),
     require('remark-toc'),
@@ -75,13 +79,10 @@ module.exports = withMdx({
     process: async (_, frontmatter) => {
       const { __resourcePath: mdxPath, author, tags } = frontmatter
 
-      // read the file path
       const filePath = path.join(process.cwd(), 'pages', mdxPath)
       const lastEdited = await getLastEdited(filePath)
       const editUrl = getEditUrl(path.join(mdxPath), EDIT_URL)
       const slug = fileToPath(mdxPath)
-
-      // if frontmatter inclues author, add the author's data
       const authorData = author ? 'Faisal Karim' : undefined
 
       return {
@@ -93,4 +94,6 @@ module.exports = withMdx({
       }
     }
   }
-})(/* your normal nextjs config */)
+}
+
+module.exports = withPlugins([withBundleAnalyzer, withMdx(mdxConfig)], defaultConfig)

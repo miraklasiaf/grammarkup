@@ -1,4 +1,4 @@
-import { Icon, chakra } from '@chakra-ui/core'
+import { Icon, useColorModeValue, chakra } from '@chakra-ui/core'
 import { useRef, useState, useEffect } from 'react'
 
 const Arrow = (props) => (
@@ -57,10 +57,10 @@ function SidebarCategory(props) {
         alignItems="center"
         justifyContent="space-between"
         userSelect="none"
-        color="gray.700"
+        color={useColorModeValue('gray.700', 'inherit')}
         onClick={onClick}
         _hover={{
-          color: 'gray.800'
+          color: useColorModeValue('gray.800', 'inherit')
         }}
       >
         {title}
@@ -76,7 +76,14 @@ function SidebarCategory(props) {
           color="gray.400"
         />
       </chakra.button>
-      <chakra.div hidden={!toggle} mt={3} pl={3} overflow="hidden">
+      <chakra.div
+        hidden={!toggle}
+        mt={3}
+        pl={3}
+        borderLeft="1px"
+        borderColor={useColorModeValue('gray.200', 'whiteAlpha.200')}
+        overflow="hidden"
+      >
         {children}
       </chakra.div>
     </chakra.div>

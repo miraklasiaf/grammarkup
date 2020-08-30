@@ -13,7 +13,7 @@ const StyledLink = forwardRef((props, ref) => {
       ref={ref}
       fontSize="sm"
       color={color}
-      transition="all 0.2s"
+      transition="all 0.15s ease"
       _hover={{
         color: hoverColor
       }}

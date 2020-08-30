@@ -1,11 +1,8 @@
 import {
-  chakra,
   Flex,
   Box,
   HStack,
-  Icon,
   IconButton,
-  Link,
   useColorMode,
   useColorModeValue
 } from '@chakra-ui/core'
@@ -80,20 +77,21 @@ const Header = (props) => {
   const bg = useColorModeValue('white', 'gray.800')
 
   return (
-    <chakra.header
+    <Box
+      as="header"
       pos="fixed"
       w="full"
       insetX={0}
       top={0}
-      zIndex="1"
       bg={bg}
+      zIndex="1"
       borderBottomWidth="1px"
       {...props}
     >
       <Box h={16} mx="auto" maxW="8xl">
         <HeaderContent />
       </Box>
-    </chakra.header>
+    </Box>
   )
 }
 

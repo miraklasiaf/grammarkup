@@ -1,20 +1,20 @@
-import * as React from 'react'
+import { useRef } from 'react'
 import { useRouter } from 'next/router'
-import { Box, chakra, Stack } from '@chakra-ui/core'
+import { Box, Heading, Stack, useColorModeValue } from '@chakra-ui/core'
 import SidebarCategory from './sidebar-category'
 import SidebarLink from './sidebar-link'
 
 const Sidebar = ({ routes, isMobile, ...props }) => {
   const { pathname } = useRouter()
-  const ref = React.useRef(null)
+  const ref = useRef(null)
 
   return (
     <Box
       ref={ref}
       as="aside"
       pos={isMobile ? 'static' : 'sticky'}
-      top={isMobile ? 0 : 24}
-      w={isMobile ? 'full' : '280px'}
+      top={isMobile ? 0 : '6.5rem'}
+      w={isMobile ? 'full' : 72}
       mt={isMobile ? 2 : 0}
       pr={isMobile ? 2 : 8}
       pb={8}
@@ -29,9 +29,9 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
         return (
           <React.Fragment key={idx}>
             {c1.heading && (
-              <chakra.h4 fontSize="md" my={5} fontWeight="bold">
+              <Heading as="h4" fontSize="md" my={5} fontWeight="bold">
                 {c1.title}
-              </chakra.h4>
+              </Heading>
             )}
 
             {c1.routes.map((c2) => {
@@ -49,7 +49,7 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
               return (
                 <SidebarCategory
                   contentRef={ref}
-                  key={c2.path}
+                  key={c2.title}
                   {...c2}
                   selected={selected}
                   opened={opened}

@@ -4,10 +4,9 @@ description: Subject Pronouns
 tags: ['beginner-grammar', 'pronouns']
 ---
 
-import { Tooltip } from '@chakra-ui/core'
-import { InfoOutlineIcon } from '@chakra-ui/icons'
+import InfoTooltip from '@/components/info-tooltip'
 
-### Introduction
+## Introduction
 
 A subject is the person or thing that performs the action in the clause or sentence. A subject pronoun is a pronoun that takes the place of a noun as the subject of a sentence. For example:
 
@@ -37,35 +36,32 @@ We use _it_ when we talk about time, weather, or temperature.
 
 > _What time is it? - **It's** 7 o'clock_. _It's quite cold today_.
 
-### Guided Practice
+## Guided Practice
 
-**`Subject pronouns replace nouns that are the subject of their clause`**
+**Subject pronouns replace nouns that are the subject of their clause**
 
-- Helen - .................... <Tooltip hasArrow label='She' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+- Helen - .................... <InfoTooltip label='She' />
+- dog - .................... <InfoTooltip label='It' />
+- students - .................... <InfoTooltip label='They' />
+- my brother and I - .................... <InfoTooltip label='We' />
 
-- dog - .................... <Tooltip hasArrow label='It' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+**We should replace the subject with a subject pronoun to avoid repetition**
 
-- students - .................... <Tooltip hasArrow label='They' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+- Fred and Molly are very good friends. Fred and Molly have known each other since middle school <InfoTooltip label='They have known each other since middle school' />
 
-- my brother and I - .................... <Tooltip hasArrow label='We' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+**We use the subject pronoun it when we refer to objects, things, animals, or ideas.**
 
-**`We should replace the subject with a subject pronoun to avoid repetition`**
+- Look at the cat! The cat is so cute! <InfoTooltip label='It is so cute!' />
 
-- Fred and Molly are very good friends. Fred and Molly have known each other since middle school <Tooltip hasArrow label='They have known each other since middle school' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+**Sometiems when we don't know the sex of a baby, we can use it**
 
-**`We use the subject pronoun it when we refer to objects, things, animals, or ideas.`**
+- The baby didn't sleep well. .................... kicking all night <InfoTooltip label='It was' />
 
-- Look at the cat! The cat is so cute! <Tooltip hasArrow label='It is so cute!' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+**We use it when we talk about time, weather, or temperature**
 
-**`Sometiems when we don't know the sex of a baby, we can use it`**
+- .................... -10 ℃ outside. You should definitely wear a hat! <InfoTooltip  label='It is' />
 
-- The baby didn't sleep well. .................... kicking all night <Tooltip hasArrow label='It was' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-**`We use it when we talk about time, weather, or temperature`**
-
-- .................... -10 ℃ outside. You should definitely wear a hat! <Tooltip hasArrow label='It is' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-### Short Story using Subject Pronouns
+## Short Story using Subject Pronouns
 
 -Shall **we** go out tonight? The weather is lovely!
 
@@ -77,28 +73,20 @@ We use _it_ when we talk about time, weather, or temperature.
 
 -**I** know the feeling! All grandmas are like that. **They** show their love by feeding their grandkids.
 
-### Independent Practice
+## Independent Practice
 
 **Replace the subject with the appropriate pronoun.**
 
-a. Kyle is looking for a job at the moment. <Tooltip hasArrow label='He is looking for a job at the moment' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-b. My kids absolutely love reading books. <Tooltip hasArrow label='They absolutely love reading books' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-c. The temperature is 25 ℃ today. <Tooltip hasArrow label='It is 25 ℃ today' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-d. My friends and I like to go on trips together. <Tooltip hasArrow label='We like to go on trips together' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-e. Mrs. Smith is my neighbour. <Tooltip hasArrow label='She is my neighbour' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+1. Kyle is looking for a job at the moment. <InfoTooltip label='He is looking for a job at the moment' />
+2. My kids absolutely love reading books. <InfoTooltip label='They absolutely love reading books' />
+3. The temperature is 25 ℃ today. <InfoTooltip label='It is 25 ℃ today' />
+4. My friends and I like to go on trips together. <InfoTooltip label='We like to go on trips together' />
+5. Mrs. Smith is my neighbour. <InfoTooltip label='She is my neighbour' />
 
 **Correct the mistakes in the following sentences**
 
-a. The dog stole Amanda's hot dog before he ran away. <Tooltip hasArrow label={`The dog stole Amanda's hot dog before it ran away`} placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-b. My brother likes working out in the morning. He gives him energy for the rest of the day. <Tooltip hasArrow label='It gives him energy for the rest of the day' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-c. There are raindrops on my windows. Are they raining again? <Tooltip hasArrow label='Is it raining again?' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-d. Her husband is really sweet because her husband brings her breakfast in bed. <Tooltip hasArrow label='Her husband is really sweet because he brings her breakfast in bed' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
-
-e. You can have ice cream after they eat your broccoli. <Tooltip hasArrow label='You can have ice cream after you eat your broccoli' placement="left-start" bg='blue.600' color='white'><InfoOutlineIcon /></Tooltip>
+1. The dog stole Amanda's hot dog before he ran away. <InfoTooltip label={`The dog stole Amanda's hot dog before it ran away`} />
+2. My brother likes working out in the morning. He gives him energy for the rest of the day. <InfoTooltip label='It gives him energy for the rest of the day' />
+3. There are raindrops on my windows. Are they raining again? <InfoTooltip label='Is it raining again?' />
+4. Her husband is really sweet because her husband brings her breakfast in bed. <InfoTooltip label='Her husband is really sweet because he brings her breakfast in bed' />
+5. You can have ice cream after they eat your broccoli. <InfoTooltip label='You can have ice cream after you eat your broccoli' />
