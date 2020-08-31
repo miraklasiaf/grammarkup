@@ -91,7 +91,7 @@ const Table = (props) => (
 
 const THead = (props) => (
   <chakra.th
-    bg={useColorModeValue('gray.50', 'gray.600')}
+    bg={useColorModeValue('gray.50', 'gray.700')}
     color={useColorModeValue('gray.500', 'white')}
     fontSize="xs"
     fontWeight="medium"
@@ -109,7 +109,7 @@ const TData = (props) => (
   <chakra.td
     px={6}
     py={4}
-    bg={useColorModeValue('white', 'gray.700')}
+    bg={useColorModeValue('white', 'gray.800')}
     borderBottomWidth="1px"
     whiteSpace="nowrap"
     {...props}

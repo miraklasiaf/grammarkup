@@ -58,7 +58,8 @@ const defaultConfig = {
     }
   },
   experimental: {
-    modern: true
+    optimizeFonts: true,
+    optimizeImages: true
   }
 }
 
