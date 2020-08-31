@@ -1,5 +1,6 @@
 import NextDocument, { Head, Main, NextScript } from 'next/document'
 import GoogleFonts from 'next-google-fonts'
+import { ColorModeScript } from '@chakra-ui/core'
 
 class Document extends NextDocument {
   static async getInitialProps(ctx) {
@@ -47,6 +48,7 @@ class Document extends NextDocument {
           />
         </Head>
         <body>
+          <ColorModeScript />
           <Main />
           <NextScript />
         </body>
