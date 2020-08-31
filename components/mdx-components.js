@@ -8,6 +8,7 @@ import {
   useColorModeValue,
   Link
 } from '@chakra-ui/core'
+import CodeBlock from '@/components/codeblock/codeblock'
 
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
@@ -25,52 +26,6 @@ const Quote = (props) => {
     />
   )
 }
-
-const DocsHeading = (props) => (
-  <Heading
-    css={{
-      scrollMarginTop: '100px',
-      scrollSnapMargin: '100px', // Safari
-      '&[id]': {
-        pointerEvents: 'none'
-      },
-      '&[id]:before': {
-        display: 'block',
-        height: ' 6rem',
-        marginTop: '-6rem',
-        visibility: 'hidden',
-        content: `""`
-      },
-      '&[id]:hover a': { opacity: 1 }
-    }}
-    mb="1em"
-    mt="2em"
-    color={useColorModeValue('gray.800', 'white')}
-    {...props}
-  >
-    <Box pointerEvents="auto">
-      {props.children}
-      {props.id && (
-        <Box
-          aria-label="anchor"
-          as="a"
-          color="blue.500"
-          fontWeight="normal"
-          outline="none"
-          _focus={{
-            opacity: 1,
-            boxShadow: 'outline'
-          }}
-          opacity="0"
-          ml="0.375rem"
-          href={`#${props.id}`}
-        >
-          #
-        </Box>
-      )}
-    </Box>
-  </Heading>
-)
 
 const Table = (props) => (
   <chakra.div mt={8} mx={{ sm: `-${6}`, lg: `-${8}` }} overflowX="auto">
@@ -192,6 +147,7 @@ const MDXComponents = {
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   inlineCode: InlineCode,
+  code: CodeBlock,
   pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
