@@ -14,11 +14,11 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
       as="aside"
       pos={isMobile ? 'static' : 'sticky'}
       top={isMobile ? 0 : '6.5rem'}
-      w={isMobile ? 'full' : 72}
+      w={isMobile ? 'full' : '280px'}
       mt={isMobile ? 2 : 0}
       pr={isMobile ? 2 : 8}
       pb={8}
-      pl={2}
+      pl={1}
       overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
       h={isMobile ? 'calc(100vh - 5.5rem)' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
@@ -37,7 +37,7 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
             {c1.routes.map((c2) => {
               if (!c2.routes) {
                 return (
-                  <SidebarLink mt={4} key={c2.path} href={c2.path}>
+                  <SidebarLink mt="18px" key={c2.path} href={c2.path}>
                     {c2.title}
                   </SidebarLink>
                 )
