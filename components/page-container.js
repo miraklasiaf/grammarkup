@@ -19,7 +19,7 @@ const PageContainer = ({ frontmatter, children, sidebar, pagination }) => {
           {sidebar || null}
           <div style={{ flex: 1 }}>
             <SkipNavContent />
-            <Box pt={3} px={5} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
+            <Box pt={3} px={[0, 0, 5]} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
               <Box>
                 <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
               </Box>

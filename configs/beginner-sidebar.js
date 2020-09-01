@@ -34,12 +34,11 @@ const sidebar = {
         },
         {
           title: 'Articles',
-          path: '/beginner/present-tenses',
           open: true,
           routes: [
             {
               title: 'A - An - The',
-              path: '/beginner/present-tenses/to-be'
+              path: '/beginner/articles/a-an-the'
             }
           ]
         },

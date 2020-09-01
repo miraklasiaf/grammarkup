@@ -1461,12 +1461,12 @@
     "@chakra-ui/system" "1.0.0-rc.3"
     "@chakra-ui/utils" "1.0.0-rc.3"
 
-"@chakra-ui/skip-nav@^1.0.0-next.3":
-  version "1.0.0-next.3"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/skip-nav/-/skip-nav-1.0.0-next.3.tgz#819cac23c2a30147a6c72cd57166a4829a8539d1"
-  integrity sha512-abD3F2tzDlYue9VCACYLfLovw/wDX5clnjI0tUNFfKlgjQsemv3Fp5S+Ffjdi6ACHVFN2yTT7mpZnyPJNsYQkg==
+"@chakra-ui/skip-nav@^1.0.0-rc.3":
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/skip-nav/-/skip-nav-1.0.0-rc.3.tgz#0ffd4ea054eefd8f115bacfc48463e1ce9e3dc45"
+  integrity sha512-O0fGxd4sgSPZ3bzmzSESpls8Yj+3LbZ0A1nN3ez4FhiXjdbvMUPTAFihQdP/H5RqwLHdn2pvPaSUzRBtp93NAw==
   dependencies:
-    "@chakra-ui/utils" "^1.0.0-next.3"
+    "@chakra-ui/utils" "1.0.0-rc.3"
 
 "@chakra-ui/slider@1.0.0-rc.3":
   version "1.0.0-rc.3"
@@ -1548,21 +1548,12 @@
     "@chakra-ui/form-control" "1.0.0-rc.3"
     "@chakra-ui/utils" "1.0.0-rc.3"
 
-"@chakra-ui/theme-tools@1.0.0-rc.3":
+"@chakra-ui/theme-tools@1.0.0-rc.3", "@chakra-ui/theme-tools@^1.0.0-rc.3":
   version "1.0.0-rc.3"
   resolved "https://registry.yarnpkg.com/@chakra-ui/theme-tools/-/theme-tools-1.0.0-rc.3.tgz#8aab04bfce2c03a70c3739b28a4992eca08253d7"
   integrity sha512-Jka7fcAwQu18lBtwNwe1/K9N7xcRDmFDsTt7SmuzUYecqqmy5+Zga/ggkUqXa9YI8DLVip+SN8PMl26vNiIj3g==
   dependencies:
     "@chakra-ui/utils" "1.0.0-rc.3"
-    "@types/tinycolor2" "1.4.2"
-    tinycolor2 "1.4.1"
-
-"@chakra-ui/theme-tools@^1.0.0-next.3":
-  version "1.0.0-next.3"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/theme-tools/-/theme-tools-1.0.0-next.3.tgz#604b03a616d3703a94e2bbaf764547c9f69c5657"
-  integrity sha512-5W8MH1L+3Q4dcCb4urjtcCQXtUUxCPTwvbJmlw6OhypiUj+4AvgYBhCjSGPSvF/eK23CH2cBg8SddweE31VfHw==
-  dependencies:
-    "@chakra-ui/utils" "^1.0.0-next.3"
     "@types/tinycolor2" "1.4.2"
     tinycolor2 "1.4.1"
 
@@ -1614,15 +1605,6 @@
     "@types/lodash.merge" "4.6.6"
     css-box-model "1.2.1"
     lodash.merge "4.6.2"
-    memoize-one "5.1.1"
-
-"@chakra-ui/utils@^1.0.0-next.3":
-  version "1.0.0-next.3"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/utils/-/utils-1.0.0-next.3.tgz#b1019152a3caa2811c63858ea8021b9b85bee096"
-  integrity sha512-bHCvHRIUKPL9WY0k+HcVrtfoHNucS7kP3xvEhzm8h1UNmWtCKMCp6vLHwn8QszJH/UG1Xi0xi550rOQW9gXSXA==
-  dependencies:
-    css-box-model "1.2.1"
-    deepmerge "4.2.2"
     memoize-one "5.1.1"
 
 "@chakra-ui/visually-hidden@1.0.0-rc.3":
@@ -3816,11 +3798,6 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
   integrity sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==
-
-deepmerge@4.2.2:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-4.2.2.tgz#44d2ea3679b8f4d4ffba33f03d865fc1e7bf4955"
-  integrity sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
 
 define-properties@^1.1.2:
   version "1.1.3"

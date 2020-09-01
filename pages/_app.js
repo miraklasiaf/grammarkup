@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ChakraProvider, useColorModeValue } from '@chakra-ui/core'
+import { ChakraProvider } from '@chakra-ui/core'
 import theme from '@/design-system'
 import Nprogress from '@/components/nprogress'
 import { DefaultSeo } from 'next-seo'
