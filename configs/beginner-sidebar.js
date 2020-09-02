@@ -44,7 +44,6 @@ const sidebar = {
         },
         {
           title: 'Demonstratives',
-          path: '/beginner/demonstratives',
           open: true,
           routes: [
             {
@@ -55,7 +54,6 @@ const sidebar = {
         },
         {
           title: 'Distributives',
-          path: '/beginner/distributives',
           open: true,
           routes: [
             {
