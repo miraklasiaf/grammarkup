@@ -2,11 +2,6 @@ const baseUrl = 'https://github.com/miraklasiaf/grammarkup'
 
 const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Faisal Karim. All Rights Reserved.`,
-  algolia: {
-    apiKey: 'df1dcc41f7b8e5d68e73dd56d1e19701',
-    indexName: 'chakra-ui',
-    inputSelector: '#algolia-search'
-  },
   author: {
     name: 'Faisal Karim',
     github: 'https://github.com/miraklasiaf',
@@ -19,15 +14,10 @@ const siteConfig = {
     editUrl: `${baseUrl}/edit/develop/website`,
     blobUrl: `${baseUrl}/blob/develop`
   },
-  openCollective: {
-    url: 'https://opencollective.com/chakra-ui'
-  },
-  discord: {
-    url: 'https://discord.gg/dQHfcWF'
-  },
+
   seo: {
     title: 'Grammarkup',
-    titleTemplate: '%s - Grammarkup',
+    titleTemplate: '%s · Grammarkup',
     description: 'Web for learning grammar',
     siteUrl: 'https://chakra-ui.com',
     twitter: {
