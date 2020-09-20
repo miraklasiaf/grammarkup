@@ -65,6 +65,10 @@ const sidebar = {
               path: '/beginner/distributives/each-every'
             }
           ]
+        },
+        {
+          title: 'Verb Conjugation',
+          path: '/beginner/verb-conjugation'
         }
       ]
     }

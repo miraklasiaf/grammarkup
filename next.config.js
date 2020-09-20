@@ -1,5 +1,6 @@
 const withMdx = require('next-mdx-enhanced')
 const withPlugins = require('next-compose-plugins')
+const withOffline = require('next-offline')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
@@ -60,6 +61,26 @@ const defaultConfig = {
   experimental: {
     optimizeFonts: true,
     optimizeImages: true
+  },
+  workboxOpts: {
+    swDest: 'static/service-worker.js',
+    runtimeCaching: [
+      {
+        urlPattern: /^https?.*/,
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'https-calls',
+          networkTimeoutSeconds: 15,
+          expiration: {
+            maxEntries: 150,
+            maxAgeSeconds: 30 * 24 * 60 * 60
+          },
+          cacheableResponse: {
+            statuses: [0, 200]
+          }
+        }
+      }
+    ]
   }
 }
 
@@ -97,4 +118,7 @@ const mdxConfig = {
   }
 }
 
-module.exports = withPlugins([withBundleAnalyzer, withMdx(mdxConfig)], defaultConfig)
+module.exports = withPlugins(
+  [withBundleAnalyzer, withOffline, withMdx(mdxConfig)],
+  defaultConfig
+)
