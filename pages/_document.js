@@ -42,7 +42,6 @@ class Document extends NextDocument {
             type="image/png"
           />
           <link color="#4a9885" href="/static/safari-pinned-tab.svg" rel="mask-icon" />
-          <link rel="manifest" href="/static/manifest.json" />
         </Head>
         <body>
           <ColorModeScript />

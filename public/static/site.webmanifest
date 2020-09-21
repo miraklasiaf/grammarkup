@@ -1,14 +1,26 @@
 {
-    "name": "",
-    "short_name": "",
-    "icons": [
-        {
-            "src": "/android-chrome-192x192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        }
-    ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+  "name": "Grammarkup - docs for learning grammar",
+  "short_name": "Grammarkup",
+  "background_color": "#FFFFFF",
+  "theme_color": "#FFFFFF",
+  "description": "Grammarkup - docs for learning grammar",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/static/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/static/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/static/icon144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    }
+  ]
 }
