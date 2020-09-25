@@ -1,9 +1,9 @@
 {
-  "name": "Grammarkup - docs for learning grammar",
+  "name": "Grammarkupr",
   "short_name": "Grammarkup",
   "background_color": "#FFFFFF",
   "theme_color": "#FFFFFF",
-  "description": "Grammarkup - docs for learning grammar",
+  "description": "Grammarkup - web for learning grammar",
   "display": "standalone",
   "start_url": "/",
   "icons": [

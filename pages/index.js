@@ -35,7 +35,7 @@ const HomePage = () => {
               </Text>
 
               <Flex justify="center" mt={8}>
-                <NextLink href="/beginner/nouns/common-nouns" passHref>
+                <NextLink href="/beginner/getting-started" passHref>
                   <Button
                     as="a"
                     h={12}

@@ -28,7 +28,6 @@ const StyledLink = forwardRef((props, ref) => {
 
 const SidebarLink = (props) => {
   const { href, icon, children, ...rest } = props
-
   const { pathname } = useRouter()
   const isActive = pathname === href
 

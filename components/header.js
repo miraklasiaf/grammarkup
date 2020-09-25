@@ -32,7 +32,7 @@ const HeaderContent = () => {
           </Box>
         </NextLink>
         <HStack as="nav" spacing={4} ml={6} display={{ base: 'none', md: 'flex' }}>
-          <NavLink href="/beginner/nouns/common-nouns">Beginner</NavLink>
+          <NavLink href="/beginner/getting-started">Beginner</NavLink>
           <NavLink href="/intermediate/getting-started">Intermediate</NavLink>
           <NavLink href="/advanced/getting-started">Advanced</NavLink>
         </HStack>

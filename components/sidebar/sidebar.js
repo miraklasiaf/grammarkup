@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { useRouter } from 'next/router'
-import { Box, Heading, Stack, useColorModeValue } from '@chakra-ui/core'
+import { Box, Heading, Stack, chakra } from '@chakra-ui/core'
 import SidebarCategory from './sidebar-category'
 import SidebarLink from './sidebar-link'
 
@@ -29,15 +29,15 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
         return (
           <React.Fragment key={idx}>
             {c1.heading && (
-              <Heading as="h4" fontSize="md" my={5} fontWeight="bold">
+              <chakra.h4 fontSize="md" fontWeight="bold" my="1.25rem">
                 {c1.title}
-              </Heading>
+              </chakra.h4>
             )}
 
             {c1.routes.map((c2) => {
               if (!c2.routes) {
                 return (
-                  <SidebarLink mt="18px" key={c2.path} href={c2.path}>
+                  <SidebarLink mt="3" key={c2.path} href={c2.path}>
                     {c2.title}
                   </SidebarLink>
                 )
@@ -49,12 +49,12 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
               return (
                 <SidebarCategory
                   contentRef={ref}
-                  key={c2.title}
+                  key={c2.path}
                   {...c2}
                   selected={selected}
                   opened={opened}
                 >
-                  <Stack spacing={3}>
+                  <Stack spacing="3">
                     {c2.routes.map((c3) => (
                       <SidebarLink key={c3.path} href={c3.path}>
                         {c3.title}
