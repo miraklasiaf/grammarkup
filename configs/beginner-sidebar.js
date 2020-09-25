@@ -120,13 +120,13 @@ const sidebar = {
           routes: [
             {
               title: 'Can - Could',
-              path: '/beginner/modal-verbs/can-could'
+              path: '/beginner/wip'
             }
           ]
         },
         {
           title: 'Adjectives and Adverbs Intro',
-          path: '/beginner/the-gerund'
+          path: '/beginner/wip'
         },
         {
           title: 'Adjectives',
@@ -134,15 +134,15 @@ const sidebar = {
           routes: [
             {
               title: 'Descriptive Adjectives',
-              path: '/beginner/adjectives/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Proper Adjectives',
-              path: '/beginner/adjectives/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Possessive Adjectives',
-              path: '/beginner/adjectives/can-could'
+              path: '/beginner/wip'
             }
           ]
         },
@@ -152,19 +152,19 @@ const sidebar = {
           routes: [
             {
               title: 'How to Form Adverbs',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Adverbs of Manner',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Adverbs of Place',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Adverbs of Time',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             }
           ]
         },
@@ -174,19 +174,19 @@ const sidebar = {
           routes: [
             {
               title: 'Introduction',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Prepositions of Place',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Prepositions of Time',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Prepositions of Direction',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             }
           ]
         },
@@ -196,11 +196,11 @@ const sidebar = {
           routes: [
             {
               title: 'Introduction',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             },
             {
               title: 'Coordinating Conjunctions',
-              path: '/beginner/adverbs/can-could'
+              path: '/beginner/wip'
             }
           ]
         }
