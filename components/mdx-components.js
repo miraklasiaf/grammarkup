@@ -8,7 +8,6 @@ import {
   useColorModeValue,
   Link
 } from '@chakra-ui/core'
-import CodeBlock from '@/components/codeblock/codeblock'
 
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
@@ -147,7 +146,6 @@ const MDXComponents = {
   hr: (props) => <chakra.hr apply="mdx.hr" {...props} />,
   strong: (props) => <Box as="strong" fontWeight="semibold" {...props} />,
   inlineCode: InlineCode,
-  code: CodeBlock,
   pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
