@@ -69,7 +69,7 @@ const Header = (props) => {
       borderBottomWidth="1px"
       {...props}
     >
-      <Box h={16} mx="auto" maxW="7xl">
+      <Box h={16} mx="auto" maxW="1200px">
         <HeaderContent />
       </Box>
     </Box>
