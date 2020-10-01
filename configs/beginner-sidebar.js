@@ -71,8 +71,18 @@ const sidebar = {
           ]
         },
         {
-          title: 'Verb Conjugation',
-          path: '/beginner/verb-conjugation'
+          title: 'Conjugating Verbs',
+          open: true,
+          routes: [
+            {
+              title: 'Verb Conjugation',
+              path: '/beginner/conjugating-verbs/verb-conjugation'
+            },
+            {
+              title: 'Subject-Verb Agreement',
+              path: '/beginner/conjugating-verbs/subject-verb-agreement'
+            }
+          ]
         },
         {
           title: 'Verbs Simple Tense',
@@ -91,10 +101,6 @@ const sidebar = {
               path: '/beginner/verbs-simple-tense/future-simple'
             }
           ]
-        },
-        {
-          title: 'Subject-Verb Agreement',
-          path: '/beginner/subject-verb-agreement'
         },
         {
           title: 'The Gerund',
