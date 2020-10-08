@@ -112,7 +112,7 @@ const sidebar = {
           routes: [
             {
               title: 'To Be',
-              path: '/beginner/auxiliary-verbs/past-simple'
+              path: '/beginner/auxiliary-verbs/to-be'
             },
             {
               title: 'To Do and To Have',

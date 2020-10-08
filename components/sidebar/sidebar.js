@@ -21,7 +21,7 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
       pl={1}
       overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
-      h={isMobile ? 'calc(100vh - 5.5rem)' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
+      h={isMobile ? 'full' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
       {...props}
     >
       {/* <Search /> */}

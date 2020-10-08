@@ -45,11 +45,11 @@ const MobileNav = (props) => {
   return (
     <>
       <IconButton
-        aria-label="Open menu"
+        size="md"
         fontSize="lg"
-        display={{ sm: 'inline-flex', md: 'none' }}
+        aria-label="Open menu"
+        display={{ sm: 'flex', md: 'none' }}
         variant="ghost"
-        verticalAlign="middle"
         icon={<MdDehaze />}
         onClick={onOpen}
         ref={btnRef}
@@ -67,14 +67,6 @@ const MobileNav = (props) => {
             <DrawerHeader>Grammarkup</DrawerHeader>
             <DrawerBody py={0} px={4}>
               <Box top="0">
-                <VStack as="nav" spacing={4} alignItems="flex-start">
-                  <NavLink href="/beginner/getting-started">Beginner Grammar</NavLink>
-                  <NavLink href="/intermediate/getting-started">
-                    Intermediate Grammar
-                  </NavLink>
-                  <NavLink href="/advanced/getting-started">Advanced Grammar</NavLink>
-                </VStack>
-
                 <Sidebar routes={routes} isMobile />
               </Box>
             </DrawerBody>
