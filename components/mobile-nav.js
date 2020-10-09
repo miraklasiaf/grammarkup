@@ -15,7 +15,6 @@ import useRouteChanged from '@/utils/use-route-changed'
 import beginner from '@/configs/beginner-sidebar'
 import intermediate from '@/configs/intermediate-sidebar'
 import advanced from '@/configs/advanced-sidebar'
-import BottomNav from './bottom-nav'
 import { useRef } from 'react'
 
 function getRoutes(route) {
@@ -72,7 +71,6 @@ const MobileNav = (props) => {
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
-      <BottomNav />
     </>
   )
 }

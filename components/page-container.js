@@ -3,6 +3,7 @@ import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import EditPageLink from './edit-page-button'
 import Header from './header'
 import Container from './container'
+import BottomNav from './bottom-nav'
 import SEO from './seo'
 
 const PageContainer = ({ frontmatter, children, sidebar, pagination }) => {
@@ -25,6 +26,7 @@ const PageContainer = ({ frontmatter, children, sidebar, pagination }) => {
               {children}
               <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
               {pagination || null}
+              <BottomNav />
             </Box>
           </div>
         </Flex>
