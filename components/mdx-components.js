@@ -1,7 +1,7 @@
 import {
   Box,
   Alert,
-  Heading,
+  Text,
   Divider,
   chakra,
   Kbd,
@@ -9,89 +9,49 @@ import {
   Link
 } from '@chakra-ui/core'
 
-const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
-
 const Quote = (props) => {
   return (
     <Alert
-      mt="4"
-      role="none"
-      status="warning"
-      variant="left-accent"
       as="blockquote"
-      rounded="4px"
-      my="1.5rem"
+      mt="4"
+      w="98%"
+      role="none"
+      status="info"
+      variant="left-accent"
+      borderRadius="md"
       {...props}
     />
   )
 }
 
+const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
+
 const Table = (props) => (
-  <chakra.div mt={8} mx={{ sm: `-${6}`, lg: `-${8}` }} overflowX="auto">
-    <chakra.div
-      minWidth="full"
-      px={{ sm: 6, lg: 8 }}
-      py={2}
-      display="inline-block"
-      minWidth="full"
-      verticalAlign="middle"
-    >
-      <chakra.div boxShadow="default" overflow="hidden" borderRadius={{ sm: 'lg' }}>
-        <chakra.table w="full" {...props} />
-      </chakra.div>
-    </chakra.div>
+  <chakra.div overflowX="auto">
+    <chakra.table textAlign="left" mt="32px" width="full" {...props} />
   </chakra.div>
 )
 
 const THead = (props) => (
   <chakra.th
-    bg={useColorModeValue('gray.50', 'gray.700')}
-    color={useColorModeValue('gray.500', 'white')}
-    fontSize="xs"
-    fontWeight="medium"
-    letterSpacing="wider"
-    lineHeight={4}
-    px={6}
-    py={3}
-    textTransform="uppercase"
-    borderBottomWidth="1px"
+    bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
+    fontWeight="semibold"
+    p={2}
+    fontSize="sm"
     {...props}
   />
 )
 
 const TData = (props) => (
   <chakra.td
-    px={6}
-    py={4}
-    bg={useColorModeValue('white', 'gray.800')}
-    borderBottomWidth="1px"
-    whiteSpace="nowrap"
+    p={2}
+    borderTopWidth="1px"
+    borderColor="inherit"
+    fontSize="sm"
+    whiteSpace="normal"
     {...props}
   />
 )
-
-const Hr = () => {
-  const borderColor = useColorMode('gray.200', 'gray.600')
-
-  return <Divider borderColor={borderColor} my={4} w="100%" />
-}
-
-const CustomLink = (props) => {
-  const color = useColorModeValue('hsl(208, 99%, 44%)', 'hsl(208, 95%, 68%)')
-
-  const { href } = props
-  const isInternalLink = href && (href.startsWith('/') || href.startsWith('#'))
-
-  if (isInternalLink) {
-    return (
-      <NextLink href={href} passHref>
-        <Link color={color} {...props} />
-      </NextLink>
-    )
-  }
-
-  return <Link color={color} isExternal {...props} />
-}
 
 const LinkedHeading = (props) => (
   <chakra.h2

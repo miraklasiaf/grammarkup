@@ -9,10 +9,10 @@ import {
   useDisclosure,
   VStack
 } from '@chakra-ui/core'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import NavLink from './header-nav-link'
 import { useRouter } from 'next/router'
 import Sidebar from './sidebar/sidebar'
-import { MdDehaze } from 'react-icons/md'
 import useRouteChanged from '@/utils/use-route-changed'
 import beginner from '@/configs/beginner-sidebar'
 import intermediate from '@/configs/intermediate-sidebar'
@@ -50,7 +50,7 @@ const MobileNav = (props) => {
         aria-label="Open menu"
         display={{ sm: 'flex', md: 'none' }}
         variant="ghost"
-        icon={<MdDehaze />}
+        icon={<HamburgerIcon />}
         onClick={onOpen}
         ref={btnRef}
         {...props}

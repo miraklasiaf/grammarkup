@@ -1,11 +1,9 @@
 import * as chakraComponents from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
 import MDXComponents from '@/components/mdx-components'
-
 import PageContainer from '@/components/page-container'
 import Sidebar from '@/components/sidebar/sidebar'
 import Pagination from '@/components/pagination'
-
 import beginner from '@/configs/beginner-sidebar'
 import intermediate from '@/configs/intermediate-sidebar'
 import advanced from '@/configs/advanced-sidebar'

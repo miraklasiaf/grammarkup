@@ -1,12 +1,12 @@
-import { useRef } from 'react'
+import { Box, Stack, chakra } from '@chakra-ui/core'
 import { useRouter } from 'next/router'
-import { Box, Heading, Stack, chakra } from '@chakra-ui/core'
+import * as React from 'react'
 import SidebarCategory from './sidebar-category'
 import SidebarLink from './sidebar-link'
 
 const Sidebar = ({ routes, isMobile, ...props }) => {
   const { pathname } = useRouter()
-  const ref = useRef(null)
+  const ref = React.useRef(null)
 
   return (
     <Box
@@ -37,7 +37,7 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
             {c1.routes.map((c2) => {
               if (!c2.routes) {
                 return (
-                  <SidebarLink mt="3" key={c2.path} href={c2.path}>
+                  <SidebarLink mt={3} key={c2.path} href={c2.path}>
                     {c2.title}
                   </SidebarLink>
                 )
@@ -50,11 +50,11 @@ const Sidebar = ({ routes, isMobile, ...props }) => {
                 <SidebarCategory
                   contentRef={ref}
                   key={c2.path}
-                  {...c2}
                   selected={selected}
                   opened={opened}
+                  {...c2}
                 >
-                  <Stack spacing="3">
+                  <Stack spacing={3}>
                     {c2.routes.map((c3) => (
                       <SidebarLink key={c3.path} href={c3.path}>
                         {c3.title}

@@ -1,5 +1,5 @@
-import { Icon, useColorModeValue, chakra } from '@chakra-ui/core'
-import { useRef, useState, useEffect } from 'react'
+import { Icon, chakra, useColorModeValue } from '@chakra-ui/core'
+import { useRef, useState, useEffect, ReactNode, RefObject } from 'react'
 
 const Arrow = (props) => (
   <svg viewBox="0 0 5 8" fill="none" {...props}>
@@ -47,7 +47,7 @@ function SidebarCategory(props) {
   return (
     <chakra.div mt="18px" ref={ref}>
       <chakra.button
-        w="full"
+        width="full"
         cursor="pointer"
         style={{ outlineOffset: 4 }}
         fontSize="sm"
@@ -66,7 +66,7 @@ function SidebarCategory(props) {
         <Icon
           w="auto"
           h="2"
-          mr={4}
+          mr="16px"
           transformOrigin="center"
           transform={toggle ? 'rotate(90deg)' : undefined}
           transition="transform 0.15s ease"
@@ -76,12 +76,12 @@ function SidebarCategory(props) {
       </chakra.button>
       <chakra.div
         hidden={!toggle}
-        mt={4}
-        ml={1}
-        pl={5}
-        borderLeft="1px"
+        borderLeft="1px solid"
         borderColor={useColorModeValue('gray.200', 'whiteAlpha.200')}
+        mt="16px"
+        pl="5"
         overflow="hidden"
+        ml="1"
       >
         {children}
       </chakra.div>
