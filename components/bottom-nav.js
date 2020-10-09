@@ -27,7 +27,6 @@ const BottomNav = () => {
       w="100%"
       bottom="0"
       left="0"
-      zIndex={1000}
       spacing={3}
       px="1rem"
       py="0.8rem"
