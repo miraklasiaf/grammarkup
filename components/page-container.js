@@ -1,7 +1,6 @@
 import { Box, Flex, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import EditPageLink from './edit-page-button'
-import Footer from './footer'
 import Header from './header'
 import Container from './container'
 import SEO from './seo'
@@ -27,7 +26,6 @@ const PageContainer = ({ frontmatter, children, sidebar, pagination }) => {
               <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
               {pagination || null}
             </Box>
-            <Footer />
           </div>
         </Flex>
       </Container>

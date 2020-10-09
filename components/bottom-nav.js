@@ -1,6 +1,6 @@
 import NavLink from './header-nav-link'
 import { Stack, Box, Text, Icon, useColorModeValue } from '@chakra-ui/core'
-import { FiUsers, FiBookOpen, FiFileText } from 'react-icons/fi'
+import { IoIosStarOutline, IoIosStarHalf, IoIosStar } from 'react-icons/io'
 
 export function BottomNavItem(props) {
   const { href, label, icon, ...rest } = props
@@ -10,7 +10,6 @@ export function BottomNavItem(props) {
       <NavLink href={href}>
         <Stack spacing="0" textAlign="center" alignItems="center" justifyContent="center">
           <Icon boxSize="1.4rem" as={icon} marginBottom="0.2rem" />
-          <Text fontSize="0.875rem">{label}</Text>
         </Stack>
       </NavLink>
     </Box>
@@ -22,21 +21,30 @@ const BottomNav = () => {
 
   return (
     <Stack
-      bottom="0"
-      w="100%"
-      zIndex={1000}
-      spacing="14px"
-      direction="row"
-      px="1rem"
       pos="fixed"
+      direction="row"
+      display={{ base: 'flex', md: 'none' }}
+      w="100%"
+      bottom="0"
+      left="0"
+      zIndex={1000}
+      spacing={3}
+      px="1rem"
       py="0.8rem"
       borderTopWidth="1px"
       bg={bg}
-      display={['flex', 'flex', 'none', 'none']}
     >
-      <BottomNavItem width="33%" href="/docs/getting-started" label="Docs" icon={FiFileText} />
-      <BottomNavItem width="33%" href="/guides" label="Guides" icon={FiBookOpen} />
-      <BottomNavItem width="33%" href="/team" label="Team" icon={FiUsers} />
+      <BottomNavItem
+        width="33%"
+        href="/beginner/getting-started"
+        icon={IoIosStarOutline}
+      />
+      <BottomNavItem
+        width="33%"
+        href="/intermediate/getting-started"
+        icon={IoIosStarHalf}
+      />
+      <BottomNavItem width="33%" href="/advanced/getting-started" icon={IoIosStar} />
     </Stack>
   )
 }
