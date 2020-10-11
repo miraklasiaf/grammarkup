@@ -1,8 +1,8 @@
-import { Box, Stack, chakra } from "@chakra-ui/core"
-import { useRouter } from "next/router"
-import * as React from "react"
-import SidebarCategory from "./sidebar-category"
-import SidebarLink from "./sidebar-link"
+import { Box, Stack, chakra } from '@chakra-ui/core'
+import { useRouter } from 'next/router'
+import * as React from 'react'
+import SidebarCategory from './sidebar-category'
+import SidebarLink from './sidebar-link'
 
 const Sidebar = ({ routes, isMobile, ...props }: any) => {
   const { pathname } = useRouter()
@@ -12,16 +12,16 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
     <Box
       ref={ref}
       as="aside"
-      pos={isMobile ? "static" : "sticky"}
-      top={isMobile ? 0 : "6.5rem"}
-      w={isMobile ? "full" : "280px"}
+      pos={isMobile ? 'static' : 'sticky'}
+      top={isMobile ? 0 : '6.5rem'}
+      w={isMobile ? 'full' : '280px'}
       mt={isMobile ? 2 : 0}
       pr={isMobile ? 2 : 8}
       pb={8}
       pl={1}
-      overflowY={isMobile ? "none" : "auto"}
+      overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
-      h={isMobile ? "full" : "calc(((100vh - 1.5rem) - 64px) - 42px);"}
+      h={isMobile ? 'full' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
       {...props}
     >
       {/* <Search /> */}
@@ -48,8 +48,8 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
 
               return (
                 <SidebarCategory
+                  key={c2.title}
                   contentRef={ref}
-                  key={c2.path}
                   selected={selected}
                   opened={opened}
                   {...c2}
