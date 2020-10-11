@@ -1,21 +1,11 @@
-import {
-  Flex,
-  Box,
-  HStack,
-  IconButton,
-  useColorMode,
-  useColorModeValue,
-} from "@chakra-ui/core"
+import { Flex, Box, HStack, useColorModeValue } from "@chakra-ui/core"
 import MobileNav from "./mobile-nav"
 import NextLink from "next/link"
 import NavLink from "./header-nav-link"
-import { FaMoon, FaSun } from "react-icons/fa"
+import ThemeToggle from "./theme-toggle"
 
 const HeaderContent = () => {
-  const { toggleColorMode: toggleMode } = useColorMode()
-  const text = useColorModeValue("dark", "light")
   const logoColor = useColorModeValue("gray.600", "whiteAlpha.800")
-  const SwitchIcon = useColorModeValue(FaMoon, FaSun)
 
   return (
     <Flex w="full" h="full" px={6} align="center" justify="space-between">
@@ -44,15 +34,7 @@ const HeaderContent = () => {
       </Flex>
 
       <Flex maxW="720px" align="center" color="gray.400">
-        <IconButton
-          size="md"
-          fontSize="lg"
-          aria-label={`Switch to ${text} mode`}
-          variant="ghost"
-          color="current"
-          onClick={toggleMode}
-          icon={<SwitchIcon />}
-        />
+        <ThemeToggle />
         <MobileNav display={{ md: "none" }} />
       </Flex>
     </Flex>
