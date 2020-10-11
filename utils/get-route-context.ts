@@ -3,7 +3,7 @@ export interface RouteItem {
   path?: string
   open?: boolean
   heading?: boolean
-  routes: RouteItem[]
+  routes?: RouteItem[]
 }
 
 export interface Routes {
