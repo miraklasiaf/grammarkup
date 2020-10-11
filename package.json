@@ -33,21 +33,22 @@
     "remark-toc": "^7.0.0",
     "remark-unwrap-images": "^2.0.0"
   },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
     "@next/bundle-analyzer": "^9.5.2",
+    "@types/node": "^14.11.8",
+    "@types/react": "^16.9.51",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
     "commitizen": "^4.2.1",
     "cross-env": "^7.0.2",
     "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
     "execa": "^4.0.3",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
@@ -55,6 +56,15 @@
     "next-offline": "^5.0.2",
     "prettier": "^2.1.1",
     "react-icons": "^3.11.0",
-    "sharp": "^0.26.0"
+    "sharp": "^0.26.0",
+    "typescript": "^4.0.3"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
