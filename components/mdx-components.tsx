@@ -1,4 +1,4 @@
-import { Box, Alert, chakra, Kbd, Flex, useColorModeValue } from '@chakra-ui/core'
+import { Box, Alert, chakra, Kbd, useColorModeValue } from '@chakra-ui/core'
 
 const Quote = (props) => {
   return (
