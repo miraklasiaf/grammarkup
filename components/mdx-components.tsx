@@ -18,16 +18,8 @@ const Quote = (props) => {
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
 const Table = (props) => (
-  <chakra.div
-    mt={8}
-    w={{ base: '19.5rem', sm: '37rem', md: '25rem', lg: '41rem', xl: 'full' }}
-    overflowX="auto"
-  >
-    <chakra.div minW="full" py={2} display="inline-block" verticalAlign="middle">
-      <chakra.div boxShadow="default" overflow="hidden" borderRadius={{ sm: 'lg' }}>
-        <chakra.table textAlign="left" minW="full" {...props} />
-      </chakra.div>
-    </chakra.div>
+  <chakra.div overflowX="auto">
+    <chakra.table textAlign="left" mt="32px" {...props} />
   </chakra.div>
 )
 
@@ -44,11 +36,11 @@ const THead = (props) => (
 
 const TData = (props) => (
   <chakra.td
-    px={6}
-    py={4}
-    bg={useColorModeValue('white', 'gray.800')}
-    borderBottomWidth="1px"
-    whiteSpace="nowrap"
+    p={2}
+    borderTopWidth="1px"
+    borderColor="inherit"
+    fontSize="sm"
+    whiteSpace="wrap"
     {...props}
   />
 )

@@ -3,10 +3,10 @@ import NextDocument, {
   Head,
   Main,
   NextScript,
-  DocumentContext,
-} from "next/document"
-import GoogleFonts from "next-google-fonts"
-import { ColorModeScript } from "@chakra-ui/core"
+  DocumentContext
+} from 'next/document'
+import GoogleFonts from 'next-google-fonts'
+import { ColorModeScript } from '@chakra-ui/core'
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -22,21 +22,14 @@ class Document extends NextDocument {
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="#ffffff" name="theme-color" />
           <meta content="#ffffff" name="msapplication-TileColor" />
-          <meta
-            content="/static/browserconfig.xml"
-            name="msapplication-config"
-          />
+          <meta content="/static/browserconfig.xml" name="msapplication-config" />
           <meta
             name="google-site-verification"
             content="KfTyzAKabwlabC29C3S23xuqg6nq_fG94IRlnpFSNtI"
           />
           <link href="/static/favicon.ico" rel="shortcut icon" />
           <link href="/static/site.webmanifest" rel="manifest" />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com/"
-            crossOrigin=""
-          />
+          <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
           <link
             href="/static/apple-touch-icon.png"
             rel="apple-touch-icon"
@@ -54,10 +47,11 @@ class Document extends NextDocument {
             sizes="16x16"
             type="image/png"
           />
-          <link
-            color="#4a9885"
-            href="/static/safari-pinned-tab.svg"
-            rel="mask-icon"
+          <link color="#4a9885" href="/static/safari-pinned-tab.svg" rel="mask-icon" />
+          <script
+            data-ad-client="ca-pub-7966864664516090"
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
         </Head>
         <body>
