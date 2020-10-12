@@ -19,7 +19,7 @@ const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
 const Table = (props) => (
   <chakra.div overflowX="auto">
-    <chakra.table textAlign="left" mt="32px" {...props} />
+    <chakra.table textAlign="left" mt="32px" width="full" {...props} />
   </chakra.div>
 )
 
@@ -27,8 +27,7 @@ const THead = (props) => (
   <chakra.th
     bg={useColorModeValue('gray.50', 'whiteAlpha.100')}
     fontWeight="semibold"
-    px={6}
-    py={2}
+    p={2}
     fontSize="sm"
     {...props}
   />
@@ -40,7 +39,7 @@ const TData = (props) => (
     borderTopWidth="1px"
     borderColor="inherit"
     fontSize="sm"
-    whiteSpace="wrap"
+    whiteSpace="normal"
     {...props}
   />
 )
