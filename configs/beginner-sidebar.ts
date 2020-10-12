@@ -132,7 +132,7 @@ const sidebar = {
         },
         {
           title: 'Adjectives and Adverbs Intro',
-          path: '/beginner/wip'
+          path: '/beginner/adjectives-and-adverbs-introduction'
         },
         {
           title: 'Adjectives',

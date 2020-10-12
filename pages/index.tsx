@@ -1,9 +1,9 @@
-import NextLink from "next/link"
-import { Box, Heading, Text, Button, Divider, Flex } from "@chakra-ui/core"
-import Container from "@/components/container"
-import Header from "@/components/header"
-import { Footer } from "@/components/footer"
-import SEO from "@/components/seo"
+import NextLink from 'next/link'
+import { Box, Heading, Text, Button, Divider, Flex } from '@chakra-ui/core'
+import Container from '@/components/container'
+import Header from '@/components/header'
+import { Footer } from '@/components/footer'
+import SEO from '@/components/seo'
 
 const ArrowRight = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>
@@ -29,7 +29,7 @@ const HomePage = () => {
             <Box maxW="760px" mx="auto" textAlign="center">
               <Heading
                 as="h1"
-                fontSize={{ base: "2.25rem", md: "3rem", lg: "3.75rem" }}
+                fontSize={{ base: '2.25rem', md: '3rem', lg: '3.75rem' }}
                 letterSpacing="tight"
                 fontWeight="bold"
                 mb={4}
@@ -37,12 +37,12 @@ const HomePage = () => {
               >
                 Learn grammar
                 <Box as="span" color="teal.500">
-                  {" "}
+                  {' '}
                   with speed
                 </Box>
               </Heading>
 
-              <Text opacity={0.7} fontSize={{ base: "lg", lg: "xl" }} mt={6}>
+              <Text opacity={0.7} fontSize={{ base: 'lg', lg: 'xl' }} mt={6}>
                 Grammarkup is a web for learn grammar
               </Text>
 
@@ -55,7 +55,7 @@ const HomePage = () => {
                     fontSize="xl"
                     size="lg"
                     colorScheme="teal"
-                    rightIcon={<ArrowRight fontSize="0.8em" />}
+                    rightIcon={<ArrowRight fontSize="0.8em" w={5} />}
                   >
                     Get Started
                   </Button>
