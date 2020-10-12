@@ -10,6 +10,7 @@ const sidebar = {
         },
         {
           title: 'Nouns',
+          rootPath: '/beginner/nouns',
           open: true,
           routes: [
             {
@@ -24,6 +25,7 @@ const sidebar = {
         },
         {
           title: 'Pronouns',
+          rootPath: '/beginner/pronouns',
           open: true,
           routes: [
             {
@@ -38,6 +40,7 @@ const sidebar = {
         },
         {
           title: 'Articles',
+          rootPath: '/beginner/articles',
           open: true,
           routes: [
             {
@@ -48,6 +51,7 @@ const sidebar = {
         },
         {
           title: 'Demonstratives',
+          rootPath: '/beginner/demonstratives',
           open: true,
           routes: [
             {
@@ -58,6 +62,7 @@ const sidebar = {
         },
         {
           title: 'Distributives',
+          rootPath: '/beginner/distributives',
           open: true,
           routes: [
             {
@@ -72,6 +77,7 @@ const sidebar = {
         },
         {
           title: 'Conjugating Verbs',
+          rootPath: '/beginner/conjugating-verbs',
           open: true,
           routes: [
             {
@@ -86,6 +92,7 @@ const sidebar = {
         },
         {
           title: 'Verbs Simple Tense',
+          rootPath: '/beginner/verbs-simple-tense',
           open: true,
           routes: [
             {
@@ -108,6 +115,7 @@ const sidebar = {
         },
         {
           title: 'Auxiliary Verbs',
+          rootPath: '/beginner/auxiliary-verbs',
           open: true,
           routes: [
             {
@@ -122,6 +130,7 @@ const sidebar = {
         },
         {
           title: 'Modal Verbs',
+          rootPath: '/beginner/modal-verbs',
           open: true,
           routes: [
             {
@@ -136,6 +145,7 @@ const sidebar = {
         },
         {
           title: 'Adjectives',
+          rootPath: '/beginner/adjectives',
           open: true,
           routes: [
             {
@@ -154,6 +164,7 @@ const sidebar = {
         },
         {
           title: 'Adverbs',
+          rootPath: '/beginner/adverbs',
           open: true,
           routes: [
             {
@@ -176,6 +187,7 @@ const sidebar = {
         },
         {
           title: 'Prepositions',
+          rootPath: '/beginner/prepositions',
           open: true,
           routes: [
             {
@@ -198,15 +210,16 @@ const sidebar = {
         },
         {
           title: 'Conjunctions',
+          rootPath: '/beginner/conjunctions',
           open: true,
           routes: [
             {
               title: 'Introduction',
-              path: '/beginner/conjuctions/introductions'
+              path: '/beginner/conjunctions/introductions'
             },
             {
               title: 'Coordinating Conjunctions',
-              path: '/beginner/conjuctions/coordinating-conjunctions'
+              path: '/beginner/conjunctions/coordinating-conjunctions'
             }
           ]
         }

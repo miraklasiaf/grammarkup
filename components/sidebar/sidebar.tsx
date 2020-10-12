@@ -43,12 +43,13 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
                 )
               }
 
-              const selected = pathname.startsWith(c2.path)
+              const selected = pathname.startsWith(c2.rootPath)
+
               const opened = selected || c2.open
 
               return (
                 <SidebarCategory
-                  key={c2.title}
+                  key={c2.rootPath}
                   contentRef={ref}
                   selected={selected}
                   opened={opened}

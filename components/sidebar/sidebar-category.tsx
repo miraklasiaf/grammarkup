@@ -40,6 +40,7 @@ function SidebarCategory(props: SidebarCategoryProps) {
   // If a category is selected indirectly, open it. This can happen when using the search input
   useEffect(() => {
     if (selected) {
+      console.log('useEffect running...', selected)
       setToggle({ toggle: true, shouldScroll: true })
     }
   }, [selected])
