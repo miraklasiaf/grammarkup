@@ -38,11 +38,11 @@ const sidebar = {
           routes: [
             {
               title: 'Possessive Nouns',
-              path: '/intermediate/possesive/nouns'
+              path: '/intermediate/possesive/possesive-nouns'
             },
             {
               title: 'Possessive Pronouns',
-              path: '/intermediate/possesive/pronouns'
+              path: '/intermediate/possesive/possesive-pronouns'
             }
           ]
         },
