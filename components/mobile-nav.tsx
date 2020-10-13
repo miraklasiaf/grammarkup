@@ -6,24 +6,23 @@ import {
   DrawerHeader,
   IconButton,
   Box,
-  useDisclosure,
-} from "@chakra-ui/core"
-import { HamburgerIcon } from "@chakra-ui/icons"
-import { useRouter } from "next/router"
-import Sidebar from "./sidebar/sidebar"
-import useRouteChanged from "@/utils/use-route-changed"
-import beginner from "@/configs/beginner-sidebar"
-import intermediate from "@/configs/intermediate-sidebar"
-import advanced from "@/configs/advanced-sidebar"
-import { useRef } from "react"
+  useDisclosure
+} from '@chakra-ui/core'
+import { HamburgerIcon } from '@chakra-ui/icons'
+import { useRouter } from 'next/router'
+import Sidebar from './sidebar/sidebar'
+import beginner from '@/configs/beginner-sidebar'
+import intermediate from '@/configs/intermediate-sidebar'
+import advanced from '@/configs/advanced-sidebar'
+import { useRef } from 'react'
 
 function getRoutes(route) {
   switch (route) {
-    case "beginner":
+    case 'beginner':
       return beginner.routes
-    case "intermediate":
+    case 'intermediate':
       return intermediate.routes
-    case "advanced":
+    case 'advanced':
       return advanced.routes
     default:
       return beginner.routes
@@ -34,9 +33,8 @@ const MobileNav = (props) => {
   const { pathname } = useRouter()
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
-  useRouteChanged(onClose)
 
-  const section = pathname.split("/")[1]
+  const section = pathname.split('/')[1]
 
   const routes = getRoutes(section)
 
@@ -46,7 +44,7 @@ const MobileNav = (props) => {
         size="md"
         fontSize="lg"
         aria-label="Open menu"
-        display={{ sm: "flex", md: "none" }}
+        display={{ sm: 'flex', md: 'none' }}
         variant="ghost"
         icon={<HamburgerIcon />}
         onClick={onOpen}
