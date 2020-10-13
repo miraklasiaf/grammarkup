@@ -175,7 +175,7 @@ const sidebar = {
             },
             {
               title: 'Prepositions of Cause, Purpose, and Reason',
-              path: '/intermediate/prepositions/prepositions-of-clause-purpose-and-reason'
+              path: '/intermediate/prepositions/prepositions-of-cause-purpose-and-reason'
             },
             {
               title: 'Prepositional Phrases',
