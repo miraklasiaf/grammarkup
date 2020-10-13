@@ -50,6 +50,7 @@
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.1.2",
     "execa": "^4.0.3",
+    "globby": "^11.0.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.13",
     "next-compose-plugins": "^2.2.0",

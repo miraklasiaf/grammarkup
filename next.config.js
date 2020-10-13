@@ -52,7 +52,11 @@ function fileToPath(str) {
 
 const defaultConfig = {
   target: 'serverless',
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require('./scripts/generate-sitemap')
+    }
+
     return {
       ...config,
       externals: [...config.externals, 'sharp']
