@@ -169,7 +169,7 @@ const sidebar = {
           routes: [
             {
               title: 'How to Form Adverbs',
-              path: '/beginner/adverbs/'
+              path: '/beginner/adverbs/how-to-form-adverbs'
             },
             {
               title: 'Adverbs of Manner',
@@ -215,7 +215,7 @@ const sidebar = {
           routes: [
             {
               title: 'Introduction',
-              path: '/beginner/conjunctions/introductions'
+              path: '/beginner/conjunctions/introduction'
             },
             {
               title: 'Coordinating Conjunctions',
