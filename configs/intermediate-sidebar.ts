@@ -160,7 +160,7 @@ const sidebar = {
             },
             {
               title: 'Comparative/Superlative Adverbs',
-              path: '/intermediate/adverbs/superlative-adverbs'
+              path: '/intermediate/adverbs/comparative-superlative-adverbs'
             }
           ]
         },
