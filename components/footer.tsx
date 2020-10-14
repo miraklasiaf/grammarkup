@@ -1,4 +1,4 @@
-import { Box, Icon, Stack, Link } from "@chakra-ui/core"
+import { Box, Icon, Stack, Link } from '@chakra-ui/core'
 
 const Twitter = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 24 24" {...props}>
@@ -40,16 +40,16 @@ const FooterLink = ({ icon, href }) => (
 const links = [
   {
     icon: Twitter,
-    url: "https://twitter.com/miraklasiaf",
+    url: 'https://twitter.com/miraklasiaf'
   },
   {
     icon: Github,
-    url: "https://github.com/miraklasiaf",
+    url: 'https://github.com/miraklasiaf'
   },
   {
     icon: Mail,
-    url: "mailto:faisalkarim96@gmail.com",
-  },
+    url: 'mailto:faisalkarim96@gmail.com'
+  }
 ]
 
 export const Footer = () => (
