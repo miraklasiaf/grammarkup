@@ -1,8 +1,7 @@
 import NextLink from 'next/link'
-import { Box, Heading, Text, Button, Divider, Flex } from '@chakra-ui/core'
+import { Box, Text, Button, chakra, Flex } from '@chakra-ui/core'
 import Container from '@/components/container'
 import Header from '@/components/header'
-import { Footer } from '@/components/footer'
 import SEO from '@/components/seo'
 
 const ArrowRight = (props) => (
@@ -23,16 +22,16 @@ const HomePage = () => {
         description="A Web for learning grammar"
       />
       <Header />
-      <Box mb={4}>
-        <Box as="section" pt={40} pb={20}>
+
+      <Box mb={20}>
+        <Box as="section" pt="12rem" pb="6rem">
           <Container>
             <Box maxW="760px" mx="auto" textAlign="center">
-              <Heading
-                as="h1"
-                fontSize={{ base: '2.25rem', md: '3rem', lg: '3.75rem' }}
+              <chakra.h1
+                fontSize={{ base: '2.25rem', sm: '3rem', lg: '3.75rem' }}
                 letterSpacing="tight"
                 fontWeight="bold"
-                mb={4}
+                mb="16px"
                 lineHeight="1.2"
               >
                 Learn grammar
@@ -40,7 +39,7 @@ const HomePage = () => {
                   {' '}
                   with speed
                 </Box>
-              </Heading>
+              </chakra.h1>
 
               <Text opacity={0.7} fontSize={{ base: 'lg', lg: 'xl' }} mt={6}>
                 Grammarkup is a web for learn grammar
@@ -49,10 +48,10 @@ const HomePage = () => {
               <Flex justify="center" mt={8}>
                 <NextLink href="/beginner/getting-started" passHref>
                   <Button
+                    h="4rem"
+                    px="40px"
+                    fontSize="1.2rem"
                     as="a"
-                    h={12}
-                    px={8}
-                    fontSize="xl"
                     size="lg"
                     colorScheme="teal"
                     rightIcon={<ArrowRight fontSize="0.8em" w={5} />}
@@ -64,10 +63,6 @@ const HomePage = () => {
             </Box>
           </Container>
         </Box>
-
-        <Divider />
-
-        <Footer />
       </Box>
     </>
   )

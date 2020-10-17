@@ -1,11 +1,15 @@
-import { Flex, Box, HStack, useColorModeValue } from "@chakra-ui/core"
-import MobileNav from "./mobile-nav"
-import NextLink from "next/link"
-import NavLink from "./header-nav-link"
-import ThemeToggle from "./theme-toggle"
+import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/core'
+import MobileNav from './mobile-nav'
+import NextLink from 'next/link'
+import NavLink from './header-nav-link'
+import ThemeToggle from './theme-toggle'
+import { useRouter } from 'next/router'
 
 const HeaderContent = () => {
-  const logoColor = useColorModeValue("gray.600", "whiteAlpha.800")
+  const router = useRouter()
+  const logoColor = useColorModeValue('gray.600', 'whiteAlpha.800')
+
+  console.log(router.pathname)
 
   return (
     <Flex w="full" h="full" px={6} align="center" justify="space-between">
@@ -21,12 +25,7 @@ const HeaderContent = () => {
             Grammarkup
           </Box>
         </NextLink>
-        <HStack
-          as="nav"
-          spacing={4}
-          ml={6}
-          display={{ base: "none", md: "flex" }}
-        >
+        <HStack as="nav" spacing={4} ml={6} display={{ base: 'none', md: 'flex' }}>
           <NavLink href="/beginner/getting-started">Beginner</NavLink>
           <NavLink href="/intermediate/getting-started">Intermediate</NavLink>
           <NavLink href="/advanced/getting-started">Advanced</NavLink>
@@ -35,14 +34,14 @@ const HeaderContent = () => {
 
       <Flex maxW="720px" align="center" color="gray.400">
         <ThemeToggle />
-        <MobileNav display={{ md: "none" }} />
+        {router.pathname === '/' ? null : <MobileNav display={{ md: 'none' }} />}
       </Flex>
     </Flex>
   )
 }
 
 const Header = (props) => {
-  const bg = useColorModeValue("white", "gray.900")
+  const bg = useColorModeValue('white', 'gray.900')
 
   return (
     <Box
