@@ -9,8 +9,6 @@ const HeaderContent = () => {
   const router = useRouter()
   const logoColor = useColorModeValue('gray.600', 'whiteAlpha.800')
 
-  console.log(router.pathname)
-
   return (
     <Flex w="full" h="full" px={6} align="center" justify="space-between">
       <Flex align="center">
