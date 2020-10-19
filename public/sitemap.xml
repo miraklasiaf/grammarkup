@@ -303,12 +303,6 @@
   </url>
 
   <url>
-    <loc
-      >https://grammarkup.vercel.app/intermediate/distributives/both-either-neither</loc
-    >
-  </url>
-
-  <url>
     <loc>https://grammarkup.vercel.app/intermediate/modal-verbs/must-may-might</loc>
   </url>
 
@@ -318,6 +312,12 @@
 
   <url>
     <loc>https://grammarkup.vercel.app/intermediate/modal-verbs/will-would</loc>
+  </url>
+
+  <url>
+    <loc
+      >https://grammarkup.vercel.app/intermediate/distributives/both-either-neither</loc
+    >
   </url>
 
   <url>

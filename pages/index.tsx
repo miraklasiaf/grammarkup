@@ -1,8 +1,11 @@
 import NextLink from 'next/link'
+import dynamic from 'next/dynamic'
 import { Box, Text, Button, chakra, Flex } from '@chakra-ui/core'
 import Container from '@/components/container'
 import Header from '@/components/header'
 import SEO from '@/components/seo'
+
+const Blobs = dynamic(() => import('@/components/blobs'), { ssr: false })
 
 const ArrowRight = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>
@@ -21,6 +24,16 @@ const HomePage = () => {
         title="Grammarkup - A Web for learning grammar"
         description="A Web for learning grammar"
       />
+      <Box
+        sx={{
+          zIndex: -1,
+          position: 'fixed',
+          bg: 'sheet',
+          '@media print': { display: 'none' }
+        }}
+      >
+        <Blobs />
+      </Box>
       <Header />
 
       <Box mb={20}>

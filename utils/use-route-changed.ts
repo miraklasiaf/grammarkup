@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 const useRouteChanged = (fn: () => void) => {
   const router = useRouter()
   useEffect(() => {
-    const handleRouteChange = (url: string) => {
+    const handleRouteChange = () => {
       fn()
     }
 
