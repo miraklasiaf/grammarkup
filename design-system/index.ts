@@ -1,33 +1,17 @@
 import chakraTheme from '@chakra-ui/theme'
 import foundations from './foundations'
 import styles from './styles'
+import textStyles from './text-styles'
+import layerStyles from './layer-styles'
+import layout from './layout'
 
 const theme = {
   ...chakraTheme,
   ...foundations,
   styles,
-  textStyles: {
-    heading: {
-      textAlign: 'center',
-      fontWeight: 'bold',
-      letterSpacing: '-0.015em',
-      lineHeight: '1.24',
-      fontSize: { base: '2.75rem', md: '3.5rem' }
-    },
-    'heading-2': {
-      textAlign: 'center',
-      fontWeight: 'bold',
-      letterSpacing: '-0.015em',
-      lineHeight: '1.24',
-      fontSize: { base: '2.5rem', md: '2.75rem' }
-    },
-    caps: {
-      textTransform: 'uppercase',
-      fontSize: 'sm',
-      letterSpacing: 'widest',
-      fontWeight: 'bold'
-    }
-  },
+  textStyles,
+  layerStyles,
+  layout,
   mdx: {
     h1: {
       mt: '2rem',

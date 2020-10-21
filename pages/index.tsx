@@ -28,7 +28,6 @@ const HomePage = () => {
         sx={{
           zIndex: -1,
           position: 'fixed',
-          bg: 'sheet',
           '@media print': { display: 'none' }
         }}
       >
