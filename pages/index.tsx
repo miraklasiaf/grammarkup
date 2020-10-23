@@ -33,6 +33,7 @@ const HomePage = () => {
       >
         <Blobs />
       </Box>
+
       <Header />
 
       <Box mb={20}>

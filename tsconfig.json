@@ -18,6 +18,12 @@
     "baseUrl": "node_modules",
     "paths": { "@/*": ["../*"] }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/new/header.js",
+    "components/new/nav.js"
+  ],
   "exclude": ["node_modules"]
 }
