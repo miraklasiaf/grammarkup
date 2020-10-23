@@ -1,28 +1,18 @@
-import breakpoints from "./breakpoints"
-import colors from "./colors"
-import radii from "./radius"
-import shadows from "./shadows"
-import sizes, { baseSizes } from "./sizes"
-import typography from "./typography"
-import zIndices from "./z-index"
-import borders from "./borders"
-import transition from "./transition"
+import colors from './colors'
+import radii from './radii'
+import shadows from './shadows'
+import sizes, { space } from './sizes'
+import typography from './typography'
+import borders from './borders'
 
-const space = baseSizes
-
-const theme = {
-  breakpoints,
-  zIndices,
-  radii,
-  colors,
-  ...typography,
-  sizes,
-  shadows,
+export const foundations = {
   space,
-  borders,
-  transition,
+  sizes,
+  radii,
+  ...typography,
+  colors,
+  shadows,
+  borders
 }
 
-export type Theme = typeof theme
-
-export default theme
+export default foundations

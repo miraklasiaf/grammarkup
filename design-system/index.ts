@@ -1,87 +1,208 @@
-import chakraTheme from '@chakra-ui/theme'
-import foundations from './foundations'
-import styles from './styles'
-import textStyles from './text-styles'
-import layerStyles from './layer-styles'
-import layout from './layout'
+import { extendTheme } from '@chakra-ui/core'
+import { foundations } from './foundations'
+import { layerStyles, textStyles } from './styles'
+import { ColorModeOptions } from '@chakra-ui/system'
+import { mode, Styles } from '@chakra-ui/theme-tools'
 
-const theme = {
-  ...chakraTheme,
-  ...foundations,
+const styles: Styles = {
+  global: (props) => ({
+    body: {
+      fontFamily: 'body',
+      lineHeight: 'body',
+      fontWeight: 'body',
+      color: mode('text', 'white')(props),
+      bg: mode('white', 'dark')(props),
+      margin: 0,
+      minHeight: '100vh',
+      textRendering: 'optimizeLegibility',
+      WebkitFontSmoothing: 'antialiased',
+      MozOsxFontSmoothing: 'grayscale'
+    },
+    '*::placeholder': {
+      color: mode('gray.400', 'whiteAlpha.400')(props)
+    },
+    '*, *::before, &::after': {
+      borderColor: mode('gray.200', 'whiteAlpha.300')(props),
+      boxSizing: 'border-box',
+      wordWrap: 'break-word'
+    }
+  })
+}
+
+/**
+ * Color mode config
+ */
+const config: ColorModeOptions = {
+  useSystemColorMode: false,
+  initialColorMode: 'light'
+}
+
+const customTheme = {
+  config,
   styles,
-  textStyles,
   layerStyles,
-  layout,
+  textStyles,
+  ...foundations,
+  layout: {
+    container: {
+      maxWidth: ['layout', null, 'layoutPlus'],
+      width: '100%',
+      mx: 'auto',
+      px: 4
+    },
+    wide: {
+      width: '100%',
+      mx: 'auto',
+      px: 4,
+      maxWidth: ['layout', null, 'wide']
+    },
+    copy: {
+      width: '100%',
+      mx: 'auto',
+      px: 4,
+      maxWidth: ['copy', null, 'copyPlus']
+    },
+    narrow: {
+      width: '100%',
+      mx: 'auto',
+      px: 4,
+      maxWidth: ['narrow', null, 'narrowPlus']
+    }
+  },
   mdx: {
     h1: {
-      mt: '2rem',
-      mb: '.25rem',
-      lineHeight: 1.2,
       fontWeight: 'bold',
-      fontSize: '1.875rem',
-      letterSpacing: '-.025em'
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: '2xl'
     },
     h2: {
-      mt: '4rem',
-      mb: '0.5rem',
-      lineHeight: 1,
-      fontWeight: 'semibold',
-      fontSize: '1.5rem',
-      letterSpacing: '-.025em',
-      '& + h3': {
-        mt: '1.5rem'
-      }
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: 'xl'
     },
     h3: {
-      mt: '3rem',
-      // mb: "0.5rem",
-      lineHeight: 1.25,
-      fontWeight: 'semibold',
-      fontSize: '1.25rem',
-      letterSpacing: '-.025em'
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: 'xl'
     },
     h4: {
-      mt: '3rem',
-      lineHeight: 1.375,
-      fontWeight: 'semibold',
-      fontSize: '1.125rem'
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: 'lg'
     },
-    a: {
-      color: 'teal.500',
-      fontWeight: 'semibold',
-      transition: 'color 0.15s',
-      transitionTimingFunction: 'ease-out',
-      _hover: {
-        color: 'teal.600'
-      }
+    h5: {
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: 'sm'
+    },
+    h6: {
+      fontWeight: 'bold',
+      lineHeight: 'heading',
+      mt: 0,
+      mb: 0,
+      fontSize: 0
     },
     p: {
-      mt: '1.25rem',
-      lineHeight: 1.7,
-      'blockquote &': {
-        mt: 0
-      }
+      color: 'text',
+      fontWeight: 'body',
+      lineHeight: 'body',
+      my: 8
+    },
+    img: {
+      maxWidth: '100%'
     },
     hr: {
-      my: '4rem'
+      border: 0,
+      borderBottom: '1px solid',
+      borderColor: 'border'
     },
-    ul: {
-      mt: '1.5rem',
-      ml: '1.25rem',
-      'blockquote &': { mt: 0 },
-      '& > * + *': {
-        mt: '0.25rem'
+    a: {
+      color: 'primary',
+      textDecoration: 'underline',
+      textUnderlinePosition: 'under',
+      ':focus,:hover': {
+        textDecorationStyle: 'wavy'
+      }
+    },
+    pre: {
+      fontFamily: 'monospace',
+      fontSize: 'lg',
+      p: 4,
+      color: 'text',
+      bg: 'sunken',
+      overflow: 'auto',
+      borderRadius: 'default',
+      code: {
+        color: 'inherit',
+        mx: 0,
+        '.comment,.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url': {
+          color: 'muted'
+        },
+        '.comment': {
+          fontStyle: 'italic'
+        },
+        '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable': {
+          color: 'red'
+        },
+        '.atrule, .attr-value, .keyword': {
+          color: 'blue'
+        },
+        '.selector, .attr-name, .string, .char, .builtin, .inserted': {
+          color: 'orange'
+        }
       }
     },
     code: {
-      rounded: 'sm',
-      px: '1',
-      fontSize: '0.875em',
-      py: '2px',
-      whiteSpace: 'nowrap',
-      lineHeight: 'normal'
+      fontFamily: 'monospace',
+      fontSize: 'inherit',
+      color: 'accent',
+      bg: 'sunken',
+      borderRadius: 'small',
+      mx: 1,
+      px: 1
+    },
+    'p > code, li > code': {
+      color: 'accent',
+      fontSize: 'xl'
+    },
+    li: {
+      my: 2
+    },
+    table: {
+      width: '100%',
+      my: 4,
+      borderCollapse: 'separate',
+      borderSpacing: 0,
+      'th,td': {
+        textAlign: 'left',
+        py: '4px',
+        pr: '4px',
+        pl: 0,
+        borderColor: 'border',
+        borderBottomStyle: 'solid'
+      }
+    },
+    th: {
+      verticalAlign: 'bottom',
+      borderBottomWidth: '2px'
+    },
+    td: {
+      verticalAlign: 'top',
+      borderBottomWidth: '1px'
     }
   }
 }
+
+const theme = extendTheme(customTheme)
 
 export default theme

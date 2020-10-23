@@ -1,7 +1,8 @@
 const layerStyles = {
   card: {
     primary: {
-      bg: 'white',
+      bg: 'elevated',
+      color: 'text',
       p: 8,
       borderRadius: 'xl',
       boxShadow: 'card',
@@ -13,7 +14,8 @@ const layerStyles = {
       borderRadius: 'xl'
     },
     interactive: {
-      bg: 'white',
+      bg: 'elevated',
+      color: 'text',
       p: [4, 8],
       borderRadius: 'xl',
       boxShadow: 'card',
