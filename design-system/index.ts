@@ -1,208 +1,103 @@
-import { extendTheme } from '@chakra-ui/core'
-import { foundations } from './foundations'
-import { layerStyles, textStyles } from './styles'
-import { ColorModeOptions } from '@chakra-ui/system'
-import { mode, Styles } from '@chakra-ui/theme-tools'
+import chakraTheme from '@chakra-ui/theme'
+import foundations from './foundations'
+import styles from './styles'
 
-const styles: Styles = {
-  global: (props) => ({
-    body: {
-      fontFamily: 'body',
-      lineHeight: 'body',
-      fontWeight: 'body',
-      color: mode('text', 'white')(props),
-      bg: mode('white', 'dark')(props),
-      margin: 0,
-      minHeight: '100vh',
-      textRendering: 'optimizeLegibility',
-      WebkitFontSmoothing: 'antialiased',
-      MozOsxFontSmoothing: 'grayscale'
-    },
-    '*::placeholder': {
-      color: mode('gray.400', 'whiteAlpha.400')(props)
-    },
-    '*, *::before, &::after': {
-      borderColor: mode('gray.200', 'whiteAlpha.300')(props),
-      boxSizing: 'border-box',
-      wordWrap: 'break-word'
-    }
-  })
-}
-
-/**
- * Color mode config
- */
-const config: ColorModeOptions = {
-  useSystemColorMode: false,
-  initialColorMode: 'light'
-}
-
-const customTheme = {
-  config,
-  styles,
-  layerStyles,
-  textStyles,
+const theme = {
+  ...chakraTheme,
   ...foundations,
-  layout: {
-    container: {
-      maxWidth: ['layout', null, 'layoutPlus'],
-      width: '100%',
-      mx: 'auto',
-      px: 4
+  styles,
+  textStyles: {
+    heading: {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      letterSpacing: '-0.015em',
+      lineHeight: '1.24',
+      fontSize: { base: '2.75rem', md: '3.5rem' }
     },
-    wide: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['layout', null, 'wide']
+    'heading-2': {
+      textAlign: 'center',
+      fontWeight: 'bold',
+      letterSpacing: '-0.015em',
+      lineHeight: '1.24',
+      fontSize: { base: '2.5rem', md: '2.75rem' }
     },
-    copy: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['copy', null, 'copyPlus']
-    },
-    narrow: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['narrow', null, 'narrowPlus']
+    caps: {
+      textTransform: 'uppercase',
+      fontSize: 'sm',
+      letterSpacing: 'widest',
+      fontWeight: 'bold'
     }
   },
   mdx: {
     h1: {
+      mt: '2rem',
+      mb: '.25rem',
+      lineHeight: 1.2,
       fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: '2xl'
+      fontSize: '1.875rem',
+      letterSpacing: '-.025em'
     },
     h2: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: 'xl'
-    },
-    h3: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: 'xl'
-    },
-    h4: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: 'lg'
-    },
-    h5: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: 'sm'
-    },
-    h6: {
-      fontWeight: 'bold',
-      lineHeight: 'heading',
-      mt: 0,
-      mb: 0,
-      fontSize: 0
-    },
-    p: {
-      color: 'text',
-      fontWeight: 'body',
-      lineHeight: 'body',
-      my: 8
-    },
-    img: {
-      maxWidth: '100%'
-    },
-    hr: {
-      border: 0,
-      borderBottom: '1px solid',
-      borderColor: 'border'
-    },
-    a: {
-      color: 'primary',
-      textDecoration: 'underline',
-      textUnderlinePosition: 'under',
-      ':focus,:hover': {
-        textDecorationStyle: 'wavy'
+      mt: '4rem',
+      mb: '0.5rem',
+      lineHeight: 1,
+      fontWeight: 'semibold',
+      fontSize: '1.5rem',
+      letterSpacing: '-.025em',
+      '& + h3': {
+        mt: '1.5rem'
       }
     },
-    pre: {
-      fontFamily: 'monospace',
-      fontSize: 'lg',
-      p: 4,
-      color: 'text',
-      bg: 'sunken',
-      overflow: 'auto',
-      borderRadius: 'default',
-      code: {
-        color: 'inherit',
-        mx: 0,
-        '.comment,.prolog,.doctype,.cdata,.punctuation,.operator,.entity,.url': {
-          color: 'muted'
-        },
-        '.comment': {
-          fontStyle: 'italic'
-        },
-        '.property, .tag, .boolean, .number, .constant, .symbol, .deleted, .function, .class-name, .regex, .important, .variable': {
-          color: 'red'
-        },
-        '.atrule, .attr-value, .keyword': {
-          color: 'blue'
-        },
-        '.selector, .attr-name, .string, .char, .builtin, .inserted': {
-          color: 'orange'
-        }
+    h3: {
+      mt: '3rem',
+      // mb: "0.5rem",
+      lineHeight: 1.25,
+      fontWeight: 'semibold',
+      fontSize: '1.25rem',
+      letterSpacing: '-.025em'
+    },
+    h4: {
+      mt: '3rem',
+      lineHeight: 1.375,
+      fontWeight: 'semibold',
+      fontSize: '1.125rem'
+    },
+    a: {
+      color: 'teal.500',
+      fontWeight: 'semibold',
+      transition: 'color 0.15s',
+      transitionTimingFunction: 'ease-out',
+      _hover: {
+        color: 'teal.600'
+      }
+    },
+    p: {
+      mt: '1.25rem',
+      lineHeight: 1.7,
+      'blockquote &': {
+        mt: 0
+      }
+    },
+    hr: {
+      my: '4rem'
+    },
+    ul: {
+      mt: '1.5rem',
+      ml: '1.25rem',
+      'blockquote &': { mt: 0 },
+      '& > * + *': {
+        mt: '0.25rem'
       }
     },
     code: {
-      fontFamily: 'monospace',
-      fontSize: 'inherit',
-      color: 'accent',
-      bg: 'sunken',
-      borderRadius: 'small',
-      mx: 1,
-      px: 1
-    },
-    'p > code, li > code': {
-      color: 'accent',
-      fontSize: 'xl'
-    },
-    li: {
-      my: 2
-    },
-    table: {
-      width: '100%',
-      my: 4,
-      borderCollapse: 'separate',
-      borderSpacing: 0,
-      'th,td': {
-        textAlign: 'left',
-        py: '4px',
-        pr: '4px',
-        pl: 0,
-        borderColor: 'border',
-        borderBottomStyle: 'solid'
-      }
-    },
-    th: {
-      verticalAlign: 'bottom',
-      borderBottomWidth: '2px'
-    },
-    td: {
-      verticalAlign: 'top',
-      borderBottomWidth: '1px'
+      rounded: 'sm',
+      px: '1',
+      fontSize: '0.875em',
+      py: '2px',
+      whiteSpace: 'nowrap',
+      lineHeight: 'normal'
     }
   }
 }
-
-const theme = extendTheme(customTheme)
 
 export default theme
