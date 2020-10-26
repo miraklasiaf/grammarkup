@@ -5,6 +5,7 @@ import Header from './header'
 import Container from './container'
 import BottomNav from './bottom-nav'
 import SEO from './seo'
+import PageTransition from './page-transition'
 
 const PageContainer = ({
   frontmatter,
@@ -30,13 +31,15 @@ const PageContainer = ({
           <div style={{ flex: 1 }}>
             <SkipNavContent />
             <Box pt={3} px={[0, 0, 5]} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
-              <Box>
-                <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
-              </Box>
-              {children}
-              <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
-              {pagination || null}
-              <BottomNav />
+              <PageTransition>
+                <Box>
+                  <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
+                </Box>
+                {children}
+                <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
+                {pagination || null}
+                <BottomNav />
+              </PageTransition>
             </Box>
           </div>
         </Flex>

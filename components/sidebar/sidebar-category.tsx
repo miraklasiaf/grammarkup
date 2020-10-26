@@ -72,7 +72,7 @@ function SidebarCategory(props: SidebarCategoryProps) {
         alignItems="center"
         justifyContent="space-between"
         userSelect="none"
-        color={useColorModeValue('gray.500', 'inherit')}
+        color={useColorModeValue('gray.900', 'inherit')}
         onClick={onClick}
         _hover={{
           color: useColorModeValue('gray.600', 'inherit')
