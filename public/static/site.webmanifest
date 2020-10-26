@@ -8,7 +8,7 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/static/icon512.png",
+      "src": "/static/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
@@ -18,7 +18,7 @@
       "sizes": "192x192"
     },
     {
-      "src": "/static/icon144.png",
+      "src": "/static/android-chrome-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     }
