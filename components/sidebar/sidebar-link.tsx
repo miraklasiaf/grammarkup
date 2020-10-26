@@ -1,32 +1,39 @@
-import NextLink from "next/link"
-import { useRouter } from "next/router"
-import { chakra, PropsOf, useColorModeValue } from "@chakra-ui/core"
-import * as React from "react"
+import NextLink from 'next/link'
+import { useRouter } from 'next/router'
+import { chakra, PropsOf, useColorModeValue } from '@chakra-ui/core'
+import * as React from 'react'
 
-const StyledLink = React.forwardRef(
-  (props: PropsOf<typeof chakra.a>, ref: React.Ref<any>) => {
-    const hoverColor = useColorModeValue("gray.900", "whiteAlpha.900")
-    const activeColor = useColorModeValue("teal.400", "teal.200")
-    const color = useColorModeValue("gray.700", "whiteAlpha.900")
+const StyledLink = React.forwardRef(function StyledLink(
+  props: PropsOf<typeof chakra.a> & { isActive?: boolean },
+  ref: React.Ref<any>
+) {
+  const { isActive, ...rest } = props
 
-    return (
-      <chakra.a
-        ref={ref}
-        fontSize="sm"
-        color={color}
-        transition="all 0.2s"
-        _hover={{
-          color: hoverColor,
-        }}
-        _activeLink={{
-          color: activeColor,
-          fontWeight: "semibold",
-        }}
-        {...props}
-      />
-    )
-  },
-)
+  return (
+    <chakra.a
+      aria-current={isActive ? 'page' : undefined}
+      width="100%"
+      px="3"
+      py="1"
+      rounded="md"
+      ref={ref}
+      fontSize="sm"
+      fontWeight="medium"
+      color={useColorModeValue('gray.700', 'whiteAlpha.900')}
+      transition="all 0.2s"
+      _hover={{
+        color: useColorModeValue('gray.900', 'whiteAlpha.900'),
+        transform: isActive ? undefined : 'translateX(2px)'
+      }}
+      _activeLink={{
+        bg: useColorModeValue('teal.100', 'rgba(48, 140, 122, 0.3)'),
+        color: useColorModeValue('gray.800', 'teal.200'),
+        fontWeight: 'semibold'
+      }}
+      {...rest}
+    />
+  )
+})
 
 type SidebarLinkProps = PropsOf<typeof chakra.div> & {
   href?: string
@@ -35,6 +42,7 @@ type SidebarLinkProps = PropsOf<typeof chakra.div> & {
 
 const SidebarLink = (props: SidebarLinkProps) => {
   const { href, icon, children, ...rest } = props
+
   const { pathname } = useRouter()
   const isActive = pathname === href
 
@@ -47,9 +55,7 @@ const SidebarLink = (props: SidebarLinkProps) => {
       {...rest}
     >
       <NextLink href={href} passHref>
-        <StyledLink aria-current={isActive ? "page" : undefined}>
-          {children}
-        </StyledLink>
+        <StyledLink isActive={isActive}>{children}</StyledLink>
       </NextLink>
     </chakra.div>
   )

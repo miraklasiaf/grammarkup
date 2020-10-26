@@ -1,4 +1,4 @@
-import { Box, Stack, chakra } from '@chakra-ui/core'
+import { Box, Stack, chakra, useColorModeValue } from '@chakra-ui/core'
 import { useRouter } from 'next/router'
 import * as React from 'react'
 import SidebarCategory from './sidebar-category'
@@ -7,6 +7,7 @@ import SidebarLink from './sidebar-link'
 const Sidebar = ({ routes, isMobile, ...props }: any) => {
   const { pathname } = useRouter()
   const ref = React.useRef<HTMLDivElement>(null)
+  const color = useColorModeValue('gray.700', 'inherit')
 
   return (
     <Box
@@ -18,7 +19,7 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
       mt={isMobile ? 2 : 0}
       pr={isMobile ? 2 : 8}
       pb={8}
-      pl={1}
+      pl={3}
       overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
       h={isMobile ? 'full' : 'calc(((100vh - 1.5rem) - 64px) - 42px);'}
@@ -29,7 +30,14 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
         return (
           <React.Fragment key={idx}>
             {c1.heading && (
-              <chakra.h4 fontSize="md" fontWeight="bold" my="1.25rem">
+              <chakra.h4
+                fontSize="sm"
+                fontWeight="bold"
+                my="1.25rem"
+                textTransform="uppercase"
+                letterSpacing="wider"
+                color={color}
+              >
                 {c1.title}
               </chakra.h4>
             )}
@@ -37,7 +45,7 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
             {c1.routes.map((c2) => {
               if (!c2.routes) {
                 return (
-                  <SidebarLink mt={3} key={c2.path} href={c2.path}>
+                  <SidebarLink ml="-3" mt="2" key={c2.path} href={c2.path}>
                     {c2.title}
                   </SidebarLink>
                 )
