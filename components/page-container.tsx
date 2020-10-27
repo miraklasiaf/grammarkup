@@ -38,8 +38,8 @@ const PageContainer = ({
                 {children}
                 <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
                 {pagination || null}
-                <BottomNav />
               </PageTransition>
+              <BottomNav />
             </Box>
           </div>
         </Flex>
