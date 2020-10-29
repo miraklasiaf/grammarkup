@@ -5,6 +5,7 @@ import { InfoOutlineIcon } from '@chakra-ui/icons'
 const InfoTooltip = forwardRef<TooltipProps, 'div'>(({ label, ...rest }: any, ref) => (
   <Tooltip
     ref={ref}
+    openDelay={500}
     shouldWrapChildren
     hasArrow
     label={label}
