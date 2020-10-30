@@ -40,7 +40,7 @@ export interface RouteContext {
 export function getRouteContext(
   currentRoute: RouteItem,
   routes: RouteItem[],
-  ctx: RouteContext = {},
+  ctx: RouteContext = {}
 ) {
   if (!currentRoute) {
     return ctx
@@ -75,7 +75,7 @@ export function getRouteContext(
         title:
           parent && !parent.heading
             ? `${parent.title}: ${currentRoute.title}`
-            : currentRoute.title,
+            : currentRoute.title
       }
       // Continue the loop until we know the next route
       continue
