@@ -1,4 +1,4 @@
-const sidebar = {
+const intermediateSidebar = {
   routes: [
     {
       title: 'Intermediate Grammar',
@@ -207,4 +207,4 @@ const sidebar = {
   ]
 }
 
-export default sidebar
+export default intermediateSidebar

@@ -11,21 +11,19 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
 import Sidebar from './sidebar/sidebar'
-import beginner from '@/configs/beginner-sidebar'
-import intermediate from '@/configs/intermediate-sidebar'
-import advanced from '@/configs/advanced-sidebar'
+import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs/sidebar'
 import { useRef } from 'react'
 
 function getRoutes(route) {
   switch (route) {
     case 'beginner':
-      return beginner.routes
+      return beginnerSidebar.routes
     case 'intermediate':
-      return intermediate.routes
+      return intermediateSidebar.routes
     case 'advanced':
-      return advanced.routes
+      return advancedSidebar.routes
     default:
-      return beginner.routes
+      return beginnerSidebar.routes
   }
 }
 
