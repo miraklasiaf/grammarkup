@@ -1,13 +1,9 @@
 import { Box, Flex, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
-import EditPageLink from './edit-page-button'
-import Header from './header'
-import Container from './container'
-import BottomNav from './bottom-nav'
-import SEO from './seo'
-import PageTransition from './page-transition'
+import { Header } from '@/components/core'
+import { PageTransition, EditPageLink, Container, BottomNav, SEO } from '@/components/ui'
 
-const PageContainer = ({
+const BlogLayout = ({
   frontmatter,
   children,
   sidebar,
@@ -48,4 +44,4 @@ const PageContainer = ({
   )
 }
 
-export default PageContainer
+export default BlogLayout

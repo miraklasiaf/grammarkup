@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
-import Sidebar from './sidebar/sidebar'
+import { Sidebar } from '@/components/ui'
 import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs/sidebar'
 import { useRef } from 'react'
 

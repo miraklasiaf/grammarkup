@@ -1,8 +1,7 @@
 import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/core'
-import MobileNav from './mobile-nav'
+import MobileNav from './MobileNav'
 import NextLink from 'next/link'
-import NavLink from './header-nav-link'
-import ThemeToggle from './theme-toggle'
+import { ThemeSwitcher, NavLink } from '@/components/ui'
 import { useRouter } from 'next/router'
 
 const HeaderContent = () => {
@@ -31,7 +30,7 @@ const HeaderContent = () => {
       </Flex>
 
       <Flex maxW="720px" align="center" color="gray.400">
-        <ThemeToggle />
+        <ThemeSwitcher />
         {router.pathname === '/' ? null : <MobileNav display={{ md: 'none' }} />}
       </Flex>
     </Flex>

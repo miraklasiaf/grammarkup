@@ -1,5 +1,5 @@
-import NavLink from "./header-nav-link"
-import { Stack, Box, Icon, useColorModeValue } from "@chakra-ui/core"
+import { Stack, Box, Icon, useColorModeValue } from '@chakra-ui/core'
+import { NavLink } from '../Link'
 
 const User1 = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>
@@ -28,12 +28,7 @@ export function BottomNavItem(props) {
   return (
     <Box {...rest}>
       <NavLink href={href}>
-        <Stack
-          spacing="0"
-          textAlign="center"
-          alignItems="center"
-          justifyContent="center"
-        >
+        <Stack spacing="0" textAlign="center" alignItems="center" justifyContent="center">
           <Icon boxSize="1.4rem" as={icon} marginBottom="0.2rem" />
         </Stack>
       </NavLink>
@@ -42,13 +37,13 @@ export function BottomNavItem(props) {
 }
 
 const BottomNav = () => {
-  const bg = useColorModeValue("white", "gray.800")
+  const bg = useColorModeValue('white', 'gray.800')
 
   return (
     <Stack
       pos="fixed"
       direction="row"
-      display={{ base: "flex", md: "none" }}
+      display={{ base: 'flex', md: 'none' }}
       w="100%"
       bottom="0"
       left="0"
@@ -58,21 +53,9 @@ const BottomNav = () => {
       borderTopWidth="1px"
       bg={bg}
     >
-      <BottomNavItem
-        width="33%"
-        href="/beginner/getting-started"
-        icon={User1}
-      />
-      <BottomNavItem
-        width="33%"
-        href="/intermediate/getting-started"
-        icon={User2}
-      />
-      <BottomNavItem
-        width="33%"
-        href="/advanced/getting-started"
-        icon={User3}
-      />
+      <BottomNavItem width="33%" href="/beginner/getting-started" icon={User1} />
+      <BottomNavItem width="33%" href="/intermediate/getting-started" icon={User2} />
+      <BottomNavItem width="33%" href="/advanced/getting-started" icon={User3} />
     </Stack>
   )
 }

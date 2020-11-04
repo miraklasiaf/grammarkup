@@ -1,5 +1,5 @@
-import { chakra, Icon, Stack, Link, Box } from "@chakra-ui/core"
-import * as React from "react"
+import { chakra, Icon, Stack, Link, Box } from '@chakra-ui/core'
+import * as React from 'react'
 
 const EditIcon = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>

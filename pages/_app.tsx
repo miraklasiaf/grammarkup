@@ -1,9 +1,9 @@
-import Head from "next/head"
-import { ChakraProvider } from "@chakra-ui/core"
-import theme from "@/design-system"
-import Nprogress from "@/components/nprogress"
-import { DefaultSeo } from "next-seo"
-import siteConfig from "@/configs/site-config"
+import Head from 'next/head'
+import { ChakraProvider } from '@chakra-ui/core'
+import theme from '@/design-system'
+import { Nprogress } from '@/components/ui'
+import { DefaultSeo } from 'next-seo'
+import { siteConfig } from '@/configs'
 
 const App = ({ Component, pageProps }) => {
   return (

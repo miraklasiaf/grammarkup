@@ -1,11 +1,10 @@
 import NextLink from 'next/link'
 import dynamic from 'next/dynamic'
 import { Box, Text, Button, chakra, Flex } from '@chakra-ui/core'
-import Container from '@/components/container'
-import Header from '@/components/header'
-import SEO from '@/components/seo'
+import { Container, SEO } from '@/components/ui'
+import { Header } from '@/components/core'
 
-const Blobs = dynamic(() => import('@/components/blobs'), { ssr: false })
+const Blobs = dynamic(() => import('@/components/ui/Blobs'), { ssr: false })
 
 const ArrowRight = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>

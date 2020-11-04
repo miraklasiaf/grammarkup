@@ -1,12 +1,9 @@
 import * as chakraComponents from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
-import MDXComponents from '@/components/mdx-components'
-import PageContainer from '@/components/page-container'
-import Sidebar from '@/components/sidebar/sidebar'
-import Pagination from '@/components/pagination'
-import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs/sidebar'
-import { findRouteByPath, removeFromLast } from '@/utils/find-route-by-path'
-import { getRouteContext } from '@/utils/get-route-context'
+import { BlogLayout, MDX } from '@/components/core'
+import { Sidebar, Pagination } from '@/components/ui'
+import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs'
+import { findRouteByPath, removeFromLast, getRouteContext } from '@/utils'
 
 export default function MDXLayout({ frontmatter, children }) {
   const { slug } = frontmatter
@@ -23,8 +20,8 @@ export default function MDXLayout({ frontmatter, children }) {
   const routeContext = getRouteContext(route, routes)
 
   return (
-    <MDXProvider components={{ ...chakraComponents, ...MDXComponents }}>
-      <PageContainer
+    <MDXProvider components={{ ...chakraComponents, ...MDX }}>
+      <BlogLayout
         frontmatter={frontmatter}
         sidebar={<Sidebar routes={routes} display={['none', null, 'block']} />}
         pagination={
@@ -32,7 +29,7 @@ export default function MDXLayout({ frontmatter, children }) {
         }
       >
         {children}
-      </PageContainer>
+      </BlogLayout>
     </MDXProvider>
   )
 }

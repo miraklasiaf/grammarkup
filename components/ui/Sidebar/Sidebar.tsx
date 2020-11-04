@@ -1,8 +1,8 @@
 import { Box, Stack, chakra, useColorModeValue } from '@chakra-ui/core'
 import { useRouter } from 'next/router'
 import * as React from 'react'
-import SidebarCategory from './sidebar-category'
-import SidebarLink from './sidebar-link'
+import SidebarCategory from './SidebarCategory'
+import SidebarLink from './SidebarLink'
 
 const Sidebar = ({ routes, isMobile, ...props }: any) => {
   const { pathname } = useRouter()
