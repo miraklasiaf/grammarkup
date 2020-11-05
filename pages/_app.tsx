@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { ChakraProvider } from '@chakra-ui/core'
-import theme from '@/design-system'
+import { theme } from '@/components/core'
 import { Nprogress } from '@/components/ui'
 import { DefaultSeo } from 'next-seo'
 import { siteConfig } from '@/configs'

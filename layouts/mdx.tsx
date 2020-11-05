@@ -5,18 +5,18 @@ import { Sidebar, Pagination } from '@/components/ui'
 import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs'
 import { findRouteByPath, removeFromLast, getRouteContext } from '@/utils'
 
-export default function MDXLayout({ frontmatter, children }) {
-  const { slug } = frontmatter
-
+export function getRoutes(slug: string) {
   const config = slug.startsWith('/beginner')
     ? beginnerSidebar
     : slug.startsWith('/intermediate')
     ? intermediateSidebar
     : advancedSidebar
+  return config.routes
+}
 
-  const { routes } = config
-
-  const route = findRouteByPath(removeFromLast(slug, '#'), routes)
+export default function MDXLayout({ frontmatter, children }) {
+  const routes = getRoutes(frontmatter.slug)
+  const route = findRouteByPath(removeFromLast(frontmatter.slug, '#'), routes)
   const routeContext = getRouteContext(route, routes)
 
   return (

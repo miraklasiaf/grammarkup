@@ -1,13 +1,67 @@
-import { Box, Stack, chakra, useColorModeValue } from '@chakra-ui/core'
+import { Box, Stack } from '@chakra-ui/core'
+import { Routes } from '@/utils'
 import { useRouter } from 'next/router'
 import * as React from 'react'
-import SidebarCategory from './SidebarCategory'
+import Category from './Category'
 import SidebarLink from './SidebarLink'
+import Heading from './Heading'
+
+export type SidebarContentProps = Routes & {
+  pathname?: string
+  contentRef?: any
+}
+
+export function SidebarRoutes(props: SidebarContentProps) {
+  const { routes, pathname, contentRef } = props
+
+  return (
+    <>
+      {routes.map((c1, idx) => {
+        return (
+          <React.Fragment key={idx}>
+            {c1.heading && <Heading>{c1.title}</Heading>}
+            {c1.routes.map((c2) => {
+              if (!c2.routes) {
+                return (
+                  <SidebarLink ml="-3" mt="2" key={c2.path} href={c2.path}>
+                    {c2.title}
+                  </SidebarLink>
+                )
+              }
+
+              const selected = pathname.startsWith(c2.rootPath)
+
+              const opened = selected || c2.open
+
+              return (
+                <Category
+                  key={c2.rootPath}
+                  contentRef={contentRef}
+                  selected={selected}
+                  opened={opened}
+                  {...c2}
+                >
+                  <Stack spacing={3}>
+                    {c2.routes.map((c3) => (
+                      <SidebarLink key={c3.path} href={c3.path}>
+                        {c3.title}
+                      </SidebarLink>
+                    ))}
+                  </Stack>
+                </Category>
+              )
+            })}
+          </React.Fragment>
+        )
+      })}
+    </>
+  )
+}
 
 const Sidebar = ({ routes, isMobile, ...props }: any) => {
   const { pathname } = useRouter()
+
   const ref = React.useRef<HTMLDivElement>(null)
-  const color = useColorModeValue('gray.700', 'inherit')
 
   return (
     <Box
@@ -26,56 +80,7 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
       {...props}
     >
       {/* <Search /> */}
-      {routes.map((c1, idx) => {
-        return (
-          <React.Fragment key={idx}>
-            {c1.heading && (
-              <chakra.h4
-                fontSize="sm"
-                fontWeight="bold"
-                my="1.25rem"
-                textTransform="uppercase"
-                letterSpacing="wider"
-                color={color}
-              >
-                {c1.title}
-              </chakra.h4>
-            )}
-
-            {c1.routes.map((c2) => {
-              if (!c2.routes) {
-                return (
-                  <SidebarLink ml="-3" mt="2" key={c2.path} href={c2.path}>
-                    {c2.title}
-                  </SidebarLink>
-                )
-              }
-
-              const selected = pathname.startsWith(c2.rootPath)
-
-              const opened = selected || c2.open
-
-              return (
-                <SidebarCategory
-                  key={c2.rootPath}
-                  contentRef={ref}
-                  selected={selected}
-                  opened={opened}
-                  {...c2}
-                >
-                  <Stack spacing={3}>
-                    {c2.routes.map((c3) => (
-                      <SidebarLink key={c3.path} href={c3.path}>
-                        {c3.title}
-                      </SidebarLink>
-                    ))}
-                  </Stack>
-                </SidebarCategory>
-              )
-            })}
-          </React.Fragment>
-        )
-      })}
+      <SidebarRoutes routes={routes} pathname={pathname} contentRef={ref} />
     </Box>
   )
 }

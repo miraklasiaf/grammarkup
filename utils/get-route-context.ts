@@ -1,5 +1,6 @@
 export interface RouteItem {
   title: string
+  rootPath?: string
   path?: string
   open?: boolean
   heading?: boolean
@@ -38,15 +39,15 @@ export interface RouteContext {
 }
 
 export function getRouteContext(
-  currentRoute: RouteItem,
+  _route: RouteItem,
   routes: RouteItem[],
   ctx: RouteContext = {}
 ) {
-  if (!currentRoute) {
+  if (!_route) {
     return ctx
   }
 
-  const { path } = currentRoute
+  const { path } = _route
   const { parent } = ctx
 
   for (let i = 0; i < routes.length; i += 1) {
@@ -54,35 +55,36 @@ export function getRouteContext(
 
     if (route.routes) {
       ctx.parent = route
-      ctx = getRouteContext(currentRoute, route.routes, ctx)
+      ctx = getRouteContext(_route, route.routes, ctx)
 
       // If the active route and the next route was found in nested routes, return it
       if (ctx.nextRoute) return ctx
     }
 
-    if (!route) continue
     if (!route.path) continue
 
     if (ctx.route) {
       // const isNext = parent && i === 0
-      ctx.nextRoute = route
+      ctx.nextRoute =
+        parent && i === 0 ? { ...route, title: `${parent.title}: ${route.title}` } : route
+
       return ctx
     }
 
-    if (route && route.path === path) {
+    if (route.path === path) {
       ctx.route = {
-        ...currentRoute,
+        ..._route,
         title:
-          parent && !parent.heading
-            ? `${parent.title}: ${currentRoute.title}`
-            : currentRoute.title
+          parent && !parent.heading ? `${parent.title}: ${_route.title}` : _route.title
       }
       // Continue the loop until we know the next route
       continue
     }
 
-    // const isPrev = parent && !parent.heading && !routes[i + 1]?.path
-    ctx.prevRoute = route
+    ctx.prevRoute =
+      parent && !parent.heading && !routes[i + 1]?.path
+        ? { ...route, title: `${parent.title}: ${route.title}` }
+        : route
   }
 
   // The loop ended and the previous route was found, or nothing
