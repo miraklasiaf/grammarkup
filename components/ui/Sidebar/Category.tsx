@@ -59,7 +59,7 @@ function Category(props: CategoryProps) {
   }, [toggle, shouldScroll, isMobile, contentRef])
 
   return (
-    <chakra.div mt="8" mb={6} ref={ref} {...rest}>
+    <chakra.div mt={6} mb={4} ref={ref} {...rest}>
       <chakra.button
         width="full"
         cursor="pointer"

@@ -41,7 +41,7 @@ export function SidebarRoutes(props: SidebarContentProps) {
                   opened={opened}
                   {...c2}
                 >
-                  <Stack spacing={3}>
+                  <Stack spacing={2}>
                     {c2.routes.map((c3) => (
                       <SidebarLink key={c3.path} href={c3.path}>
                         {c3.title}
