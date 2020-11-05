@@ -1,11 +1,11 @@
 import { NextSeo } from 'next-seo'
 import siteConfig from '@/configs/site-config'
 
-const SEO = ({ title, description }) => (
+const BlogSEO = ({ title, description, slug }) => (
   <NextSeo
     title={title}
     description={description}
-    canonical={siteConfig.seo.openGraph.url}
+    canonical={`${siteConfig.seo.openGraph.url}/${slug}`}
     openGraph={{
       url: siteConfig.seo.openGraph.url,
       title: title,
@@ -16,4 +16,4 @@ const SEO = ({ title, description }) => (
   />
 )
 
-export default SEO
+export default BlogSEO

@@ -19,10 +19,7 @@ const ArrowRight = (props) => (
 const HomePage = () => {
   return (
     <>
-      <SEO
-        title="Grammarkup - A Web for learning grammar"
-        description="A Web for learning grammar"
-      />
+      <SEO title="Grammarkup" description="A Web for learning grammar" />
       <Box
         sx={{
           zIndex: -1,

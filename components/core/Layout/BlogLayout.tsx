@@ -1,24 +1,27 @@
 import { Box, Flex, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { Header } from '@/components/core'
-import { PageTransition, EditPageLink, Container, BottomNav, SEO } from '@/components/ui'
+import {
+  PageTransition,
+  EditPageLink,
+  Container,
+  BottomNav,
+  BlogSEO
+} from '@/components/ui'
 
-const BlogLayout = ({
-  frontmatter,
-  children,
-  sidebar,
-  pagination
-}: {
+interface Props {
   frontmatter: any
   children: React.ReactNode
   sidebar?: any
   pagination?: any
-}) => {
+}
+
+const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
   const { title, description, editUrl } = frontmatter
 
   return (
     <>
-      <SEO title={title} description={description} />
+      <BlogSEO title={title} description={description} slug={frontmatter.slug} />
       <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
       <Header />
       <Container>
