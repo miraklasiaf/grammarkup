@@ -118,7 +118,7 @@ const theme = {
     code: {
       rounded: 'sm',
       px: '1',
-      fontSize: '0.875em',
+      fontSize: 'base',
       py: '2px',
       whiteSpace: 'nowrap',
       lineHeight: 'normal'
