@@ -21,7 +21,11 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
 
   return (
     <>
-      <BlogSEO title={title} description={description} slug={frontmatter.slug} />
+      <BlogSEO
+        title={`${title} – Grammarkup`}
+        description={description}
+        slug={frontmatter.slug}
+      />
       <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
       <Header />
       <Container>
