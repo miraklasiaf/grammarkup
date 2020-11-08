@@ -8,7 +8,7 @@ const start = debounce(nprogress.start, 500)
 
 Router.events.on('routeChangeStart', start)
 
-Router.events.on('routeChangeComplete', () => {
+Router.events.on('routeChangeComplete', (url) => {
   start.cancel()
   nprogress.done()
   window.scrollTo(0, 0)
