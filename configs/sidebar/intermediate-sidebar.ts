@@ -86,7 +86,7 @@ const intermediateSidebar = {
         },
         {
           title: 'Verbs Continuous Tense',
-          rootPath: '/intermediate/verbs-continuous-sense',
+          rootPath: '/intermediate/verbs-continuous-tense',
           open: true,
           routes: [
             {
