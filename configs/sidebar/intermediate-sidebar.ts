@@ -26,8 +26,12 @@ const intermediateSidebar = {
               path: '/intermediate/nouns/collective-nouns'
             },
             {
-              title: 'Concrete and Abstract Nouns',
-              path: '/intermediate/nouns/concrete-and-abstract-nouns'
+              title: 'Concrete Nouns',
+              path: '/intermediate/nouns/concrete-nouns'
+            },
+            {
+              title: 'Abstract Nouns',
+              path: '/intermediate/nouns/abstract-nouns'
             }
           ]
         },
