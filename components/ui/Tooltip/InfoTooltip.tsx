@@ -6,9 +6,8 @@ const InfoTooltip = forwardRef<TooltipProps, 'div'>(({ label, ...rest }: any, re
   <Tooltip
     ref={ref}
     closeOnClick={false}
-    hasArrow
     label={label}
-    placement="right"
+    placement="auto"
     bg="gray.600"
     color="white"
     {...rest}
