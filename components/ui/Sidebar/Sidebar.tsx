@@ -72,7 +72,7 @@ const Sidebar = ({ routes, isMobile, ...props }: any) => {
       w={isMobile ? 'full' : '280px'}
       mt={isMobile ? 2 : 0}
       pr={isMobile ? 2 : 8}
-      pb={8}
+      pb={isMobile ? 4 : 2}
       pl={3}
       overflowY={isMobile ? 'none' : 'auto'}
       flexShrink={0}
