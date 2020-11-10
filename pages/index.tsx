@@ -1,8 +1,8 @@
 import NextLink from 'next/link'
 import dynamic from 'next/dynamic'
 import { Box, Text, Button, chakra, Flex } from '@chakra-ui/core'
-import { Container, SEO } from '@/components/ui'
-import { Header } from '@/components/core'
+import { Container } from '@/components/ui'
+import { SEO, Header } from '@/components/common'
 
 const Blobs = dynamic(() => import('@/components/ui/Blobs'), { ssr: false })
 
@@ -19,7 +19,7 @@ const ArrowRight = (props) => (
 const HomePage = () => {
   return (
     <>
-      <SEO title="Grammarkup" description="A Web for learning grammar" />
+      <SEO title="Grammarkup" description="A web for learning grammar" />
       <Box
         sx={{
           zIndex: -1,

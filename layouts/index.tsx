@@ -1,4 +1,4 @@
-import { BlogLayout } from '@/components/core'
+import { BlogLayout } from '@/components/common'
 import dynamic from 'next/dynamic'
 
 const MDXLayout = dynamic(() => import('./mdx'))

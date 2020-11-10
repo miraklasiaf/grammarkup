@@ -11,9 +11,11 @@ const DefaultImageSize = {
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
+    const category = req.query.category as string
+    const section = req.query.section as string
     const title = req.query.title as string
 
-    const html = getHtml(title)
+    const html = getHtml(category, section, title)
     const file = await getScreenshot({
       html,
       width: DefaultImageSize.width,

@@ -1,4 +1,4 @@
-export function getHtml(title: string) {
+export function getHtml(category: string, section: string, title: string) {
   return `
     <!DOCTYPE html>
     <html>
@@ -6,7 +6,7 @@ export function getHtml(title: string) {
         <title>Generated Image</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
             
             html,
             body {
@@ -39,16 +39,57 @@ export function getHtml(title: string) {
             }
             
             .title {
-              font-size: 5rem;
+              margin-top: 170px;
+              font-size: 90px;
               word-wrap: break-word;
               letter-spacing: -0.05em;
-              font-weight: 700;
+              font-weight: 600;
               font-family: "Inter", sans-serif;
+              color: #161e2e;
             }
+            .caption {
+              margin-top: -30px;
+              font-size: 40px;
+              word-wrap: break-word;
+              letter-spacing: -0.05em;
+              font-weight: 600;
+              font-family: "Inter", sans-serif;
+              color: #6b7280;
+            }
+            .logo {
+              width: 125px;
+              margin: 0 50px;
+            }
+            .brand {
+              font-family: "Inter", sans-serif;
+              font-size: 95px;
+              font-weight: 700;
+              padding: 50px;
+              text-align: center;
+              font-weight: bold;
+              position: absolute;
+              top: 0;
+              width: 100%;
+              color: #212121;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            .brand span {
+              color: #6b7280;
+              font-weight: normal;
+              margin-right: 0.2em;
+            }   
         </style>
         <body>
             <div class="main top-background">
-              <h1 class="title">${title}</h1>
+              <h1 class="title">${section} - ${title}</h1>
+              <h2 class="caption">${category}</h2>
+
+              <div class="brand">
+                <img class="logo" src="https://grammarkup.vercel.app/static/svg/logo.svg">
+                Grammarkup
+              </div>
             </div>
         </body>
     </html>

@@ -90,7 +90,7 @@ const InlineCode = (props) => (
   />
 )
 
-const MDXComponents = {
+const MDX = {
   h1: (props) => <chakra.h1 apply="mdx.h1" {...props} />,
   h2: (props) => <LinkedHeading apply="mdx.h2" {...props} />,
   h3: (props) => <LinkedHeading as="h3" apply="mdx.h3" {...props} />,
@@ -113,4 +113,4 @@ const MDXComponents = {
   InfoTooltip
 }
 
-export default MDXComponents
+export default MDX
