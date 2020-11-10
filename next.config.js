@@ -1,11 +1,10 @@
+const withOffline = require('next-offline')
 const withMdx = require('next-mdx-enhanced')
 const withPlugins = require('next-compose-plugins')
-const withOffline = require('next-offline')
+const { addLeadingSlash } = require('@docusaurus/utils')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
-const path = require('path')
-const { addLeadingSlash } = require('@docusaurus/utils')
 
 function fileToPath(str) {
   return addLeadingSlash(str.replace('.mdx', ''))
