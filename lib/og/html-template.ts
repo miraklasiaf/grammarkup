@@ -1,4 +1,4 @@
-export function getHtml(category: string, section: string, title: string) {
+export function getHtml(category: string, title: string) {
   return `
     <!DOCTYPE html>
     <html>
@@ -83,7 +83,7 @@ export function getHtml(category: string, section: string, title: string) {
         </style>
         <body>
             <div class="main top-background">
-              <h1 class="title">${section} - ${title}</h1>
+              <h1 class="title">${title}</h1>
               <h2 class="caption">${category}</h2>
 
               <div class="brand">

@@ -13,7 +13,6 @@ function getCategory(slug: string) {
 
 const BlogSEO = ({ title, description, slug }) => {
   const category = getCategory(slug)
-  const [, , section] = slug.split('/')
 
   return (
     <NextSeo
@@ -26,7 +25,7 @@ const BlogSEO = ({ title, description, slug }) => {
         description: description,
         images: [
           {
-            url: `${siteConfig.seo.openGraph.url}/api/og?category=${category}&section=${section}&title=${title}`
+            url: `${siteConfig.seo.openGraph.url}/api/og?category=${category}&title=${title}`
           }
         ],
         site_name: title
