@@ -1,13 +1,7 @@
 import { Box, Flex, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { Header } from '@/components/core'
-import {
-  PageTransition,
-  EditPageLink,
-  Container,
-  BottomNav,
-  BlogSEO
-} from '@/components/ui'
+import { PageTransition, Container, BottomNav, BlogSEO } from '@/components/ui'
 
 interface Props {
   frontmatter: any
@@ -17,7 +11,7 @@ interface Props {
 }
 
 const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
-  const { title, description, editUrl } = frontmatter
+  const { title, description } = frontmatter
 
   return (
     <>
@@ -39,7 +33,6 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
                   <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
                 </Box>
                 {children}
-                <Box mt={10}>{editUrl && <EditPageLink href={editUrl} />}</Box>
                 {pagination || null}
               </PageTransition>
               <BottomNav />
