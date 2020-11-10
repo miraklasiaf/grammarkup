@@ -11,7 +11,9 @@ const SEO = ({ title, description, category }) => (
       title: title,
       description: description,
       images: [
-        { url: `${siteConfig.seo.openGraph.url}/api/og?title=${title}&${category}` }
+        {
+          url: `${siteConfig.seo.openGraph.url}/api/og?title=${title}&category=${category}`
+        }
       ],
       site_name: title
     }}
