@@ -1,9 +1,9 @@
 import { NextSeo } from 'next-seo'
 import siteConfig from '@/configs/site-config'
 
-const SEO = ({ title, description, category }) => (
+const SEO = ({ title, description }) => (
   <NextSeo
-    title={title}
+    title={`${title} - ${description}`}
     description={description}
     canonical={siteConfig.seo.openGraph.url}
     openGraph={{
@@ -12,7 +12,7 @@ const SEO = ({ title, description, category }) => (
       description: description,
       images: [
         {
-          url: `${siteConfig.seo.openGraph.url}/api/og?title=${title}&category=${category}`
+          url: `${siteConfig.seo.openGraph.url}/api/og?title=${title}&category=${description}`
         }
       ],
       site_name: title
