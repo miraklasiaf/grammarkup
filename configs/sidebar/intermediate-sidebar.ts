@@ -37,16 +37,16 @@ const intermediateSidebar = {
         },
         {
           title: 'Possessive',
-          rootPath: '/intermediate/possesive',
+          rootPath: '/intermediate/possessive',
           open: true,
           routes: [
             {
               title: 'Possessive Nouns',
-              path: '/intermediate/possesive/possesive-nouns'
+              path: '/intermediate/possessive/possessive-nouns'
             },
             {
               title: 'Possessive Pronouns',
-              path: '/intermediate/possesive/possesive-pronouns'
+              path: '/intermediate/possessive/possessive-pronouns'
             }
           ]
         },
