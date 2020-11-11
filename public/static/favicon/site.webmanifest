@@ -1,24 +1,24 @@
 {
   "name": "Grammarkup",
   "short_name": "Grammarkup",
-  "background_color": "#FFFFFF",
-  "theme_color": "#FFFFFF",
-  "description": "Grammarkup - web for learning grammar",
+  "theme_color": "#0694a2",
+  "background_color": "#0694a2",
+  "description": "Grammarkup - Belajar grammar bahasa inggris dengan mudah",
   "display": "standalone",
   "start_url": "/",
   "icons": [
     {
-      "src": "/static/android-chrome-512x512.png",
+      "src": "/static/favicon/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/static/android-chrome-192x192.png",
+      "src": "/static/favicon/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/static/android-chrome-144x144.png",
+      "src": "/static/favicon/android-chrome-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
     }
