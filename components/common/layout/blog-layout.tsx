@@ -1,4 +1,4 @@
-import { Box, Flex, chakra } from '@chakra-ui/core'
+import { Box, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { BlogSEO, Header } from '@/components/common'
 import { PageTransition, Container, BottomNav } from '@/components/ui'
@@ -19,14 +19,16 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
       <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
       <Header />
       <Container>
-        <Flex>
+        <Box display={{ base: 'block', md: 'flex' }}>
           {sidebar || null}
           <div style={{ flex: 1 }}>
             <SkipNavContent />
             <Box pt={3} px={[0, 0, 5]} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
               <PageTransition>
                 <Box>
-                  <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
+                  <chakra.h1 tabIndex={-1} outline={0} apply="mdx.h1">
+                    {title}
+                  </chakra.h1>
                 </Box>
                 {children}
                 {pagination || null}
@@ -34,7 +36,7 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
               <BottomNav />
             </Box>
           </div>
-        </Flex>
+        </Box>
       </Container>
     </>
   )
