@@ -2,6 +2,7 @@ import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/core'
 import MobileNav from './mobile-nav'
 import NextLink from 'next/link'
 import { ThemeSwitcher, NavLink } from '@/components/ui'
+import { Logo } from '@/components/icons'
 import { useRouter } from 'next/router'
 
 const HeaderContent = () => {
@@ -15,11 +16,11 @@ const HeaderContent = () => {
           <Box
             as="a"
             display="block"
-            aria-label="Chakra UI, Back to homepage"
+            aria-label="Grammarkup, Back to homepage"
             fontWeight="bold"
             color={logoColor}
           >
-            Grammarkup
+            <Logo />
           </Box>
         </NextLink>
         <HStack as="nav" spacing={4} ml={6} display={{ base: 'none', md: 'flex' }}>

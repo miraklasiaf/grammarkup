@@ -53,11 +53,6 @@ class Document extends NextDocument {
             href="/static/favicon/safari-pinned-tab.svg"
             rel="mask-icon"
           />
-          <script
-            data-ad-client="ca-pub-7966864664516090"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          />
         </Head>
         <body>
           <GAScript />
