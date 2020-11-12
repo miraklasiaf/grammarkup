@@ -101,6 +101,7 @@ const MDX = {
   pre: Pre,
   kbd: Kbd,
   br: (props) => <Box height="24px" {...props} />,
+  Br: (props) => <Box height="4px" {...props} />,
   table: Table,
   th: THead,
   td: TData,
