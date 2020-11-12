@@ -17,7 +17,7 @@
 ## Kenapa belajar grammar bahasa inggris di Grammarkup?
 
 - Metode belajar mandiri.
-- Materi grammar lengkap. Mulai dari beginner hingga advanced.
+- Materi grammar lengkap. Mulai dari _beginner_ hingga _advanced_.
 - Materi disusun secara sistematis sehingga mudah dalam proses belajarnya.
 - Bisa belajar kapan dan dimana saja. Tinggal buka webnya dari smartphone kamu!
 - Tetap bisa belajar walaupun tidak ada koneksi internet. Caranya tinggal kamu klik "Add to home screen" ketika ada notifikasi muncul.
