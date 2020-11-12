@@ -6,6 +6,5 @@ export { default as BottomNav } from './Nav'
 export { default as Container } from './Container'
 export { default as Pagination } from './Pagination'
 export { default as InfoTooltip } from './Tooltip'
-export { default as GoogleAd } from './google-ad'
 
 export * from './Link'

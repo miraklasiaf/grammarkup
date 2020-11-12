@@ -1,5 +1,5 @@
 import { Box, Alert, chakra, Kbd, useColorModeValue } from '@chakra-ui/core'
-import { InfoTooltip, GoogleAd } from '@/components/ui'
+import { InfoTooltip } from '@/components/ui'
 
 const Quote = (props) => {
   return (
@@ -111,8 +111,7 @@ const MDX = {
   ol: (props) => <chakra.ol apply="mdx.ul" {...props} />,
   li: (props) => <chakra.li pb="4px" {...props} />,
   blockquote: Quote,
-  InfoTooltip,
-  GoogleAd
+  InfoTooltip
 }
 
 export default MDX
