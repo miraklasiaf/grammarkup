@@ -1,6 +1,6 @@
 import { Box, chakra } from '@chakra-ui/core'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
-import { BlogSEO, Header } from '@/components/common'
+import { BlogSEO, Header, Footer } from '@/components/common'
 import { PageTransition, Container, BottomNav } from '@/components/ui'
 
 interface Props {
@@ -33,6 +33,7 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
                 {children}
                 {pagination || null}
               </PageTransition>
+              <Footer />
               <BottomNav />
             </Box>
           </div>
