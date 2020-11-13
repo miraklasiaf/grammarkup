@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from '@chakra-ui/react'
 import { Routes } from '@/utils'
 import { useRouter } from 'next/router'
 import * as React from 'react'

@@ -1,4 +1,4 @@
-import { chakra, useColorModeValue } from '@chakra-ui/core'
+import { chakra, useColorModeValue } from '@chakra-ui/react'
 
 export default function Heading({ children }) {
   const color = useColorModeValue('gray.700', 'inherit')

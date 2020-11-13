@@ -1,4 +1,4 @@
-import { Box, Text, Stack, Link, chakra, Divider, Center } from '@chakra-ui/core'
+import { Box, Text, Stack, Link, chakra, Divider, Center } from '@chakra-ui/react'
 
 export const Footer = () => (
   <Box as="footer" mt={8} textAlign="center" pb={12}>

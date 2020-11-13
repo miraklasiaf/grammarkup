@@ -1,4 +1,4 @@
-import { Box, Alert, chakra, Kbd, useColorModeValue } from '@chakra-ui/core'
+import { Box, Alert, chakra, Kbd, useColorModeValue } from '@chakra-ui/react'
 import { InfoTooltip } from '@/components/ui'
 
 const Quote = (props) => {

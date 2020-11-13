@@ -1,4 +1,4 @@
-import { IconButton, useColorMode, useColorModeValue, chakra } from '@chakra-ui/core'
+import { IconButton, useColorMode, useColorModeValue, chakra } from '@chakra-ui/react'
 
 const Sun = (props) => (
   <chakra.svg fill="currentColor" viewBox="0 0 20 20" {...props}>

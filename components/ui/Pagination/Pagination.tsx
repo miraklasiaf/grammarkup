@@ -1,5 +1,5 @@
 import NextLink from 'next/link'
-import { Link, SimpleGrid, Text } from '@chakra-ui/core'
+import { Link, SimpleGrid, Text } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 export const PaginationLink = (props) => {

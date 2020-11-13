@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { chakra, HTMLChakraProps, useColorModeValue } from '@chakra-ui/core'
+import { chakra, HTMLChakraProps, useColorModeValue } from '@chakra-ui/react'
 
 export const NavLink = (props: HTMLChakraProps<'a'>) => {
   const { href, ...rest } = props

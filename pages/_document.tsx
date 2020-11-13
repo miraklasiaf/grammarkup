@@ -6,7 +6,7 @@ import NextDocument, {
   DocumentContext
 } from 'next/document'
 import GoogleFonts from 'next-google-fonts'
-import { ColorModeScript } from '@chakra-ui/core'
+import { ColorModeScript } from '@chakra-ui/react'
 import { GAScript } from '@/lib/gtag'
 
 class Document extends NextDocument {

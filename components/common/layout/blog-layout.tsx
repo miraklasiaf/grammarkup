@@ -1,4 +1,4 @@
-import { Box, chakra } from '@chakra-ui/core'
+import { Box, chakra } from '@chakra-ui/react'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { BlogSEO, Header, Footer } from '@/components/common'
 import { PageTransition, Container, BottomNav } from '@/components/ui'

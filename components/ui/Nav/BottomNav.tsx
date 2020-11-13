@@ -1,4 +1,4 @@
-import { Stack, Box, Icon, useColorModeValue } from '@chakra-ui/core'
+import { Stack, Box, Icon, useColorModeValue } from '@chakra-ui/react'
 import { NavLink } from '../Link'
 
 const User1 = (props) => (

@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { useRouter } from 'next/router'
-import { chakra, PropsOf, useColorModeValue } from '@chakra-ui/core'
+import { chakra, PropsOf, useColorModeValue } from '@chakra-ui/react'
 import * as React from 'react'
 
 const StyledLink = React.forwardRef(function StyledLink(

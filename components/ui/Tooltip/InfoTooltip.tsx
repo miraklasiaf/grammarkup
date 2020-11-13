@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Tooltip, TooltipProps } from '@chakra-ui/core'
+import { Tooltip, TooltipProps } from '@chakra-ui/react'
 import { InfoOutlineIcon } from '@chakra-ui/icons'
 
 const InfoTooltip = forwardRef<TooltipProps, 'div'>(({ label, ...rest }: any, ref) => {

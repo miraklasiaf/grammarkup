@@ -1,4 +1,4 @@
-import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/core'
+import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/react'
 import MobileNav from './mobile-nav'
 import NextLink from 'next/link'
 import { ThemeSwitcher, NavLink } from '@/components/ui'

@@ -1,4 +1,4 @@
-import { Icon, chakra, useColorModeValue, BoxProps } from '@chakra-ui/core'
+import { Icon, chakra, useColorModeValue, BoxProps } from '@chakra-ui/react'
 import { useRef, useState, useEffect, ReactNode, RefObject } from 'react'
 
 interface CategoryProps extends BoxProps {
