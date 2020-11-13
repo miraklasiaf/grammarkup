@@ -2045,7 +2045,7 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@mdx-js/loader@^1.6.16":
+"@mdx-js/loader@^1.6.19":
   version "1.6.21"
   resolved "https://registry.yarnpkg.com/@mdx-js/loader/-/loader-1.6.21.tgz#e5b2b5c48d182e495d36104b0c7a5da96964a2dd"
   integrity sha512-4xNtT7oal4PrLSpZE+75nj9XMwYwc5BuoHmer1GDmer2Hhg8DCLxskk4lWpXnMv+IUg7MboK0EAtZ2fk0szt3A==
@@ -7038,14 +7038,14 @@ next-google-fonts@^1.2.1:
   resolved "https://registry.yarnpkg.com/next-google-fonts/-/next-google-fonts-1.2.1.tgz#0b517cff3f34b8f7836f81eb9427973c8b4ac03e"
   integrity sha512-BhVSldP1oZBTwXeJdMtjmu2qbDT1EkbQO2rG83Oj6APYm6aUsIcMu00Pzkzd8TTkrQW9HyC08Pzr10PY4pE6jA==
 
-next-mdx-enhanced@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/next-mdx-enhanced/-/next-mdx-enhanced-4.0.0.tgz#aafd8c1c351dccd8198150d6e82fdea60b4aab0f"
-  integrity sha512-mHhSR8tDgCLF3Qyo2sVNZijA2Ibr+RCsYtiEtkQOzoD+ExrSxDQ1yDpFxVgWpfZit/bMz1qZ3FmvH5ECsIuXjg==
+next-mdx-enhanced@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/next-mdx-enhanced/-/next-mdx-enhanced-5.0.0.tgz#5cfe98fa4446b1ce0941a5427afbeab5a5a42a7e"
+  integrity sha512-ZeiJFV33V5ykRNW/w4UVnZzSwNsvQ1wz5qpJXrct4fkMSx+LXt5f6+IyxQbZXOdGqODEu7cZ6nEMPMohIldKaA==
   dependencies:
     "@babel/core" "7.x"
-    "@mdx-js/loader" "^1.6.16"
-    debug "^4.1.1"
+    "@mdx-js/loader" "^1.6.19"
+    debug "^4.2.0"
     fs-extra "^9.0.1"
     glob "^7.1.6"
     gray-matter "^4.0.2"

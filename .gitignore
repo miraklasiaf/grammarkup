@@ -29,6 +29,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-.mdx-data
 .vercel
 public/sitemap.xml
