@@ -18,6 +18,13 @@
     "baseUrl": "node_modules",
     "paths": { "@/*": ["../*"] }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "lib/docs/utils.js", "lib/gtag.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "lib/docs/utils.js",
+    "lib/gtag.js",
+    "components/ui/ads/ads.jx"
+  ],
   "exclude": ["node_modules"]
 }
