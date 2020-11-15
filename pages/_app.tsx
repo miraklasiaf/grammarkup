@@ -11,9 +11,9 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </Head>
+      <DefaultSeo {...siteConfig.seo} />
+      <Nprogress />
       <ChakraProvider resetCSS theme={theme} portalZIndex={40}>
-        <DefaultSeo {...siteConfig.seo} />
-        <Nprogress />
         <Component {...pageProps} />
       </ChakraProvider>
     </>
