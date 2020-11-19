@@ -6,7 +6,8 @@ import {
   DrawerHeader,
   IconButton,
   Box,
-  useDisclosure
+  useDisclosure,
+  useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router'
@@ -36,6 +37,8 @@ const MobileNav = (props) => {
 
   const routes = getRoutes(section)
 
+  const bgColor = useColorModeValue('white', 'bg.dark')
+
   return (
     <>
       <IconButton
@@ -51,7 +54,7 @@ const MobileNav = (props) => {
       />
       <Drawer size="xs" isOpen={isOpen} placement="left" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent bg={bgColor}>
             <DrawerHeader>Grammarkup</DrawerHeader>
             <DrawerBody py={0} px={4}>
               <Box top="0">

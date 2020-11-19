@@ -60,7 +60,6 @@ export function SidebarRoutes(props: SidebarContentProps) {
 
 const Sidebar = ({ routes, isMobile, ...props }: any) => {
   const { pathname } = useRouter()
-
   const ref = React.useRef<HTMLDivElement>(null)
 
   return (
