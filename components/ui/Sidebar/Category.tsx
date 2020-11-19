@@ -72,7 +72,7 @@ function Category(props: CategoryProps) {
         alignItems="center"
         justifyContent="space-between"
         userSelect="none"
-        color={useColorModeValue('teal.500', 'inherit')}
+        color={useColorModeValue('teal.500', 'gray.400')}
         onClick={onClick}
       >
         {title}

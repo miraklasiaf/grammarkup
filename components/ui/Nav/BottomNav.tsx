@@ -37,7 +37,7 @@ export function BottomNavItem(props) {
 }
 
 const BottomNav = () => {
-  const bg = useColorModeValue('white', 'gray.800')
+  const bg = useColorModeValue('white', 'bg.dark')
 
   return (
     <Stack

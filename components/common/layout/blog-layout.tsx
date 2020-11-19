@@ -1,5 +1,4 @@
 import { Box, chakra, useColorModeValue } from '@chakra-ui/react'
-import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { BlogSEO, Header, Footer } from '@/components/common'
 import { PageTransition, Container, BottomNav } from '@/components/ui'
 
@@ -16,13 +15,11 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
   return (
     <>
       <BlogSEO title={title} description={description} slug={frontmatter.slug} />
-      <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
       <Header />
       <Container>
         <Box display={{ base: 'block', md: 'flex' }}>
           {sidebar || null}
           <div style={{ flex: 1 }}>
-            <SkipNavContent />
             <Box pt={3} px={[0, 0, 5]} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
               <PageTransition>
                 <Box>

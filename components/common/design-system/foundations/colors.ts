@@ -18,6 +18,9 @@ const colors = {
   current: 'currentColor',
   black: '#000',
   white: '#fff',
+  bg: {
+    dark: 'hsl(210deg, 30%, 8%)'
+  },
   whiteAlpha: {
     '50': 'rgba(255, 255, 255, 0.04)',
     '100': 'rgba(255, 255, 255, 0.06)',

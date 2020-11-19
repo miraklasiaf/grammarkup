@@ -19,7 +19,7 @@ const StyledLink = React.forwardRef(function StyledLink(
       ref={ref}
       fontSize="sm"
       fontWeight="medium"
-      color={useColorModeValue('gray.700', 'whiteAlpha.900')}
+      color={useColorModeValue('gray.700', 'whiteAlpha.800')}
       transition="all 0.2s"
       _hover={{
         color: useColorModeValue('gray.900', 'whiteAlpha.900'),
