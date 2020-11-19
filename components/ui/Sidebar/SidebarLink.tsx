@@ -47,13 +47,7 @@ const SidebarLink = (props: SidebarLinkProps) => {
   const isActive = pathname === href
 
   return (
-    <chakra.div
-      userSelect="none"
-      display="flex"
-      alignItems="center"
-      lineHeight="1.5rem"
-      {...rest}
-    >
+    <chakra.div userSelect="none" display="flex" alignItems="center" lineHeight="1.5rem" {...rest}>
       <NextLink href={href} passHref>
         <StyledLink isActive={isActive}>{children}</StyledLink>
       </NextLink>

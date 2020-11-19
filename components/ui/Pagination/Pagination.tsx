@@ -18,7 +18,7 @@ export const PaginationLink = (props) => {
         <Text fontSize="sm" px="2">
           {label}
         </Text>
-        <Text mt="1" fontSize="normal" fontWeight="bold" color="teal.400">
+        <Text mt="1" fontSize="normal" fontWeight="bold" color="teal.500">
           {children}
         </Text>
       </Link>
@@ -28,14 +28,7 @@ export const PaginationLink = (props) => {
 
 export const Pagination = ({ previous, next, ...rest }) => {
   return (
-    <SimpleGrid
-      as="nav"
-      aria-label="pagination"
-      spacing="40px"
-      my={16}
-      columns={2}
-      {...rest}
-    >
+    <SimpleGrid as="nav" aria-label="pagination" spacing="40px" my={16} columns={2} {...rest}>
       {previous ? (
         <PaginationLink textAlign="left" label="Previous" href={previous.path} rel="prev">
           <ChevronLeftIcon mr="1" fontSize="1.2em" />

@@ -15,18 +15,15 @@ const advancedSidebar = {
           routes: [
             {
               title: 'Present Perfect and Present Perfect Continuous',
-              path:
-                '/advanced/verbs-perfect-tense/present-perfect-and-present-perfect-continuous'
+              path: '/advanced/verbs-perfect-tense/present-perfect-and-present-perfect-continuous'
             },
             {
               title: 'Past Perfect and Past Perfect Continuous',
-              path:
-                '/advanced/verbs-perfect-tense/past-perfect-and-past-perfect-continuous'
+              path: '/advanced/verbs-perfect-tense/past-perfect-and-past-perfect-continuous'
             },
             {
               title: 'Future Perfect and Future Perfect Continuous',
-              path:
-                '/advanced/verbs-perfect-tense/future-perfect-and-future-perfect-continuous'
+              path: '/advanced/verbs-perfect-tense/future-perfect-and-future-perfect-continuous'
             }
           ]
         },

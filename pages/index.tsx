@@ -24,11 +24,7 @@ const HomePage = () => {
       <Header />
 
       <Box>
-        <Box
-          as="section"
-          pt={{ base: '10rem', md: '12rem' }}
-          pb={{ base: '0', md: '6rem' }}
-        >
+        <Box as="section" pt={{ base: '10rem', md: '12rem' }} pb={{ base: '0', md: '6rem' }}>
           <Container>
             <Box maxW="760px" mx="auto" textAlign="center">
               <chakra.h1
@@ -49,12 +45,7 @@ const HomePage = () => {
                 Grammarkup adalah website untuk belajar grammar bahasa inggris
               </Text>
 
-              <Stack
-                mt="10"
-                spacing="4"
-                justify="center"
-                direction={{ base: 'column', sm: 'row' }}
-              >
+              <Stack mt="10" spacing="4" justify="center" direction={{ base: 'column', sm: 'row' }}>
                 <NextLink href="/beginner/getting-started" passHref>
                   <Button
                     h="4rem"

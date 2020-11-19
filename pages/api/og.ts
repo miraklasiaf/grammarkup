@@ -24,10 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
     res.statusCode = 200
     res.setHeader('Content-Type', `image/png`)
-    res.setHeader(
-      'Cache-Control',
-      `max-age=${60 * 60 * 24 * 365}, public, stale-while-revalidate`
-    )
+    res.setHeader('Cache-Control', `max-age=${60 * 60 * 24 * 365}, public, stale-while-revalidate`)
     res.end(file)
   } catch (e) {
     console.error(e)

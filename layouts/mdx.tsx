@@ -24,9 +24,7 @@ export default function MDXLayout({ frontmatter, children }) {
       <BlogLayout
         frontmatter={frontmatter}
         sidebar={<Sidebar routes={routes} display={['none', null, 'block']} />}
-        pagination={
-          <Pagination next={routeContext.nextRoute} previous={routeContext.prevRoute} />
-        }
+        pagination={<Pagination next={routeContext.nextRoute} previous={routeContext.prevRoute} />}
       >
         {children}
       </BlogLayout>

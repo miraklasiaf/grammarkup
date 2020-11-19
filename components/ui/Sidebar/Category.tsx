@@ -72,11 +72,8 @@ function Category(props: CategoryProps) {
         alignItems="center"
         justifyContent="space-between"
         userSelect="none"
-        color={useColorModeValue('gray.900', 'inherit')}
+        color={useColorModeValue('teal.500', 'inherit')}
         onClick={onClick}
-        _hover={{
-          color: useColorModeValue('gray.600', 'inherit')
-        }}
       >
         {title}
         <Icon
@@ -87,7 +84,7 @@ function Category(props: CategoryProps) {
           transform={toggle ? 'rotate(90deg)' : undefined}
           transition="transform 0.15s ease"
           as={Arrow}
-          color="gray.400"
+          color="teal.400"
         />
       </chakra.button>
       <chakra.div hidden={!toggle} mt={4} mx="-3">

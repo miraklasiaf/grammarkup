@@ -62,12 +62,7 @@ const Blobs = () => {
   ColoredPolygon.prototype = Object.create(Polygon2D.prototype)
 
   return (
-    <Sketch
-      setup={setup}
-      draw={draw}
-      mousePressed={mousePressed}
-      windowResized={windowResized}
-    />
+    <Sketch setup={setup} draw={draw} mousePressed={mousePressed} windowResized={windowResized} />
   )
 }
 

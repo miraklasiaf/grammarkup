@@ -1,4 +1,4 @@
-import { Box, chakra } from '@chakra-ui/react'
+import { Box, chakra, useColorModeValue } from '@chakra-ui/react'
 import { SkipNavContent, SkipNavLink } from '@chakra-ui/skip-nav'
 import { BlogSEO, Header, Footer } from '@/components/common'
 import { PageTransition, Container, BottomNav } from '@/components/ui'
@@ -26,7 +26,12 @@ const BlogLayout = ({ frontmatter, children, sidebar, pagination }: Props) => {
             <Box pt={3} px={[0, 0, 5]} mt="4.5rem" mx="auto" maxW="3xl" minH="80vh">
               <PageTransition>
                 <Box>
-                  <chakra.h1 tabIndex={-1} outline={0} apply="mdx.h1">
+                  <chakra.h1
+                    tabIndex={-1}
+                    outline={0}
+                    apply="mdx.h1"
+                    color={useColorModeValue('teal.900', 'hsl(53deg, 100%, 50%)')}
+                  >
                     {title}
                   </chakra.h1>
                 </Box>

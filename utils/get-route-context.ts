@@ -38,11 +38,7 @@ export interface RouteContext {
   route?: RouteItem
 }
 
-export function getRouteContext(
-  _route: RouteItem,
-  routes: RouteItem[],
-  ctx: RouteContext = {}
-) {
+export function getRouteContext(_route: RouteItem, routes: RouteItem[], ctx: RouteContext = {}) {
   if (!_route) {
     return ctx
   }
@@ -74,8 +70,7 @@ export function getRouteContext(
     if (route.path === path) {
       ctx.route = {
         ..._route,
-        title:
-          parent && !parent.heading ? `${parent.title}: ${_route.title}` : _route.title
+        title: parent && !parent.heading ? `${parent.title}: ${_route.title}` : _route.title
       }
       // Continue the loop until we know the next route
       continue

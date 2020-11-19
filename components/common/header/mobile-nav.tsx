@@ -49,13 +49,7 @@ const MobileNav = (props) => {
         ref={btnRef}
         {...props}
       />
-      <Drawer
-        size="xs"
-        isOpen={isOpen}
-        placement="left"
-        onClose={onClose}
-        finalFocusRef={btnRef}
-      >
+      <Drawer size="xs" isOpen={isOpen} placement="left" onClose={onClose} finalFocusRef={btnRef}>
         <DrawerOverlay>
           <DrawerContent>
             <DrawerHeader>Grammarkup</DrawerHeader>
