@@ -1,7 +1,7 @@
 import Router from 'next/router'
 import nprogress from 'nprogress'
 import debounce from 'lodash.debounce'
-import { pageview } from '@/lib/ga'
+import { pageview } from '@/lib/gtag'
 
 // Only show nprogress after 500ms (slow loading)
 const start = debounce(nprogress.start, 500)
