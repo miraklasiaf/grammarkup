@@ -14,7 +14,6 @@ const App = ({ Component, pageProps }) => {
         <meta content="#0694a2" name="theme-color" />
         <meta content="#0694a2" name="msapplication-TileColor" />
         <meta content="/static/favicon/browserconfig.xml" name="msapplication-config" />
-
         <link href="/static/favicon/favicon.ico" rel="shortcut icon" />
         <link href="/static/favicon/site.webmanifest" rel="manifest" />
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
@@ -24,11 +23,11 @@ const App = ({ Component, pageProps }) => {
         <link color="#4a9885" href="/static/favicon/safari-pinned-tab.svg" rel="mask-icon" />
         <meta name="google-site-verification" content={process.env.GOOGLE_SITE_VERIFICATION} />
         <meta name="monetization" content={process.env.ILP_URL} />
-        <script
+        {/* <script
           data-ad-client="ca-pub-7966864664516090"
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
+        /> */}
       </Head>
 
       <DefaultSeo {...siteConfig.seo} />
