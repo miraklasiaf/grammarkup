@@ -5,6 +5,5 @@ export { default as PageTransition } from './Transition'
 export { default as BottomNav } from './Nav'
 export { default as Container } from './Container'
 export { default as Pagination } from './Pagination'
-export { default as InfoTooltip } from './Tooltip'
 
 export * from './Link'

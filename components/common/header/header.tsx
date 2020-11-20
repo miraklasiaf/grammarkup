@@ -10,7 +10,7 @@ const HeaderContent = () => {
   const logoColor = useColorModeValue('gray.600', 'whiteAlpha.800')
 
   return (
-    <Flex w="full" h="full" px={6} align="center" justify="space-between">
+    <Flex w="full" h="full" px={{ base: 4, md: 6 }} align="center" justify="space-between">
       <Flex align="center">
         <NextLink href="/" passHref>
           <Box
@@ -42,17 +42,7 @@ const Header = (props) => {
   const bg = useColorModeValue('white', 'bg.dark')
 
   return (
-    <Box
-      as="header"
-      pos="fixed"
-      w="full"
-      insetX={0}
-      top={0}
-      bg={bg}
-      zIndex="1"
-      borderBottomWidth="1px"
-      {...props}
-    >
+    <Box as="header" pos="fixed" w="full" insetX={0} top={0} bg={bg} zIndex="1" {...props}>
       <Box h={16} mx="auto" maxW="1200px">
         <HeaderContent />
       </Box>

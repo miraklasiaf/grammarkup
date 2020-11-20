@@ -18,7 +18,7 @@ export const PaginationLink = (props) => {
         <Text fontSize="sm" px="2">
           {label}
         </Text>
-        <Text mt="1" fontSize="normal" fontWeight="bold" color="teal.500">
+        <Text mt="1" fontSize="base" fontWeight="bold" color="teal.500">
           {children}
         </Text>
       </Link>
