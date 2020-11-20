@@ -21,6 +21,10 @@ const colors = {
   bg: {
     dark: 'hsl(210deg, 30%, 8%)'
   },
+  muted: {
+    light: 'hsl(210deg, 55%, 92%)',
+    dark: 'hsl(210deg, 38%, 15%)'
+  },
   whiteAlpha: {
     '50': 'rgba(255, 255, 255, 0.04)',
     '100': 'rgba(255, 255, 255, 0.06)',
