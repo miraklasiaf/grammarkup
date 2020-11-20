@@ -1,5 +1,5 @@
 import { forwardRef } from 'react'
-import { Box, Tooltip, TooltipProps, Flex, useColorModeValue } from '@chakra-ui/react'
+import { Box, chakra, Tooltip, TooltipProps, Flex, useColorModeValue } from '@chakra-ui/react'
 import { InfoOutlineIcon } from '@chakra-ui/icons'
 import { LightBulb, ChatAlt2 } from '@/components/icons'
 import ReactMarkdown from 'react-markdown'
@@ -89,4 +89,8 @@ export const Story = ({ children }) => {
       </Content>
     </Box>
   )
+}
+
+export const Blank = () => {
+  return <chakra.span>....................</chakra.span>
 }
