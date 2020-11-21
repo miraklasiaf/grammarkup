@@ -23,7 +23,7 @@
     "**/*.ts",
     "**/*.tsx",
     "lib/docs/utils.js",
-    "lib/gtag.js",
+    "lib/gtag.ts",
     "components/ui/ads/ads.jx"
   ],
   "exclude": ["node_modules"]

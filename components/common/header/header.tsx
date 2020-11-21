@@ -1,9 +1,11 @@
-import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/react'
-import MobileNav from './mobile-nav'
+import * as React from 'react'
+import { useRouter } from 'next/router'
 import NextLink from 'next/link'
+import { useViewportScroll } from 'framer-motion'
 import { ThemeSwitcher, NavLink } from '@/components/ui'
 import { Logo } from '@/components/icons'
-import { useRouter } from 'next/router'
+import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/react'
+import MobileNav from './mobile-nav'
 
 const HeaderContent = () => {
   const router = useRouter()
@@ -40,9 +42,28 @@ const HeaderContent = () => {
 
 const Header = (props) => {
   const bg = useColorModeValue('white', 'bg.dark')
+  const ref = React.useRef<HTMLHeadingElement>()
+  const [y, setY] = React.useState(0)
+  const { height = 0 } = ref.current?.getBoundingClientRect() ?? {}
+  const { scrollY } = useViewportScroll()
+
+  React.useEffect(() => {
+    return scrollY.onChange(() => setY(scrollY.get()))
+  }, [scrollY])
 
   return (
-    <Box as="header" pos="fixed" w="full" insetX={0} top={0} bg={bg} zIndex="1" {...props}>
+    <Box
+      as="header"
+      shadow={y > height ? 'sm' : undefined}
+      transition="box-shadow 0.2s"
+      pos="fixed"
+      w="full"
+      insetX={0}
+      top={0}
+      bg={bg}
+      zIndex="1"
+      {...props}
+    >
       <Box h={16} mx="auto" maxW="1200px">
         <HeaderContent />
       </Box>
