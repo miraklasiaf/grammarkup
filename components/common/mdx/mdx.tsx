@@ -2,14 +2,13 @@ import { Box, Kbd, Code } from '@chakra-ui/react'
 import { P, UL, OL, LI, Blockquote, Pre, Strong, Hr } from './body'
 import { H1, H2, H3, H4 } from './heading'
 import { Table, TH, TD } from './table'
-import { InfoTooltip, Asterisk, Sidenote, Story, Blank } from './misc'
+import { InfoTooltip, Asterisk, Sidenote, Blank } from './misc'
 import { Link } from './link'
 
 const miscComponent = {
   InfoTooltip,
   Asterisk,
   Sidenote,
-  Story,
   Blank
 }
 
