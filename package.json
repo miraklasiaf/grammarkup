@@ -15,7 +15,7 @@
     "analyze": "cross-env ANALYZE=true next build"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.0",
+    "@chakra-ui/icons": "^1.0.1",
     "@chakra-ui/react": "^1.0.0",
     "@chakra-ui/theme": "^1.0.0",
     "@chakra-ui/theme-tools": "^1.0.0",
