@@ -1,8 +1,8 @@
 {
   "name": "Grammarkup",
   "short_name": "Grammarkup",
-  "theme_color": "#0694a2",
-  "background_color": "#0694a2",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "description": "Grammarkup - Belajar grammar bahasa inggris dengan mudah",
   "display": "standalone",
   "start_url": "/",
