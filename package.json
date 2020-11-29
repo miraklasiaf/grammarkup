@@ -69,7 +69,7 @@
     "next-offline": "^5.0.2",
     "prettier": "^2.1.1",
     "rimraf": "^3.0.2",
-    "sharp": "^0.26.0",
+    "sharp": "^0.26.3",
     "typescript": "^4.0.3"
   },
   "czConfig": {
