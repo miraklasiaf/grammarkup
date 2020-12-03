@@ -136,8 +136,8 @@ const intermediateSidebar = {
               path: '/intermediate/adjectives/limiting-adjectives'
             },
             {
-              title: 'Pronomial Adjectives',
-              path: '/intermediate/adjectives/pronomial-adjectives'
+              title: 'Pronominal Adjectives',
+              path: '/intermediate/adjectives/pronominal-adjectives'
             },
             {
               title: 'Comparative Adjectives',
