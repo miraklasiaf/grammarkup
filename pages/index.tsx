@@ -42,7 +42,7 @@ const HomePage = () => {
               </chakra.h1>
 
               <Text opacity={0.7} fontSize={{ base: 'lg', lg: 'xl' }} mt={6}>
-                Grammarkup adalah website untuk belajar grammar bahasa inggris
+                Grammarkup adalah tempat untuk belajar grammar Bahasa Inggris
               </Text>
 
               <Stack mt="10" spacing="4" justify="center" direction={{ base: 'column', sm: 'row' }}>
