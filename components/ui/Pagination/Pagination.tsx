@@ -4,7 +4,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 export const PaginationLink = (props) => {
   const { label, href, children, ...rest } = props
-  const color = useColorModeValue('hsl(225deg, 12%, 40%)', 'hsl(210deg, 14%, 66%)')
+  const color = useColorModeValue('teal.600', 'teal.50')
 
   return (
     <NextLink href={href} passHref>
