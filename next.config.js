@@ -12,6 +12,9 @@ function fileToPath(str) {
 
 const defaultConfig = {
   target: 'serverless',
+  images: {
+    domains: ['d33wubrfki0l68.cloudfront.net'] // Kofi
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       require('./scripts/generate-sitemap')
@@ -76,7 +79,4 @@ const mdxConfig = {
   }
 }
 
-module.exports = withPlugins(
-  [withBundleAnalyzer, withOffline, withMdx(mdxConfig)],
-  defaultConfig
-)
+module.exports = withPlugins([withBundleAnalyzer, withOffline, withMdx(mdxConfig)], defaultConfig)

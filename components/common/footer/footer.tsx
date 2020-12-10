@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Box, Text, Stack, Link, chakra, Divider, Center } from '@chakra-ui/react'
 
 export const Footer = () => (
@@ -7,8 +8,10 @@ export const Footer = () => (
     </Text>
     <Stack mt={3} direction="row" spacing="12px" justify="center">
       <Link href="https://ko-fi.com/miraklasiaf" isExternal>
-        <chakra.img
-          w={32}
+        <Image
+          alt="Kofi"
+          width={128}
+          height={25}
           src="https://d33wubrfki0l68.cloudfront.net/3152c2f2d5e1060f65508be266a5341fed8230d5/587c6/assets/img/kofi-min.png"
         />
       </Link>
