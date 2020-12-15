@@ -20,14 +20,7 @@ const defaultConfig = {
       require('./scripts/generate-sitemap')
     }
 
-    return {
-      ...config,
-      externals: [...config.externals, 'sharp']
-    }
-  },
-  experimental: {
-    optimizeFonts: true,
-    optimizeImages: true
+    return config
   },
   workboxOpts: {
     swDest: 'static/service-worker.js',
