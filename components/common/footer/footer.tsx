@@ -7,7 +7,7 @@ export const Footer = () => (
       <span>Support Grammarkup:</span>
     </Text>
     <Stack mt={3} direction="row" spacing="12px" justify="center">
-      <Link href="https://ko-fi.com/miraklasiaf" isExternal>
+      <Link aria-label="Kofi" href="https://ko-fi.com/miraklasiaf" isExternal>
         <Image
           alt="Kofi"
           width={128}
