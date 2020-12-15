@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Box, Kbd, Code } from '@chakra-ui/react'
 import { P, UL, OL, LI, Blockquote, Pre, Strong, Hr } from './body'
 import { H1, H2, H3, H4 } from './heading'
@@ -13,6 +14,7 @@ const miscComponent = {
 }
 
 const MDX = {
+  Image,
   h1: H1,
   h2: H2,
   h3: H3,
