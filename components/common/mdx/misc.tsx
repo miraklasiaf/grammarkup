@@ -1,9 +1,27 @@
 import { forwardRef } from 'react'
-import { Box, chakra, Tooltip, TooltipProps, Flex, useColorModeValue } from '@chakra-ui/react'
+import {
+  Box,
+  chakra,
+  List,
+  ListItem,
+  Tooltip,
+  TooltipProps,
+  Flex,
+  useColorModeValue
+} from '@chakra-ui/react'
 import { InfoOutlineIcon } from '@chakra-ui/icons'
 import { LightBulb } from '@/components/icons'
 import ReactMarkdown from 'react-markdown'
-import gfm from 'remark-gfm'
+import { Link } from './link'
+import { P, Blockquote } from './body'
+
+const renderers = {
+  link: Link,
+  paragraph: (props) => <P mt={0} {...props} />,
+  List: (props) => <List styleType="disc" {...props} />,
+  ListItem,
+  blockquote: Blockquote
+}
 
 export const InfoTooltip = forwardRef<TooltipProps, 'div'>(({ label, ...rest }: any, ref) => {
   return (
@@ -57,7 +75,7 @@ export const Sidenote = ({ children, ...delegated }) => {
     <Box
       as="aside"
       position="relative"
-      mt={4}
+      mt={8}
       py={6}
       px={8}
       bg={useColorModeValue('muted.light', 'muted.dark')}
@@ -70,7 +88,7 @@ export const Sidenote = ({ children, ...delegated }) => {
       <Status>
         <LightBulb w={8} color={useColorModeValue('#3b82f6', '#3b82f6')} />
       </Status>
-      <ReactMarkdown plugins={[gfm]} children={children} />
+      <ReactMarkdown renderers={renderers} children={children} />
     </Box>
   )
 }
