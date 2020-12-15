@@ -20,7 +20,7 @@
     "@chakra-ui/theme": "^1.2.1",
     "@chakra-ui/theme-tools": "^1.0.1",
     "@docusaurus/utils": "^2.0.0-alpha.69",
-    "@emotion/react": "^11.0.0",
+    "@emotion/react": "^11.1.2",
     "@emotion/styled": "^11.0.0",
     "chrome-aws-lambda": "^5.5.0",
     "framer-motion": "^2.9.5",
