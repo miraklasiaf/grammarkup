@@ -8,6 +8,7 @@
     "start": "next start",
     "commit": "git-cz",
     "clean": "rimraf .next .mdx-data",
+    "clean-install": "rimraf node_modules",
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "lint": "eslint \"**/*.{ts,tsx}\" \"*.config.js\"",
     "type-check": "tsc --noEmit",
