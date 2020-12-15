@@ -12,19 +12,15 @@ function fileToPath(str) {
 
 const defaultConfig = {
   target: 'serverless',
+  images: {
+    domains: ['d33wubrfki0l68.cloudfront.net'] // Kofi
+  },
   webpack: (config, { isServer }) => {
     if (isServer) {
       require('./scripts/generate-sitemap')
     }
 
-    return {
-      ...config,
-      externals: [...config.externals, 'sharp']
-    }
-  },
-  experimental: {
-    optimizeFonts: true,
-    optimizeImages: true
+    return config
   },
   workboxOpts: {
     swDest: 'static/service-worker.js',
@@ -76,7 +72,4 @@ const mdxConfig = {
   }
 }
 
-module.exports = withPlugins(
-  [withBundleAnalyzer, withOffline, withMdx(mdxConfig)],
-  defaultConfig
-)
+module.exports = withPlugins([withBundleAnalyzer, withOffline, withMdx(mdxConfig)], defaultConfig)

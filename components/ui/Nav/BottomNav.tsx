@@ -27,7 +27,7 @@ export function BottomNavItem(props) {
 
   return (
     <Box {...rest}>
-      <NavLink href={href}>
+      <NavLink href={href} aria-label={label}>
         <Stack spacing="0" textAlign="center" alignItems="center" justifyContent="center">
           <Icon boxSize="1.4rem" as={icon} marginBottom="0.2rem" />
         </Stack>
@@ -53,9 +53,24 @@ const BottomNav = () => {
       borderTopWidth="1px"
       bg={bg}
     >
-      <BottomNavItem width="33%" href="/beginner/getting-started" icon={User1} />
-      <BottomNavItem width="33%" href="/intermediate/getting-started" icon={User2} />
-      <BottomNavItem width="33%" href="/advanced/getting-started" icon={User3} />
+      <BottomNavItem
+        label="Beginner Grammar"
+        width="33%"
+        href="/beginner/getting-started"
+        icon={User1}
+      />
+      <BottomNavItem
+        label="Intermediate Grammar"
+        width="33%"
+        href="/intermediate/getting-started"
+        icon={User2}
+      />
+      <BottomNavItem
+        label="Advanced Grammar"
+        width="33%"
+        href="/advanced/getting-started"
+        icon={User3}
+      />
     </Stack>
   )
 }

@@ -1,9 +1,10 @@
 import NextLink from 'next/link'
-import { Link, SimpleGrid, Text } from '@chakra-ui/react'
+import { Link, SimpleGrid, Text, useColorModeValue } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
 
 export const PaginationLink = (props) => {
   const { label, href, children, ...rest } = props
+  const color = useColorModeValue('blue.600', 'blue.400')
 
   return (
     <NextLink href={href} passHref>
@@ -18,7 +19,7 @@ export const PaginationLink = (props) => {
         <Text fontSize="sm" px="2">
           {label}
         </Text>
-        <Text mt="1" fontSize="base" fontWeight="bold" color="teal.500">
+        <Text mt="1" fontSize="base" fontWeight="bold" color={color}>
           {children}
         </Text>
       </Link>

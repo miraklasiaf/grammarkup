@@ -11,13 +11,8 @@ const HomePage = () => {
   return (
     <>
       <SEO title="Grammarkup" description="Belajar grammar bahasa inggris dengan mudah" />
-      <Box
-        sx={{
-          zIndex: -1,
-          position: 'fixed',
-          '@media print': { display: 'none' }
-        }}
-      >
+
+      <Box position="fixed" zIndex="-1">
         <Blobs />
       </Box>
 
