@@ -193,8 +193,8 @@ const intermediateSidebar = {
           open: true,
           routes: [
             {
-              title: 'Subordinate Conjunctions',
-              path: '/intermediate/conjunctions/subordinate-conjunctions'
+              title: 'Subordinating Conjunctions',
+              path: '/intermediate/conjunctions/subordinating-conjunctions'
             },
             {
               title: 'Correlative Conjunctions',
