@@ -14,16 +14,28 @@ const advancedSidebar = {
           open: true,
           routes: [
             {
-              title: 'Present Perfect and Present Perfect Continuous',
-              path: '/advanced/verbs-perfect-tense/present-perfect-and-present-perfect-continuous'
+              title: 'Present Perfect',
+              path: '/advanced/verbs-perfect-tense/present-perfect'
             },
             {
-              title: 'Past Perfect and Past Perfect Continuous',
-              path: '/advanced/verbs-perfect-tense/past-perfect-and-past-perfect-continuous'
+              title: 'Past Perfect',
+              path: '/advanced/verbs-perfect-tense/past-perfect'
             },
             {
-              title: 'Future Perfect and Future Perfect Continuous',
+              title: 'Future Perfect',
               path: '/advanced/verbs-perfect-tense/future-perfect-and-future-perfect-continuous'
+            },
+            {
+              title: 'Present Perfect Continuous',
+              path: '/advanced/verbs-perfect-tense/present-perfect-continuous'
+            },
+            {
+              title: 'Past Perfect Continuous',
+              path: '/advanced/verbs-perfect-tense/past-perfect-continuous'
+            },
+            {
+              title: 'Future Perfect Continuous',
+              path: '/advanced/verbs-perfect-tense/future-perfect-continuous'
             }
           ]
         },
