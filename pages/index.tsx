@@ -1,5 +1,4 @@
 import NextLink from 'next/link'
-import dynamic from 'next/dynamic'
 import { Box, Text, Button, chakra, Stack, useColorModeValue } from '@chakra-ui/react'
 import { Container } from '@/components/ui'
 import { SEO, Header } from '@/components/common'

@@ -1,5 +1,5 @@
 import { Box, Stack } from '@chakra-ui/react'
-import { Routes } from '@/utils'
+import { Routes } from '@/lib/docs'
 import { useRouter } from 'next/router'
 import * as React from 'react'
 import Category from './Category'
