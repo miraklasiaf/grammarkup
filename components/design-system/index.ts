@@ -1,10 +1,10 @@
-import chakraTheme from '@chakra-ui/theme'
+import { theme as defaultTheme } from '@chakra-ui/react'
 import foundations from './foundations'
 import styles from './styles'
 import { mdx } from './mdx'
 
-const theme = {
-  ...chakraTheme,
+export const theme = {
+  ...defaultTheme,
   ...foundations,
   styles,
   mdx,

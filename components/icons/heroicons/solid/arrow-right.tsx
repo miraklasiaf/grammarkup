@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-const ArrowRight = (props) => (
+export const ArrowRight = (props) => (
   <Box as="svg" fill="currentColor" viewBox="0 0 20 20" {...props}>
     <path
       fillRule="evenodd"
