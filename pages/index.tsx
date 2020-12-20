@@ -5,16 +5,10 @@ import { Container } from '@/components/ui'
 import { SEO, Header } from '@/components/common'
 import { ArrowRight } from '@/components/icons'
 
-const Blobs = dynamic(() => import('@/components/ui/Blobs'), { ssr: false })
-
 const HomePage = () => {
   return (
     <>
       <SEO title="Grammarkup" description="Belajar grammar bahasa inggris dengan mudah" />
-
-      <Box position="fixed" zIndex="-1">
-        <Blobs />
-      </Box>
 
       <Header />
 
