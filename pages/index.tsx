@@ -23,13 +23,13 @@ const HomePage = () => {
                 lineHeight="1.2"
               >
                 Belajar grammar Bahasa Inggris
-                <Box as="span" color={useColorModeValue('teal.500', 'teal.300')}>
+                <Box as="span" color={useColorModeValue('teal.600', 'teal.300')}>
                   {' '}
                   dengan mudah
                 </Box>
               </chakra.h1>
 
-              <Text opacity={0.7} fontSize={{ base: 'lg', lg: 'xl' }} mt={6}>
+              <Text opacity={0.8} fontSize={{ base: 'lg', lg: 'xl' }} mt={6}>
                 Grammarkup adalah tempat untuk belajar grammar Bahasa Inggris
               </Text>
 

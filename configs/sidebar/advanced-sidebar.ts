@@ -18,20 +18,20 @@ const advancedSidebar = {
               path: '/advanced/verbs-perfect-tense/present-perfect'
             },
             {
-              title: 'Past Perfect',
-              path: '/advanced/verbs-perfect-tense/past-perfect'
-            },
-            {
-              title: 'Future Perfect',
-              path: '/advanced/verbs-perfect-tense/future-perfect-and-future-perfect-continuous'
-            },
-            {
               title: 'Present Perfect Continuous',
               path: '/advanced/verbs-perfect-tense/present-perfect-continuous'
             },
             {
+              title: 'Past Perfect',
+              path: '/advanced/verbs-perfect-tense/past-perfect'
+            },
+            {
               title: 'Past Perfect Continuous',
               path: '/advanced/verbs-perfect-tense/past-perfect-continuous'
+            },
+            {
+              title: 'Future Perfect',
+              path: '/advanced/verbs-perfect-tense/future-perfect'
             },
             {
               title: 'Future Perfect Continuous',
