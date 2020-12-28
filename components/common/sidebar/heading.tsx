@@ -1,12 +1,12 @@
 import { chakra, useColorModeValue } from '@chakra-ui/react'
 
 export default function Heading({ children }) {
-  const color = useColorModeValue('teal.700', 'gray.500')
+  const color = useColorModeValue('gray.900', 'gray.500')
 
   return (
     <chakra.h4
       fontSize="sm"
-      fontWeight="bold"
+      fontWeight="semibold"
       my={5}
       textTransform="uppercase"
       letterSpacing="wider"

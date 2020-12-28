@@ -2,9 +2,9 @@ import { Box, Stack } from '@chakra-ui/react'
 import { Routes } from '@/lib/docs'
 import { useRouter } from 'next/router'
 import * as React from 'react'
-import Category from './Category'
-import SidebarLink from './SidebarLink'
-import Heading from './Heading'
+import Category from './category'
+import SidebarLink from './sidebar-link'
+import Heading from './heading'
 
 export type SidebarContentProps = Routes & {
   pathname?: string

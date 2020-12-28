@@ -1,7 +1,7 @@
 import * as chakraComponents from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
-import { MDX, BlogLayout } from '@/components/common'
-import { Sidebar, Pagination } from '@/components/ui'
+import { MDX, BlogLayout, Sidebar } from '@/components/common'
+import { Pagination } from '@/components/ui'
 import { beginnerSidebar, intermediateSidebar, advancedSidebar } from '@/configs'
 import { findRouteByPath, removeFromLast, getRouteContext } from '@/lib/docs'
 
