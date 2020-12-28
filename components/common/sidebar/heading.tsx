@@ -1,7 +1,7 @@
 import { chakra, useColorModeValue } from '@chakra-ui/react'
 
 export default function Heading({ children }) {
-  const color = useColorModeValue('gray.900', 'gray.500')
+  const color = useColorModeValue('gray.900', 'gray.400')
 
   return (
     <chakra.h4
