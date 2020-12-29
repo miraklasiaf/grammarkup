@@ -1,6 +1,7 @@
 import NextLink from 'next/link'
 import { Link, SimpleGrid, Text, useColorModeValue } from '@chakra-ui/react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { removeFromLast } from '@/lib/docs'
 
 export const PaginationLink = (props) => {
   const { label, href, children, ...rest } = props
@@ -31,7 +32,12 @@ export const Pagination = ({ previous, next, ...rest }) => {
   return (
     <SimpleGrid as="nav" aria-label="pagination" spacing="40px" my={16} columns={2} {...rest}>
       {previous ? (
-        <PaginationLink textAlign="left" label="Previous" href={previous.path} rel="prev">
+        <PaginationLink
+          textAlign="left"
+          label="Previous"
+          href={removeFromLast(previous.path, '.')}
+          rel="prev"
+        >
           <ChevronLeftIcon mr="1" fontSize="1.2em" />
           {previous.title}
         </PaginationLink>
@@ -39,7 +45,12 @@ export const Pagination = ({ previous, next, ...rest }) => {
         <div />
       )}
       {next ? (
-        <PaginationLink textAlign="right" label="Next" href={next.path} rel="next">
+        <PaginationLink
+          textAlign="right"
+          label="Next"
+          href={removeFromLast(next.path, '.')}
+          rel="next"
+        >
           {next.title}
           <ChevronRightIcon ml="1" fontSize="1.2em" />
         </PaginationLink>

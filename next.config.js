@@ -1,14 +1,8 @@
 const withOffline = require('next-offline')
-const withMdx = require('next-mdx-enhanced')
 const withPlugins = require('next-compose-plugins')
-const { addLeadingSlash } = require('@docusaurus/utils')
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
-
-function fileToPath(str) {
-  return addLeadingSlash(str.replace('.mdx', ''))
-}
 
 const defaultConfig = {
   target: 'serverless',
@@ -44,32 +38,4 @@ const defaultConfig = {
   }
 }
 
-const mdxConfig = {
-  layoutPath: 'layouts',
-  defaultLayout: true,
-  fileExtensions: ['mdx'],
-  remarkPlugins: [
-    require('remark-autolink-headings'),
-    require('remark-emoji'),
-    require('remark-images'),
-    require('remark-slug'),
-    require('remark-toc'),
-    require('remark-unwrap-images')
-  ],
-  rehypePlugins: [],
-  extendFrontMatter: {
-    process: async (_, frontmatter) => {
-      const { __resourcePath: mdxPath, author, tags } = frontmatter
-      const slug = fileToPath(mdxPath)
-      const authorData = author ? 'Faisal Karim' : undefined
-
-      return {
-        slug,
-        author: authorData,
-        tags
-      }
-    }
-  }
-}
-
-module.exports = withPlugins([withBundleAnalyzer, withOffline, withMdx(mdxConfig)], defaultConfig)
+module.exports = withPlugins([withBundleAnalyzer, withOffline], defaultConfig)

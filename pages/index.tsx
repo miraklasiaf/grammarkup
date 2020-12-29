@@ -34,7 +34,7 @@ const HomePage = () => {
               </Text>
 
               <Stack mt="10" spacing="4" justify="center" direction={{ base: 'column', sm: 'row' }}>
-                <NextLink href="/beginner/getting-started" passHref>
+                <NextLink href="/grammar/beginner/getting-started" passHref>
                   <Button
                     h="4rem"
                     px="40px"
