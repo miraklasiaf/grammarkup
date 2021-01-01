@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-core')
+import puppeteer from 'puppeteer-core'
 import { getOptions } from './chrome-options'
 
 async function getPage(isDev: boolean) {
@@ -21,7 +21,7 @@ export async function getScreenshot({
   html: string
   width: number
   height: number
-  type?: string
+  type?: any
   isDev: boolean
 }) {
   const { page, browser } = await getPage(isDev)
