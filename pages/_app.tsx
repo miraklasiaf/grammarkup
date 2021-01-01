@@ -5,6 +5,7 @@ import { theme, FontFace } from '@/components/design-system'
 import { NProgress } from '@/components/ui'
 import { siteConfig } from '@/configs'
 import { useAnalytics } from '@/lib/analytics'
+import '@/styles/nprogress.css'
 
 const App = ({ Component, pageProps }) => {
   useAnalytics()
