@@ -1,5 +1,4 @@
 import NextDocument, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import GoogleFonts from 'next-google-fonts'
 import { ColorModeScript } from '@chakra-ui/react'
 import { GAScript } from '@/lib/gtag'
 
@@ -12,12 +11,18 @@ class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <GoogleFonts href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" />
         <Head>
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
           <meta content="#0694a2" name="theme-color" />
           <meta content="#0694a2" name="msapplication-TileColor" />
           <meta content="/static/favicon/browserconfig.xml" name="msapplication-config" />
+          <link
+            rel="preload"
+            href="/static/fonts/Inter.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
           <link href="/static/favicon/favicon.ico" rel="shortcut icon" />
           <link href="/static/favicon/site.webmanifest" rel="manifest" />
           <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
