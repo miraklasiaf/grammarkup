@@ -1,1 +1,1 @@
-export { default } from './Nprogress'
+export { default } from './nprogress'

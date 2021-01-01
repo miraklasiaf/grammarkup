@@ -4,8 +4,11 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { theme, FontFace } from '@/components/design-system'
 import { Nprogress } from '@/components/ui'
 import { siteConfig } from '@/configs'
+import { useAnalytics } from '@/lib/analytics'
 
 const App = ({ Component, pageProps }) => {
+  useAnalytics()
+
   return (
     <>
       <Head>
