@@ -1,4 +1,3 @@
-import * as chakraComponents from '@chakra-ui/react'
 import { MDXProvider } from '@mdx-js/react'
 import { MDX, BlogLayout, Sidebar } from '@/components/common'
 import { Pagination } from '@/components/ui'
@@ -20,7 +19,7 @@ export default function MDXLayout({ frontmatter, children }) {
   const routeContext = getRouteContext(route, routes)
 
   return (
-    <MDXProvider components={{ ...chakraComponents, ...MDX }}>
+    <MDXProvider components={{ ...MDX }}>
       <BlogLayout
         frontmatter={frontmatter}
         sidebar={<Sidebar routes={routes} display={['none', null, 'block']} />}
