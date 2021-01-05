@@ -18,14 +18,13 @@ class Document extends NextDocument {
           <meta content="/static/favicon/browserconfig.xml" name="msapplication-config" />
           <link
             rel="preload"
-            href="/static/fonts/Inter.woff2"
+            href="/static/fonts/inter-var-latin.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link href="/static/favicon/favicon.ico" rel="shortcut icon" />
           <link href="/static/favicon/site.webmanifest" rel="manifest" />
-          <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
           <link
             href="/static/favicon/apple-touch-icon.png"
             rel="apple-touch-icon"
