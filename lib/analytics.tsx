@@ -1,6 +1,3 @@
-import { useRouter } from 'next/router'
-import { useEffect } from 'react'
-
 const GA_TRACKING_ID = process.env.GA_TRACKING_ID
 
 export const trackPageview = (url: string) => {
@@ -36,22 +33,6 @@ export const trackEvent = (options: TrackEventOptions) => {
   } catch (error) {
     console.error('Failed sending metrics', error)
   }
-}
-
-export const useAnalytics = () => {
-  const router = useRouter()
-
-  useEffect(() => {
-    function onRouteChangeComplete(url: string) {
-      trackPageview(url)
-    }
-
-    router.events.on('routeChangeComplete', onRouteChangeComplete)
-
-    return () => {
-      router.events.off('routeChangeComplete', onRouteChangeComplete)
-    }
-  }, [])
 }
 
 export const GAScript = () => (
