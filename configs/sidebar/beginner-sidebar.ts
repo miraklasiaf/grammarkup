@@ -191,8 +191,8 @@ const beginnerSidebar = {
           open: true,
           routes: [
             {
-              title: 'Introduction',
-              path: '/beginner/prepositions/introduction'
+              title: 'Prepositions Introduction',
+              path: '/beginner/prepositions/prepositions-introduction'
             },
             {
               title: 'Prepositions of Place',
@@ -214,8 +214,8 @@ const beginnerSidebar = {
           open: true,
           routes: [
             {
-              title: 'Introduction',
-              path: '/beginner/conjunctions/introduction'
+              title: 'Conjunctions Introduction',
+              path: '/beginner/conjunctions/conjunctions-introduction'
             },
             {
               title: 'Coordinating Conjunctions',

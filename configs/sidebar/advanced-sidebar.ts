@@ -91,6 +91,10 @@ const advancedSidebar = {
           open: true,
           routes: [
             {
+              title: 'Conditionals Introduction',
+              path: '/advanced/conditionals/conditionals-introduction'
+            },
+            {
               title: 'Conditionals Type 0',
               path: '/advanced/conditionals/conditionals-type-0'
             },
