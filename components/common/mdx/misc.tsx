@@ -29,7 +29,7 @@ export const InfoTooltip = forwardRef<TooltipProps, 'div'>(({ label, ...rest }: 
       ref={ref}
       closeOnClick={false}
       label={label}
-      placement="right"
+      placement="auto"
       bg="gray.600"
       color="white"
       {...rest}
