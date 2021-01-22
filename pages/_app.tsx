@@ -18,7 +18,7 @@ const App = ({ Component, pageProps }) => {
       </Head>
       <DefaultSeo {...siteConfig.seo} />
       <NProgress />
-      <ChakraProvider theme={theme} portalZIndex={40}>
+      <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
     </>

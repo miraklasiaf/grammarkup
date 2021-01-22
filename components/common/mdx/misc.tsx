@@ -77,7 +77,8 @@ export const Sidenote = ({ children, ...delegated }) => {
       position="relative"
       mt={8}
       py={6}
-      px={8}
+      pr={8}
+      pl={12}
       bg={useColorModeValue('muted.light', 'muted.dark')}
       borderLeftRadius="3px"
       borderLeftColor="#3b82f6"
