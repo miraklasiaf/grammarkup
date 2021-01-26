@@ -95,8 +95,8 @@ const advancedSidebar = {
               path: '/advanced/conditionals/conditionals-introduction'
             },
             {
-              title: 'Conditionals Type 0',
-              path: '/advanced/conditionals/conditionals-type-0'
+              title: 'Conditionals Zero Type',
+              path: '/advanced/conditionals/conditionals-zero-type'
             },
             {
               title: 'Conditionals Type 1',
