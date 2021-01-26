@@ -18,7 +18,7 @@ const BlogSEO = ({ title, description, slug }) => {
     <NextSeo
       title={`${title} | Grammarkup`}
       description={description}
-      canonical={`${siteConfig.seo.openGraph.url}/${slug}`}
+      canonical={`${siteConfig.seo.openGraph.url}${slug}`}
       openGraph={{
         url: siteConfig.seo.openGraph.url,
         title: title,
