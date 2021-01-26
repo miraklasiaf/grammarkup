@@ -1,39 +1,24 @@
-import { theme as defaultTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
+import { mode } from '@chakra-ui/theme-tools'
 import foundations from './foundations'
-import styles from './styles'
 import { mdx } from './mdx'
 
-export const theme = {
-  ...defaultTheme,
+export const theme = extendTheme({
+  fonts: {
+    heading: 'Inter, sans-serif',
+    body: 'Inter, sans-serif'
+  },
+  styles: {
+    global: (props) => ({
+      body: {
+        fontFamily: 'body',
+        color: mode('gray.700', 'hsl(0deg, 0%, 100%)')(props),
+        bg: mode('white', 'bg.dark')(props)
+      }
+    })
+  },
   ...foundations,
-  styles,
-  mdx,
-  layout: {
-    container: {
-      maxWidth: ['layout', null, 'layoutPlus'],
-      width: '100%',
-      mx: 'auto',
-      px: 4
-    },
-    wide: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['layout', null, 'wide']
-    },
-    copy: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['copy', null, 'copyPlus']
-    },
-    narrow: {
-      width: '100%',
-      mx: 'auto',
-      px: 4,
-      maxWidth: ['narrow', null, 'narrowPlus']
-    }
-  }
-}
+  mdx
+})
 
 export default theme
