@@ -24,7 +24,7 @@
     "@emotion/styled": "^11.0.0",
     "chrome-aws-lambda": "^5.5.0",
     "framer-motion": "^2.9.5",
-    "next": "^10.0.5",
+    "next": "^12.1.0",
     "next-mdx-enhanced": "^5.0.0",
     "next-seo": "^4.7.3",
     "nprogress": "^0.2.0",
