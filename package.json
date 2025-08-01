@@ -3,91 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "dev": "next dev --turbo",
     "start": "next start",
-    "commit": "git-cz",
-    "clean": "rimraf .next .mdx-data",
-    "clean-install": "rimraf node_modules",
-    "format": "prettier --write \"./**/*.{ts,tsx}\"",
-    "lint": "eslint \"**/*.{ts,tsx}\" \"*.config.js\"",
-    "type-check": "tsc --noEmit",
-    "validate": "yarn lint && yarn type-check",
-    "analyze": "cross-env ANALYZE=true next build"
+    "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
-    "@chakra-ui/icons": "^1.0.3",
-    "@chakra-ui/react": "^1.1.6",
-    "@chakra-ui/theme-tools": "^1.0.3",
-    "@docusaurus/utils": "^2.0.0-alpha.69",
-    "@emotion/react": "^11.1.2",
-    "@emotion/styled": "^11.0.0",
-    "chrome-aws-lambda": "^5.5.0",
-    "framer-motion": "^2.9.5",
-    "next": "^10.0.5",
-    "next-mdx-enhanced": "^5.0.0",
-    "next-seo": "^4.7.3",
-    "nprogress": "^0.2.0",
-    "puppeteer-core": "^5.5.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-markdown": "^5.0.3",
-    "remark": "^13.0.0",
-    "remark-autolink-headings": "^6.0.1",
-    "remark-emoji": "^2.1.0",
-    "remark-images": "^2.0.0",
-    "remark-slug": "^6.0.0",
-    "remark-toc": "^7.0.0",
-    "remark-unwrap-images": "^2.0.0"
+    "fumadocs-core": "^15.6.7",
+    "fumadocs-mdx": "^11.7.3",
+    "fumadocs-ui": "^15.6.7",
+    "next": "^15.4.5",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@next/bundle-analyzer": "^10.0.3",
-    "@types/node": "^14.14.12",
-    "@types/nprogress": "^0.2.0",
-    "@types/puppeteer-core": "^5.4.0",
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^4.11.1",
-    "@typescript-eslint/parser": "^4.9.1",
-    "commitizen": "^4.2.1",
-    "cross-env": "^7.0.3",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.15.0",
-    "eslint-plugin-prettier": "^3.3.0",
-    "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "^4.1.2",
-    "execa": "^5.0.0",
-    "globby": "^11.0.1",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.5.3",
-    "next-compose-plugins": "^2.2.0",
-    "next-offline": "^5.0.2",
-    "prettier": "^2.2.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.0.3"
-  },
-  "czConfig": {
-    "path": "node_modules/cz-conventional-changelog"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "prettier --write"
-    ],
-    "**/*.{md,yml,json,babelrc,eslintrc,prettierrc}": [
-      "prettier --write"
-    ]
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/mdx": "^2.0.13",
+    "@types/node": "^24.1.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.32.0",
+    "eslint-config-next": "^15.4.5",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5.9.2"
   }
 }
