@@ -1,14 +1,12 @@
 import '@/app/global.css';
 
+import { Geist, Geist_Mono } from 'next/font/google';
 import { baseUrl, createMetadata } from '@/lib/metadata';
 
-import { Inter } from 'next/font/google';
+import { Body } from '@/app/layout.client';
+import { Provider } from './provider';
 import type { ReactNode } from 'react';
-import { RootProvider } from 'fumadocs-ui/provider';
-
-const inter = Inter({
-  subsets: ['latin']
-});
+import type { Viewport } from 'next';
 
 export const metadata = createMetadata({
   title: {
@@ -20,12 +18,33 @@ export const metadata = createMetadata({
   metadataBase: baseUrl
 });
 
-export default function Layout({ children }: { children: ReactNode }) {
+const geist = Geist({
+  variable: '--font-sans',
+  subsets: ['latin']
+});
+
+const mono = Geist_Mono({
+  variable: '--font-mono',
+  subsets: ['latin']
+});
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: dark)', color: '#0A0A0A' },
+    { media: '(prefers-color-scheme: light)', color: '#fff' }
+  ]
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} suppressHydrationWarning>
-      <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
-      </body>
+    <html
+      lang="en"
+      className={`${geist.variable} ${mono.variable}`}
+      suppressHydrationWarning
+    >
+      <Body>
+        <Provider>{children}</Provider>
+      </Body>
     </html>
   );
 }

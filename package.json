@@ -9,12 +9,37 @@
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {
+    "@fumadocs/mdx-remote": "^1.4.0",
+    "@radix-ui/react-hover-card": "^1.1.14",
+    "@radix-ui/react-tooltip": "^1.2.7",
+    "@shikijs/rehype": "^3.9.1",
+    "@shikijs/transformers": "^3.9.1",
+    "class-variance-authority": "^0.7.1",
     "fumadocs-core": "^15.6.7",
+    "fumadocs-docgen": "^2.1.0",
     "fumadocs-mdx": "^11.7.3",
+    "fumadocs-openapi": "^9.1.7",
+    "fumadocs-twoslash": "^3.1.4",
+    "fumadocs-typescript": "^4.0.6",
     "fumadocs-ui": "^15.6.7",
+    "katex": "^0.16.22",
+    "lucide-react": "^0.536.0",
+    "mermaid": "^11.9.0",
     "next": "^15.4.5",
+    "next-themes": "^0.4.6",
+    "oxc-transform": "^0.79.1",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "rehype-katex": "^7.0.1",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "remark-mdx": "^3.1.0",
+    "remark-rehype": "^11.1.2",
+    "shiki": "^3.9.1",
+    "tailwind-merge": "^3.3.1",
+    "twoslash": "^0.3.3",
+    "zod": "^4.0.14"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.11",
@@ -25,6 +50,7 @@
     "eslint": "^9.32.0",
     "eslint-config-next": "^15.4.5",
     "tailwindcss": "^4.1.11",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.9.2"
   }
 }

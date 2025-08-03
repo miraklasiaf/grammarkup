@@ -24,7 +24,7 @@ export function createMetadata(override: Metadata): Metadata {
         'application/rss+xml': [
           {
             title: 'Grammarkup Blog',
-            url: 'https://fumadocs.dev/blog/rss.xml'
+            url: 'https://grammarkup.vercel.app/blog/rss.xml'
           }
         ]
       },

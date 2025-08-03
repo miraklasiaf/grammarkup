@@ -58,7 +58,7 @@ function Hero() {
       </p>
       <div className="inline-flex items-center gap-3 max-md:mx-auto">
         <Link
-          href="/learn"
+          href="/learn/beginner"
           className={cn(buttonVariants({ size: 'lg', className: 'rounded-full' }))}
         >
           Getting Started
