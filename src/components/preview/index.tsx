@@ -15,13 +15,13 @@ import {
   File,
   Files,
   Folder,
-  InlineTOC
+  InlineTOC,
 } from '@/components/preview/lazy';
 
 export function heading(): ReactNode {
   return (
     <Wrapper>
-      <div className="rounded-lg bg-fd-background p-4 prose-no-margin">
+      <div className="bg-fd-background prose-no-margin rounded-lg p-4">
         <Heading id="preview" as="h3">
           Hello World
         </Heading>
@@ -36,7 +36,7 @@ export function heading(): ReactNode {
 export function card(): ReactNode {
   return (
     <Wrapper>
-      <div className="rounded-lg bg-fd-background">
+      <div className="bg-fd-background rounded-lg">
         <Card
           href="#"
           icon={<Home />}
@@ -52,7 +52,11 @@ export function tabs(): ReactNode {
   return (
     <Wrapper>
       <div className="prose-no-margin">
-        <Tabs groupId="language" persist items={['Javascript', 'Rust', 'Typescript']}>
+        <Tabs
+          groupId="language"
+          persist
+          items={['Javascript', 'Rust', 'Typescript']}
+        >
           <Tab value="Javascript">Hello World in Javascript</Tab>
           <Tab value="Rust">Hello World in Rust</Tab>
           <Tab value="Typescript">Also works if items are not the same</Tab>
@@ -74,14 +78,15 @@ export function tabs(): ReactNode {
 export function typeTable(): ReactNode {
   return (
     <Wrapper>
-      <div className="rounded-xl bg-fd-background">
+      <div className="bg-fd-background rounded-xl">
         <TypeTable
           type={{
             percentage: {
-              description: 'The percentage of scroll position to display the roll button',
+              description:
+                'The percentage of scroll position to display the roll button',
               type: 'number',
-              default: '0.2'
-            }
+              default: '0.2',
+            },
           }}
         />
       </div>
@@ -148,7 +153,7 @@ export function inlineTOC(): ReactNode {
           { title: 'Reference', url: '#reference', depth: 2 },
           { title: 'Components', url: '#components', depth: 3 },
           { title: 'APIs', url: '#api', depth: 3 },
-          { title: 'Credits', url: '#credits', depth: 2 }
+          { title: 'Credits', url: '#credits', depth: 2 },
         ]}
       />
     </Wrapper>
@@ -158,7 +163,7 @@ export function inlineTOC(): ReactNode {
 export function steps(): ReactNode {
   return (
     <Wrapper>
-      <div className="rounded-xl bg-fd-background p-3">
+      <div className="bg-fd-background rounded-xl p-3">
         <Steps>
           <Step>
             <h4>Buy Coffee</h4>
@@ -181,20 +186,20 @@ export function steps(): ReactNode {
 export function rootToggle(): ReactNode {
   return (
     <Wrapper>
-      <div className="not-prose mx-auto grid max-w-[240px] rounded-lg bg-fd-background">
+      <div className="not-prose bg-fd-background mx-auto grid max-w-[240px] rounded-lg">
         <RootToggle
           className="p-3"
           options={[
             {
               title: 'Hello World',
               description: 'The example item of root toggle',
-              url: '/docs/ui'
+              url: '/docs/ui',
             },
             {
               title: 'Other page',
               description: 'The example item of root toggle',
-              url: '/docs/headless'
-            }
+              url: '/docs/headless',
+            },
           ]}
         />
       </div>
@@ -218,7 +223,12 @@ export function banner(): ReactNode {
           Be careful, Fumadocs v99 has released
         </Banner>
 
-        <Banner id="test-rainbow" className="z-0" variant="rainbow" changeLayout={false}>
+        <Banner
+          id="test-rainbow"
+          className="z-0"
+          variant="rainbow"
+          changeLayout={false}
+        >
           Using the <code>rainbow</code> variant
         </Banner>
 
@@ -233,7 +243,7 @@ export function banner(): ReactNode {
             'rgba(255,100,0, 0.5)',
             'transparent',
             'rgba(255,100,0, 0.5)',
-            'transparent'
+            'transparent',
           ]}
           changeLayout={false}
         >

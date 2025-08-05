@@ -6,14 +6,14 @@
     "build": "next build",
     "dev": "next dev --turbo",
     "start": "next start",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "lint": "eslint ./src --config ./eslint.config.mjs",
+    "lint:fix": "eslint --fix ./src --config ./eslint.config.mjs"
   },
   "dependencies": {
     "@fumadocs/mdx-remote": "^1.4.0",
     "@radix-ui/react-hover-card": "^1.1.14",
     "@radix-ui/react-tooltip": "^1.2.7",
-    "@shikijs/rehype": "^3.9.1",
-    "@shikijs/transformers": "^3.9.1",
     "class-variance-authority": "^0.7.1",
     "fumadocs-core": "^15.6.7",
     "fumadocs-docgen": "^2.1.0",
@@ -36,12 +36,13 @@
     "remark-math": "^6.0.0",
     "remark-mdx": "^3.1.0",
     "remark-rehype": "^11.1.2",
-    "shiki": "^3.9.1",
     "tailwind-merge": "^3.3.1",
     "twoslash": "^0.3.3",
     "zod": "^4.0.14"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.32.0",
     "@tailwindcss/postcss": "^4.1.11",
     "@types/mdx": "^2.0.13",
     "@types/node": "^24.1.0",
@@ -49,8 +50,13 @@
     "@types/react-dom": "^19.1.7",
     "eslint": "^9.32.0",
     "eslint-config-next": "^15.4.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "tailwindcss": "^4.1.11",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.38.0"
   }
 }

@@ -3,5 +3,21 @@
   "title": "Beginner Grammar",
   "description": "",
   "icon": "Dice1",
-  "pages": ["---Introduction---", "index", "---Nouns---", "common-nouns"]
+  "pages": [
+    "index",
+    "nouns",
+    "pronouns",
+    "articles",
+    "demonstratives",
+    "distributives",
+    "conjugating-verbs",
+    "verbs-simple-tense",
+    "auxiliary-verbs",
+    "modal-verbs",
+    "adjectives-and-adverbs-introduction",
+    "adjectives",
+    "adverbs",
+    "prepositions",
+    "conjunctions"
+  ]
 }

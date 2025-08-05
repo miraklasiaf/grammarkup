@@ -8,7 +8,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       {...baseOptions}
       style={
         {
-          '--spacing-fd-container': '1120px'
+          '--spacing-fd-container': '1120px',
         } as object
       }
     >
@@ -20,7 +20,7 @@ export default function Layout({ children }: { children: ReactNode }) {
 
 function Footer() {
   return (
-    <footer className="mt-auto border-t bg-fd-card py-12 text-fd-secondary-foreground">
+    <footer className="bg-fd-card text-fd-secondary-foreground mt-auto border-t py-12">
       <div className="container flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-1 text-sm font-semibold">Grammarkup</p>

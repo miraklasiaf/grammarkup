@@ -3,5 +3,17 @@
   "title": "Advanced Grammar",
   "description": "",
   "icon": "Dice3",
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "index",
+    "verbs-perfect-tense",
+    "past-participle",
+    "phrasal-verbs",
+    "pre-determiners",
+    "orders-of-adverbs",
+    "pseudo-conjunctions",
+    "passive-vs-active-voice",
+    "conditionals",
+    "clauses",
+    "reported-speech"
+  ]
 }

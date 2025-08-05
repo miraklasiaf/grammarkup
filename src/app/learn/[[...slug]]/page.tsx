@@ -11,7 +11,7 @@ import {
   PageTOCPopoverContent,
   PageTOCPopoverItems,
   PageTOCPopoverTrigger,
-  PageTOCTitle
+  PageTOCTitle,
 } from 'fumadocs-ui/layouts/docs/page';
 import { notFound } from 'next/navigation';
 import { type ComponentProps, type FC, type ReactElement } from 'react';
@@ -25,7 +25,7 @@ import { Mermaid } from '@/components/mdx/mermaid';
 import {
   HoverCard,
   HoverCardContent,
-  HoverCardTrigger
+  HoverCardTrigger,
 } from '@/components/ui/hover-card';
 import { Tooltip } from '@/components/ui/tooltip';
 import { Blank } from '@/components/ui/blank';
@@ -54,7 +54,7 @@ export default async function Page(props: {
     <PageRoot
       toc={{
         toc,
-        single: false
+        single: false,
       }}
     >
       {toc.length > 0 && (
@@ -68,14 +68,16 @@ export default async function Page(props: {
       <PageArticle>
         <PageBreadcrumb />
         <h1 className="text-3xl font-semibold">{page.data.title}</h1>
-        <p className="text-lg text-fd-muted-foreground">{page.data.description}</p>
-        <div className="prose flex-1 text-fd-foreground/80">
+        <p className="text-fd-muted-foreground text-lg">
+          {page.data.description}
+        </p>
+        <div className="prose text-fd-foreground/80 flex-1">
           <Mdx
             components={getMDXComponents({
               ...Twoslash,
               a: ({ href, ...props }) => {
                 const found = source.getPageByHref(href ?? '', {
-                  dir: path.dirname(page.path)
+                  dir: path.dirname(page.path),
                 });
 
                 if (!found) return <Link href={href} {...props} />;
@@ -85,7 +87,9 @@ export default async function Page(props: {
                     <HoverCardTrigger asChild>
                       <Link
                         href={
-                          found.hash ? `${found.page.url}#${found.hash}` : found.page.url
+                          found.hash
+                            ? `${found.page.url}#${found.hash}`
+                            : found.page.url
                         }
                         {...props}
                       />
@@ -108,7 +112,9 @@ export default async function Page(props: {
                 <AutoTypeTable generator={generator} {...props} />
               ),
               Wrapper,
-              blockquote: Callout as unknown as FC<ComponentProps<'blockquote'>>
+              blockquote: Callout as unknown as FC<
+                ComponentProps<'blockquote'>
+              >,
             })}
           />
         </div>
@@ -142,6 +148,7 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
   const { slug = [] } = await props.params;
   const page = source.getPage(slug);
+
   if (!page) notFound();
 
   const description =
@@ -150,7 +157,7 @@ export async function generateMetadata(props: {
   const image = {
     url: ['/og', ...slug, 'image.png'].join('/'),
     width: 1200,
-    height: 630
+    height: 630,
   };
 
   return createMetadata({
@@ -158,11 +165,11 @@ export async function generateMetadata(props: {
     description,
     openGraph: {
       url: `/docs/${page.slugs.join('/')}`,
-      images: [image]
+      images: [image],
     },
     twitter: {
-      images: [image]
-    }
+      images: [image],
+    },
   });
 }
 

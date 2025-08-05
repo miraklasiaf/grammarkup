@@ -23,7 +23,7 @@ const Tooltip = ({
   return (
     <TooltipPrimitive.Root>
       <TooltipPrimitive.Trigger asChild>
-        <Info className="inline w-4 h-4 -mt-0.5" />
+        <Info className="-mt-0.5 inline h-4 w-4" />
       </TooltipPrimitive.Trigger>
       <TooltipPrimitive.Portal>
         <TooltipPrimitive.Content
@@ -31,10 +31,10 @@ const Tooltip = ({
           align={align}
           sideOffset={sideOffset}
           className={cn(
-            'z-50 max-w-xs rounded-md bg-fd-popover px-3 py-1.5 text-popover-fd-foreground shadow-md outline-none',
+            'bg-fd-popover text-popover-fd-foreground z-50 max-w-xs rounded-md px-3 py-1.5 shadow-md outline-none',
             'data-[state=delayed-open]:animate-fd-popover-in data-[state=closed]:animate-fd-popover-out',
             'origin-[--radix-tooltip-content-transform-origin]',
-            className
+            className,
           )}
           {...props}
         >

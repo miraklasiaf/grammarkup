@@ -12,14 +12,18 @@ export default function Layout({ children }: { children: ReactNode }) {
         ...baseOptions.nav,
         title: (
           <>
-            <span className="font-medium [.uwu_&]:hidden max-md:hidden">Grammarkup</span>
+            <span className="font-medium max-md:hidden [.uwu_&]:hidden">
+              Grammarkup
+            </span>
           </>
-        )
+        ),
       }}
       sidebar={{
+        defaultOpenLevel: 1,
         tabs: {
           transform(option, node) {
             const meta = source.getNodeMeta(node);
+
             if (!meta || !node.icon) return option;
 
             const color = `var(--${
@@ -30,19 +34,19 @@ export default function Layout({ children }: { children: ReactNode }) {
               ...option,
               icon: (
                 <div
-                  className="[&_svg]:size-full rounded-lg size-full text-(--tab-color) max-md:bg-(--tab-color)/10 max-md:border max-md:p-1.5"
+                  className="size-full rounded-lg text-(--tab-color) max-md:border max-md:bg-(--tab-color)/10 max-md:p-1.5 [&_svg]:size-full"
                   style={
                     {
-                      '--tab-color': color
+                      '--tab-color': color,
                     } as object
                   }
                 >
                   {node.icon}
                 </div>
-              )
+              ),
             };
-          }
-        }
+          },
+        },
       }}
     >
       {children}

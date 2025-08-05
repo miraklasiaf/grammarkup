@@ -13,6 +13,7 @@ export function Mermaid({ chart }: { chart: string }) {
 
   useEffect(() => {
     if (currentChartRef.current === chart || !containerRef.current) return;
+
     const container = containerRef.current;
     currentChartRef.current = chart;
 
@@ -26,12 +27,12 @@ export function Mermaid({ chart }: { chart: string }) {
           securityLevel: 'loose',
           fontFamily: 'inherit',
           themeCSS: 'margin: 1.5rem auto 0;',
-          theme: resolvedTheme === 'dark' ? 'dark' : 'default'
+          theme: resolvedTheme === 'dark' ? 'dark' : 'default',
         });
 
         const { svg, bindFunctions } = await mermaid.render(
           id,
-          chart.replaceAll('\\n', '\n')
+          chart.replaceAll('\\n', '\n'),
         );
 
         bindFunctions?.(container);

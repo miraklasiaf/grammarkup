@@ -3,5 +3,18 @@
   "title": "Intermediate Grammar",
   "description": "",
   "icon": "Dice2",
-  "pages": ["---Introduction---", "index"]
+  "pages": [
+    "index",
+    "nouns",
+    "possessive",
+    "quantifiers",
+    "distributives",
+    "present-participle",
+    "verbs-continuous-tense",
+    "modal-verbs",
+    "adjectives",
+    "adverbs",
+    "prepositions",
+    "conjunctions"
+  ]
 }
