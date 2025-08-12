@@ -84,12 +84,8 @@ export const Tooltip = ({
     return (
       <PopoverPrimitive.Root>
         <PopoverPrimitive.Trigger asChild>
-          <button
-            type="button"
-            className="-mt-0.5 inline h-4 w-4"
-            aria-label="Show information"
-          >
-            <Info />
+          <button type="button" aria-label="Show information">
+            <Info className="-mt-0.5 inline h-4 w-4" />
           </button>
         </PopoverPrimitive.Trigger>
         <PopoverPrimitive.Portal>
@@ -119,10 +115,9 @@ export const Tooltip = ({
               e.preventDefault();
               setIsPinned((prev) => !prev);
             }}
-            className="-mt-0.5 inline h-4 w-4"
             aria-label="Show information"
           >
-            <Info />
+            <Info className="-mt-0.5 inline h-4 w-4" />
           </button>
         </TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
