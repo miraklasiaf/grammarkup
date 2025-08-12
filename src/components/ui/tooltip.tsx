@@ -30,12 +30,7 @@ export const Tooltip = ({
   // Detect input method changes (touch ↔ mouse)
   React.useEffect(() => {
     const checkTouch = () =>
-      setIsTouch(
-        'ontouchstart' in window ||
-          navigator.maxTouchPoints > 0 ||
-          // @ts-expect-error
-          navigator.msMaxTouchPoints > 0
-      );
+      setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
 
     checkTouch();
     window.addEventListener('resize', checkTouch);
