@@ -7,7 +7,6 @@ import {
 
 export const docs = defineDocs({
   docs: {
-    async: true,
     schema: frontmatterSchema
   },
   meta: {
@@ -16,6 +15,7 @@ export const docs = defineDocs({
 });
 
 export default defineConfig({
-  lastModifiedTime: 'git',
-  mdxOptions: {}
+  mdxOptions: {
+    // MDX options
+  }
 });
