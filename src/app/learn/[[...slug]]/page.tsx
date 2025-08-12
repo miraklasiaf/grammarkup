@@ -51,7 +51,7 @@ export async function generateMetadata(props: { params: Promise<{ slug?: string[
     'Grammarkup helps you understand english grammar through clean, simple lessons. No clutter. Just learning.';
 
   const image = {
-    url: ['/og', ...slug, 'image.png'].join('/'),
+    url: ['/learn-og', ...slug, 'image.png'].join('/'),
     width: 1200,
     height: 630
   };
