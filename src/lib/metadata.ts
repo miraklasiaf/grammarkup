@@ -7,7 +7,7 @@ export function createMetadata(override: Metadata): Metadata {
       title: override.title ?? undefined,
       description: override.description ?? undefined,
       url: 'https://grammarkup.vercel.app',
-      images: '/banner.png',
+      images: '/static/img/banner.png',
       siteName: 'Grammarkup',
       ...override.openGraph
     },
@@ -16,7 +16,7 @@ export function createMetadata(override: Metadata): Metadata {
       creator: '@miraklasiaf',
       title: override.title ?? undefined,
       description: override.description ?? undefined,
-      images: '/banner.png',
+      images: '/static/img/banner.png',
       ...override.twitter
     },
     alternates: {
