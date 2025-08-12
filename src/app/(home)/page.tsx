@@ -48,7 +48,9 @@ function Hero() {
             'repeating-linear-gradient(65deg, var(--color-purple-300), var(--color-purple-300) 12px, color-mix(in oklab, var(--color-blue-600) 30%, transparent) 20px, transparent 200px)'
         }}
       />
-      <h1 className="mb-8 text-4xl font-medium md:hidden">Learn Grammar Clearly</h1>
+      <h1 className="mb-8 text-4xl font-medium md:hidden">
+        Learn English Grammar Clearly
+      </h1>
       <h1 className="mb-8 max-w-[600px] text-4xl font-medium max-md:hidden">
         Learn english grammar clearly
       </h1>

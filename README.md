@@ -1,4 +1,4 @@
-[![Grammarkup](https://assets.miraklasiaf.com/image/upload/repositories/grammarkup/grammarkup.png)](https://grammarkup.vercel.app)
+[![Grammarkup](https://grammarkup.vercel.app/static/svg/logo.svg)](https://grammarkup.vercel.app)
 
 <p align="center">
   <a aria-label="Vercel logo" href="https://miraklasiaf.com">
@@ -13,22 +13,3 @@
   <img src="https://forthebadge.com/images/badges/built-with-love.svg">
   <img alt="" src="https://forthebadge.com/images/badges/for-you.svg">
 </p>
-
-## Kenapa belajar grammar bahasa inggris di Grammarkup?
-
-- Metode belajar mandiri.
-- Materi grammar lengkap. Mulai dari _beginner_ hingga _advanced_.
-- Materi disusun secara sistematis sehingga mudah dalam proses belajarnya.
-- Bisa belajar kapan dan dimana saja. Tinggal buka webnya dari smartphone kamu!
-- Tetap bisa belajar walaupun tidak ada koneksi internet. Caranya tinggal kamu klik "Add Grammarkup to Home screen".
-
-## Berkontribusi
-
-Kami menerima _pull requests_ dari siapapun! Silakan membaca [Panduan Berkontribusi](CONTRIBUTING.md) untuk informasi lebih lanjut.
-
-## Donasi
-
-Dukung Grammarkup melalui:
-
-- <b>Ko-fi</b>: <a href="https://ko-fi.com/miraklasiaf">https://ko-fi.com/miraklasiaf</a>
-- <b>Saweria</b>: <a href="https://saweria.co/miraklasiaf">https://saweria.co/miraklasiaf</a>

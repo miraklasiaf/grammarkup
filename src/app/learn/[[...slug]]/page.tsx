@@ -7,6 +7,7 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { getMDXComponents } from '@/mdx-components';
 import { notFound } from 'next/navigation';
 import { source } from '@/lib/source';
+import { createMetadata } from '@/lib/metadata';
 import { type ComponentProps, type FC } from 'react';
 
 export const revalidate = false;
@@ -41,12 +42,29 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug?: string[] }> }) {
-  const params = await props.params;
-  const page = source.getPage(params.slug);
+  const { slug = [] } = await props.params;
+  const page = source.getPage(slug);
   if (!page) notFound();
 
-  return {
-    title: page.data.title,
-    description: page.data.description
+  const description =
+    page.data.description ??
+    'Grammarkup helps you understand english grammar through clean, simple lessons. No clutter. Just learning.';
+
+  const image = {
+    url: ['/og', ...slug, 'image.png'].join('/'),
+    width: 1200,
+    height: 630
   };
+
+  return createMetadata({
+    title: page.data.title,
+    description,
+    openGraph: {
+      url: `/learn/${page.slugs.join('/')}`,
+      images: [image]
+    },
+    twitter: {
+      images: [image]
+    }
+  });
 }
