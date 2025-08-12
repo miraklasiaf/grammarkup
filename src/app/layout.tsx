@@ -10,9 +10,9 @@ import type { ReactNode } from 'react';
 import Script from 'next/script';
 import type { Viewport } from 'next';
 
-const GOOGLE_SITE_VERIFICATION = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
-const ILP_URL = process.env.NEXT_PUBLIC_ILP_URL;
+const GOOGLE_SITE_VERIFICATION = process.env.GOOGLE_SITE_VERIFICATION;
+const GA_TRACKING_ID = process.env.GA_TRACKING_ID;
+const ILP_URL = process.env.ILP_URL;
 
 export const metadata = createMetadata({
   title: {
