@@ -65,11 +65,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <head>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <Script
-          data-ad-client="ca-pub-7966864664516090"
+        <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-          strategy="afterInteractive"
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7966864664516090"
+          crossOrigin="anonymous"
         />
       </head>
       <Body>

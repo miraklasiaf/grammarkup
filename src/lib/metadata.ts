@@ -3,6 +3,17 @@ import type { Metadata } from 'next/types';
 export function createMetadata(override: Metadata): Metadata {
   return {
     ...override,
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
+    },
     openGraph: {
       title: override.title ?? undefined,
       description: override.description ?? undefined,

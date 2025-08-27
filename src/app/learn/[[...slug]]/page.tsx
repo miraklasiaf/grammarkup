@@ -59,6 +59,9 @@ export async function generateMetadata(props: { params: Promise<{ slug?: string[
   return createMetadata({
     title: page.data.title,
     description,
+    alternates: {
+      canonical: `/learn/${page.slugs.join('/')}`
+    },
     openGraph: {
       url: `/learn/${page.slugs.join('/')}`,
       images: [image]
