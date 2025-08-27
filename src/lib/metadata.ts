@@ -31,6 +31,7 @@ export function createMetadata(override: Metadata): Metadata {
       ...override.twitter
     },
     alternates: {
+      canonical: '/',
       types: {
         'application/rss+xml': [
           {
