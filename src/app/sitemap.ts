@@ -9,15 +9,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: url('/'),
-      changeFrequency: 'monthly',
-      priority: 1
+      url: url('/')
     },
     ...source.getPages().map((page) => {
       return {
-        url: url(page.url),
-        changeFrequency: 'weekly',
-        priority: 0.5
+        url: url(page.url)
       } as MetadataRoute.Sitemap[number];
     })
   ];
